@@ -175,6 +175,28 @@ a:hover .nav-num {
   padding-left: 32px;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.main::before,
+.main::after {
+  content: '';
+  position: fixed;
+  left: var(--sidebar-w);
+  right: 0;
+  height: 64px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.main::before {
+  top: 0;
+  background: linear-gradient(to bottom, var(--white) 0%, transparent 100%);
+}
+
+.main::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--white) 0%, transparent 100%);
 }
 
 
