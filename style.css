@@ -112,17 +112,8 @@ img { display: block; max-width: 100%; }
 }
 
 /* individual icon animations */
-.nav-icon.icon-work svg       { transition: transform 0.5s cubic-bezier(.34,1.56,.64,1); }
-.nav-icon.icon-about svg      { transition: transform 0.4s cubic-bezier(.34,1.56,.64,1); }
-.nav-icon.icon-email svg      { transition: transform 0.3s ease; }
-.nav-icon.icon-linkedin svg   { transition: transform 0.4s cubic-bezier(.34,1.56,.64,1); }
-.nav-icon.icon-resume svg     { transition: transform 0.4s cubic-bezier(.34,1.56,.64,1); }
-
-a:hover .icon-work svg        { transform: rotate(180deg); }
-a:hover .icon-about svg       { transform: translateY(-3px) scale(1.15); }
-a:hover .icon-email svg       { transform: rotate(-15deg) translateX(2px); }
-a:hover .icon-linkedin svg    { transform: scale(1.25); }
-a:hover .icon-resume svg      { transform: rotate(45deg) scale(1.1); }
+.nav-icon svg { transition: transform 0.35s cubic-bezier(.34,1.56,.64,1); }
+a:hover .nav-icon svg { transform: rotate(15deg) scale(1.2); }
 
 .nav-arrow { color: var(--muted); font-size: 11px; margin-left: auto; }
 
