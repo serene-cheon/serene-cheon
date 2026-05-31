@@ -104,14 +104,18 @@ img { display: block; max-width: 100%; }
 
 .nav-icon {
   flex-shrink: 0;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
+  transition: transform 0.2s cubic-bezier(.34,1.56,.64,1);
 }
 
-.nav-icon svg { display: block; }
+a:hover .nav-icon { transform: scale(1.15); }
+
+.nav-icon svg { display: block; border-radius: 5px; }
 
 .nav-arrow { color: var(--muted); font-size: 11px; margin-left: auto; }
 
