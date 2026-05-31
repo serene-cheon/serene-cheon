@@ -93,27 +93,38 @@ img { display: block; max-width: 100%; }
 .sidebar-nav li a {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 5px 0;
+  gap: 10px;
+  padding: 6px 0;
   font-size: 12.5px;
   color: var(--text);
-  border-bottom: 1px solid transparent;
   transition: color 0.15s;
 }
 
-.sidebar-nav li a:hover {
-  color: var(--muted);
+.sidebar-nav li a:hover { color: var(--muted); }
+
+.nav-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sidebar-nav li a .nav-arrow {
-  font-size: 11px;
-  color: var(--muted);
-}
+/* individual icon animations */
+.nav-icon.icon-work svg       { transition: transform 0.5s cubic-bezier(.34,1.56,.64,1); }
+.nav-icon.icon-about svg      { transition: transform 0.4s cubic-bezier(.34,1.56,.64,1); }
+.nav-icon.icon-email svg      { transition: transform 0.3s ease; }
+.nav-icon.icon-linkedin svg   { transition: transform 0.4s cubic-bezier(.34,1.56,.64,1); }
+.nav-icon.icon-resume svg     { transition: transform 0.4s cubic-bezier(.34,1.56,.64,1); }
 
-.sidebar-nav li a.external .nav-arrow {
-  transform: rotate(-45deg);
-  display: inline-block;
-}
+a:hover .icon-work svg        { transform: rotate(180deg); }
+a:hover .icon-about svg       { transform: translateY(-3px) scale(1.15); }
+a:hover .icon-email svg       { transform: rotate(-15deg) translateX(2px); }
+a:hover .icon-linkedin svg    { transform: scale(1.25); }
+a:hover .icon-resume svg      { transform: rotate(45deg) scale(1.1); }
+
+.nav-arrow { color: var(--muted); font-size: 11px; margin-left: auto; }
 
 .sidebar-spacer { flex: 1; }
 
