@@ -179,28 +179,53 @@ a:hover .nav-num {
   overflow-y: auto;
 }
 
-/* ─── SCROLL BLUR ─── */
+/* ─── SCROLL BLUR (progressive) ─── */
 .scroll-blur {
   position: fixed;
   left: var(--sidebar-w);
   right: 0;
-  height: 70px;
+  height: 90px;
   pointer-events: none;
   z-index: 20;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
-.scroll-blur.top {
-  top: 0;
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+.scroll-blur.top { top: 0; --dir: to bottom; }
+.scroll-blur.bottom { bottom: 0; --dir: to top; }
+
+.scroll-blur > div {
+  position: absolute;
+  inset: 0;
 }
 
-.scroll-blur.bottom {
-  bottom: 0;
-  -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
-  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+.scroll-blur > div:nth-child(1) {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  -webkit-mask-image: linear-gradient(var(--dir), black 0%, black 16.6%, transparent 33.3%);
+  mask-image: linear-gradient(var(--dir), black 0%, black 16.6%, transparent 33.3%);
+}
+.scroll-blur > div:nth-child(2) {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  -webkit-mask-image: linear-gradient(var(--dir), transparent 0%, black 16.6%, black 33.3%, transparent 50%);
+  mask-image: linear-gradient(var(--dir), transparent 0%, black 16.6%, black 33.3%, transparent 50%);
+}
+.scroll-blur > div:nth-child(3) {
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  -webkit-mask-image: linear-gradient(var(--dir), transparent 16.6%, black 33.3%, black 50%, transparent 66.6%);
+  mask-image: linear-gradient(var(--dir), transparent 16.6%, black 33.3%, black 50%, transparent 66.6%);
+}
+.scroll-blur > div:nth-child(4) {
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  -webkit-mask-image: linear-gradient(var(--dir), transparent 33.3%, black 50%, black 66.6%, transparent 83.3%);
+  mask-image: linear-gradient(var(--dir), transparent 33.3%, black 50%, black 66.6%, transparent 83.3%);
+}
+.scroll-blur > div:nth-child(5) {
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  -webkit-mask-image: linear-gradient(var(--dir), transparent 50%, black 66.6%, black 83.3%, transparent 100%);
+  mask-image: linear-gradient(var(--dir), transparent 50%, black 66.6%, black 83.3%, transparent 100%);
 }
 
 
