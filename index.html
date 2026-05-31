@@ -4,96 +4,142 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Serene Cheon — UX Researcher</title>
-  <meta name="description" content="Serene Cheon is a UX researcher who turns complex human behaviour into clear, actionable insights." />
+  <meta name="description" content="Serene Cheon is a UX researcher based in Berkeley." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<div class="layout">
 
-  <nav class="site-nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-name">Serene Cheon</a>
-      <ul class="nav-links">
-        <li><a href="work.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="mailto:serenecheon@berkeley.edu">Contact</a></li>
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar">
+
+    <div class="sidebar-logo">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="12" stroke="#1a1a1a" stroke-width="1.5"/>
+        <circle cx="14" cy="14" r="5" fill="#1a1a1a"/>
+      </svg>
+    </div>
+
+    <p class="sidebar-bio">
+      Serene Cheon is a UX researcher with a commitment to evidence and empathy.
+      She is interested in the gap between how products are designed
+      and how they are actually used.<br><br>
+      Currently researching at <a href="#">Luminary Labs</a>.
+      Previously, <a href="#">Bloom Finance</a>.
+      UC Berkeley, HCI &amp; Cognitive Science.
+    </p>
+
+    <div class="sidebar-divider"></div>
+
+    <p class="sidebar-section-title">Table of Contents</p>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="index.html">01. Work <span class="nav-arrow">→</span></a></li>
+        <li><a href="about.html">02. About <span class="nav-arrow">→</span></a></li>
       </ul>
+    </nav>
+
+    <div class="sidebar-divider"></div>
+
+    <p class="sidebar-section-title">Nodes</p>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="mailto:serenecheon@berkeley.edu" class="external">03. Email <span class="nav-arrow">↗</span></a></li>
+        <li><a href="#" class="external">04. LinkedIn <span class="nav-arrow">↗</span></a></li>
+        <li><a href="#" class="external">05. Résumé <span class="nav-arrow">↗</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-spacer"></div>
+
+    <div class="sidebar-footer">
+      &copy;2026 Serene Cheon<br>
+      Last updated 05.31.2026
     </div>
-  </nav>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Complex systems tend<br>to fail <em>the people</em><br>who need them most.</h1>
-      <p class="hero-sub">
-        I'm Serene, a UX researcher based in Berkeley. I help teams understand
-        their users deeply — so they can build products that actually work for
-        the people who matter.
-      </p>
-      <div class="hero-links">
-        <a href="work.html">View work <span class="arrow">→</span></a>
-        <a href="about.html" class="secondary">About me</a>
-      </div>
+  </aside>
+
+  <!-- ── MAIN ── -->
+  <main class="main">
+    <div class="main-header">
+      <span class="clock" id="clock"></span>
     </div>
-  </section>
 
-  <section class="selected-work">
-    <div class="container">
-      <p class="section-label">Selected Work</p>
+    <div class="projects-grid">
 
-      <div class="work-list">
+      <a href="work.html" class="project-card">
+        <div class="project-card-inner">
+          <div class="project-img img-fintech">
+            FinTech Onboarding
+          </div>
+          <div class="project-meta">
+            <div class="project-meta-row">
+              <span class="project-title">Redesigning Onboarding for a FinTech App</span>
+              <span class="project-year">2025</span>
+            </div>
+            <p class="project-desc">Reduced drop-off by 34% through a mixed-methods study of first-time users navigating a complex financial product.</p>
+          </div>
+        </div>
+      </a>
 
-        <a href="work.html" class="work-item">
-          <div>
-            <p class="work-item-num">01</p>
-            <h2 class="work-item-title">Redesigning Onboarding<br>for a FinTech App</h2>
-            <p class="work-item-desc">A mixed-methods study that reduced early drop-off by 34% by surfacing a trust deficit no one in the product team had named.</p>
+      <a href="work.html" class="project-card">
+        <div class="project-card-inner">
+          <div class="project-img tall img-access">
+            Accessibility Audit
           </div>
-          <div class="work-item-tags">
-            <span class="tag">User Interviews</span>
-            <span class="tag">Usability Testing</span>
-            <span class="tag">Mobile UX</span>
+          <div class="project-meta">
+            <div class="project-meta-row">
+              <span class="project-title">Accessibility Audit &amp; Redesign</span>
+              <span class="project-year">2024</span>
+            </div>
+            <p class="project-desc">Brought a 2M-user app into full WCAG 2.1 AA compliance. 61% improvement in assistive-technology experience scores.</p>
           </div>
-        </a>
+        </div>
+      </a>
 
-        <a href="work.html" class="work-item">
-          <div>
-            <p class="work-item-num">02</p>
-            <h2 class="work-item-title">Accessibility Audit<br>&amp; Redesign</h2>
-            <p class="work-item-desc">Brought a 2M-user consumer app into full WCAG 2.1 AA compliance — and improved experience scores among assistive-technology users by 61%.</p>
+      <a href="work.html" class="project-card">
+        <div class="project-card-inner">
+          <div class="project-img wide img-enterprise">
+            Enterprise Dashboard
           </div>
-          <div class="work-item-tags">
-            <span class="tag">Inclusive Design</span>
-            <span class="tag">Heuristic Evaluation</span>
-            <span class="tag">WCAG 2.1</span>
+          <div class="project-meta">
+            <div class="project-meta-row">
+              <span class="project-title">Enterprise Dashboard Research</span>
+              <span class="project-year">2024</span>
+            </div>
+            <p class="project-desc">Three weeks embedded with operations teams uncovered 12 high-value improvements and two new use cases.</p>
           </div>
-        </a>
+        </div>
+      </a>
 
-        <a href="work.html" class="work-item">
-          <div>
-            <p class="work-item-num">03</p>
-            <h2 class="work-item-title">Enterprise Dashboard<br>Research</h2>
-            <p class="work-item-desc">Three weeks embedded with operations teams uncovered 12 high-value improvements — and two entirely new use cases the product team hadn't anticipated.</p>
+      <a href="about.html" class="project-card">
+        <div class="project-card-inner">
+          <div class="project-img img-misc">
+            About
           </div>
-          <div class="work-item-tags">
-            <span class="tag">Contextual Inquiry</span>
-            <span class="tag">Journey Mapping</span>
-            <span class="tag">B2B</span>
+          <div class="project-meta">
+            <div class="project-meta-row">
+              <span class="project-title">About Serene</span>
+            </div>
+            <p class="project-desc">Berkeley, HCI &amp; Cognitive Science. UX researcher focused on inclusive, human-centered design.</p>
           </div>
-        </a>
+        </div>
+      </a>
 
-      </div>
     </div>
-  </section>
+  </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p class="footer-copy">&copy; 2026 Serene Cheon</p>
-      <nav class="footer-links">
-        <a href="work.html">Work</a>
-        <a href="about.html">About</a>
-        <a href="mailto:serenecheon@berkeley.edu">serenecheon@berkeley.edu</a>
-      </nav>
-    </div>
-  </footer>
+</div>
 
+<script>
+  function updateClock() {
+    const now = new Date();
+    const loc = 'Berkeley';
+    const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+    document.getElementById('clock').textContent = loc + '. ' + time;
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
 </body>
 </html>
