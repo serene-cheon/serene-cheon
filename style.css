@@ -184,7 +184,7 @@ a:hover .nav-num {
   position: fixed;
   left: var(--sidebar-w);
   right: 0;
-  height: 90px;
+  height: 52px;
   pointer-events: none;
   z-index: 20;
 }
