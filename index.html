@@ -44,9 +44,12 @@
 
     <div class="sidebar-divider"></div>
 
-    <p class="sidebar-section-title">Contact</p>
+        <p class="sidebar-section-title">Contact</p>
     <div class="contact-btns">
-      <a href="mailto:serenecheon@berkeley.edu" class="contact-btn">Email ↗</a>
+      <span class="contact-email" onclick="copyEmail(this)">
+        serenecheon@berkeley.edu
+        <span class="contact-copied">Copied!</span>
+      </span>
       <a href="#" class="contact-btn">LinkedIn ↗</a>
       <a href="#" class="contact-btn">Resume ↗</a>
     </div>
