@@ -513,6 +513,66 @@ a:hover .nav-icon { transform: scale(1.15); }
 .tl-company { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
 .tl-desc { font-size: 12px; color: #777; line-height: 1.65; }
 
+/* ─── PUBLICATION ─── */
+.pub-list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-entry {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+}
+
+.pub-year {
+  font-size: 11.5px;
+  color: var(--muted);
+  padding-top: 2px;
+}
+
+.pub-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.pub-venue {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-bottom: 4px;
+  font-style: italic;
+}
+
+.pub-authors {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.pub-links {
+  display: flex;
+  gap: 12px;
+}
+
+.pub-link {
+  font-size: 11.5px;
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.15s;
+}
+
+.pub-link:hover {
+  text-decoration-color: var(--text);
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 860px) {
   :root { --sidebar-w: 240px; }
