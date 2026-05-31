@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
   --white: #ffffff;
@@ -16,6 +16,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
   background: var(--white);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
@@ -53,7 +54,9 @@ nav.site-nav {
 }
 
 .nav-name {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 32;
   font-size: 1rem;
   letter-spacing: 0.01em;
   color: var(--text);
@@ -88,7 +91,9 @@ nav.site-nav {
 }
 
 .hero h1 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 32;
   font-size: clamp(2.6rem, 5.5vw, 4.4rem);
   font-weight: 400;
   line-height: 1.15;
@@ -179,7 +184,9 @@ nav.site-nav {
 }
 
 .work-item-title {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 32;
   font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -220,7 +227,9 @@ nav.site-nav {
 }
 
 .page-hero h1 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 32;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -299,7 +308,9 @@ nav.site-nav {
 .banner-enterprise  { background: linear-gradient(135deg, #fef3c7 0%, #fde8d8 100%); }
 
 .banner-text {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 32;
   font-size: 1.4rem;
   font-style: italic;
   color: rgba(0,0,0,0.25);
@@ -314,7 +325,9 @@ nav.site-nav {
 }
 
 .case-body h2 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 32;
   font-size: clamp(1.3rem, 2.8vw, 1.8rem);
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -354,7 +367,9 @@ nav.site-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 32;
   font-size: 1.5rem;
   font-style: italic;
   color: #bbb;
@@ -369,7 +384,9 @@ nav.site-nav {
 }
 
 .about-right h2 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 32;
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -392,7 +409,9 @@ nav.site-nav {
 }
 
 .skills-block h3 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 32;
   font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 24px;
@@ -433,7 +452,9 @@ nav.site-nav {
 }
 
 .timeline-block h3 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 32;
   font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 48px;
@@ -488,7 +509,9 @@ nav.site-nav {
 }
 
 .contact-block h2 {
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 32;
   font-size: clamp(1.6rem, 3.5vw, 2.4rem);
   font-weight: 400;
   letter-spacing: -0.02em;
