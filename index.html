@@ -60,23 +60,9 @@
 
   <!-- ── MAIN ── -->
   <main class="main">
-    <!-- music player — swap src to your mp3 path -->
-    <audio id="audio" src="" preload="none"></audio>
-
-    <div class="player">
-      <span class="player-label">Listening to</span>
-      <div class="player-info">
-        <span class="player-track" id="trackName">track title</span>
-        <span class="player-artist" id="trackArtist">artist</span>
-      </div>
-      <div class="player-bar" id="progressBar">
-        <div class="player-bar-fill" id="progressFill"></div>
-      </div>
-      <span class="player-time" id="playerTime">0:00</span>
-      <button class="player-btn" id="playBtn" aria-label="Play">
-        <svg id="iconPlay" viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg>
-        <svg id="iconPause" viewBox="0 0 10 10" style="display:none"><rect x="2" y="1" width="2.5" height="8"/><rect x="5.5" y="1" width="2.5" height="8"/></svg>
-      </button>
+    <div class="location-time">
+      <span>Berkeley, CA</span>
+      <span id="localTime"></span>
     </div>
 
     <div class="projects-grid">
@@ -146,51 +132,15 @@
 </div>
 
 <script>
-  // ── Music Player ──
-  // To use: set audio src, trackName, trackArtist below
-  const TRACK = {
-    src:    '',           // e.g. 'music/my-song.mp3'
-    title:  'track title',
-    artist: 'artist',
-  };
-
-  const audio       = document.getElementById('audio');
-  const playBtn     = document.getElementById('playBtn');
-  const iconPlay    = document.getElementById('iconPlay');
-  const iconPause   = document.getElementById('iconPause');
-  const fill        = document.getElementById('progressFill');
-  const timeEl      = document.getElementById('playerTime');
-  const bar         = document.getElementById('progressBar');
-
-  document.getElementById('trackName').textContent   = TRACK.title;
-  document.getElementById('trackArtist').textContent = TRACK.artist;
-  if (TRACK.src) audio.src = TRACK.src;
-
-  function fmt(s) {
-    const m = Math.floor(s / 60);
-    return m + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+  function updateTime() {
+    const t = new Date().toLocaleTimeString('en-US', {
+      hour: 'numeric', minute: '2-digit', hour12: true,
+      timeZone: 'America/Los_Angeles'
+    }).toLowerCase();
+    document.getElementById('localTime').textContent = t;
   }
-
-  playBtn.addEventListener('click', () => {
-    if (!TRACK.src) return;
-    if (audio.paused) { audio.play(); } else { audio.pause(); }
-  });
-
-  audio.addEventListener('play',  () => { iconPlay.style.display='none';  iconPause.style.display=''; });
-  audio.addEventListener('pause', () => { iconPlay.style.display='';      iconPause.style.display='none'; });
-  audio.addEventListener('ended', () => { iconPlay.style.display='';      iconPause.style.display='none'; fill.style.width='0%'; });
-
-  audio.addEventListener('timeupdate', () => {
-    if (!audio.duration) return;
-    fill.style.width = (audio.currentTime / audio.duration * 100) + '%';
-    timeEl.textContent = fmt(audio.currentTime);
-  });
-
-  bar.addEventListener('click', (e) => {
-    if (!audio.duration) return;
-    const rect = bar.getBoundingClientRect();
-    audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
-  });
+  updateTime();
+  setInterval(updateTime, 10000);
 </script>
 </body>
 </html>
