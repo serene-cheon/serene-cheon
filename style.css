@@ -41,7 +41,6 @@ img { display: block; max-width: 100%; }
   padding: var(--px);
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--border);
   overflow-y: auto;
 }
 
@@ -130,13 +129,15 @@ img { display: block; max-width: 100%; }
   flex: 1;
   padding: var(--px);
   padding-left: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   min-height: 28px;
 }
 
