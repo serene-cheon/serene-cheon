@@ -109,11 +109,33 @@ img { display: block; max-width: 100%; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-/* individual icon animations */
-.nav-icon svg { transition: transform 0.35s cubic-bezier(.34,1.56,.64,1); }
-a:hover .nav-icon svg { transform: rotate(15deg) scale(1.2); }
+.nav-icon::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+a:hover .nav-icon::after {
+  opacity: 0.18;
+  transform: scale(2.6);
+}
+
+/* per-color glow */
+.icon-work::after    { background: #34D399; }
+.icon-about::after   { background: #FB7185; }
+.icon-email::after   { background: #FCD34D; }
+.icon-linkedin::after{ background: #A78BFA; }
+.icon-resume::after  { background: #7DD3FC; }
+
+.nav-icon svg { position: relative; z-index: 1; transition: none; }
+a:hover .nav-icon svg { transform: none; }
 
 .nav-arrow { color: var(--muted); font-size: 11px; margin-left: auto; }
 
