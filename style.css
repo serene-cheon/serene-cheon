@@ -177,8 +177,30 @@ a:hover .nav-num {
   flex-direction: column;
   height: 100vh;
   overflow-y: auto;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0px, black 52px, black calc(100% - 52px), transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0px, black 52px, black calc(100% - 52px), transparent 100%);
+}
+
+/* ─── SCROLL BLUR ─── */
+.scroll-blur {
+  position: fixed;
+  left: var(--sidebar-w);
+  right: 0;
+  height: 70px;
+  pointer-events: none;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.scroll-blur.top {
+  top: 0;
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+}
+
+.scroll-blur.bottom {
+  bottom: 0;
+  -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+  mask-image: linear-gradient(to top, black 0%, transparent 100%);
 }
 
 
