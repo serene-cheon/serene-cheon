@@ -98,8 +98,6 @@ img { display: block; max-width: 100%; }
   font-size: 12.5px;
   color: var(--text);
   transition: color 0.15s;
-  overflow: visible;
-  position: relative;
 }
 
 .sidebar-nav li a:hover { color: var(--muted); }
@@ -111,38 +109,9 @@ img { display: block; max-width: 100%; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: visible;
 }
 
-.nav-icon::after {
-  content: '';
-  position: absolute;
-  top: 50%; left: 50%;
-  width: 8px; height: 8px;
-  margin: -4px 0 0 -4px;
-  border-radius: 50%;
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(1);
-}
-
-a:hover .nav-icon::after {
-  animation: ripple-out 0.55s ease-out forwards;
-}
-
-@keyframes ripple-out {
-  0%   { transform: scale(1);   opacity: 0.5; }
-  100% { transform: scale(5);   opacity: 0; }
-}
-
-.icon-work::after    { background: #34D399; }
-.icon-about::after   { background: #FB7185; }
-.icon-email::after   { background: #FCD34D; }
-.icon-linkedin::after{ background: #A78BFA; }
-.icon-resume::after  { background: #7DD3FC; }
-
-.nav-icon svg { position: relative; z-index: 1; }
+.nav-icon svg { display: block; }
 
 .nav-arrow { color: var(--muted); font-size: 11px; margin-left: auto; }
 
