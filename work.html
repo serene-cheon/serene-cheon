@@ -52,10 +52,6 @@
   </aside>
 
   <main class="main">
-    <div class="main-header">
-      <span class="clock" id="clock"></span>
-    </div>
-
     <div class="page-content">
       <div class="case-list">
 
@@ -134,14 +130,5 @@
   </main>
 
 </div>
-<script>
-  function updateClock() {
-    const now = new Date();
-    const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
-    document.getElementById('clock').textContent = 'Berkeley. ' + time;
-  }
-  updateClock();
-  setInterval(updateClock, 1000);
-</script>
 </body>
 </html>

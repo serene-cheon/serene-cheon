@@ -60,10 +60,6 @@
 
   <!-- ── MAIN ── -->
   <main class="main">
-    <div class="main-header">
-      <span class="clock" id="clock"></span>
-    </div>
-
     <div class="projects-grid">
 
       <a href="work.html" class="project-card">
@@ -83,7 +79,7 @@
 
       <a href="work.html" class="project-card">
         <div class="project-card-inner">
-          <div class="project-img tall img-access">
+          <div class="project-img img-access">
             Accessibility Audit
           </div>
           <div class="project-meta">
@@ -98,7 +94,7 @@
 
       <a href="work.html" class="project-card">
         <div class="project-card-inner">
-          <div class="project-img wide img-enterprise">
+          <div class="project-img img-enterprise">
             Enterprise Dashboard
           </div>
           <div class="project-meta">
@@ -130,15 +126,5 @@
 
 </div>
 
-<script>
-  function updateClock() {
-    const now = new Date();
-    const loc = 'Berkeley';
-    const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
-    document.getElementById('clock').textContent = loc + '. ' + time;
-  }
-  updateClock();
-  setInterval(updateClock, 1000);
-</script>
 </body>
 </html>
