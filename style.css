@@ -96,6 +96,7 @@ img { display: block; max-width: 100%; }
   gap: 10px;
   padding: 6px 0;
   font-size: 12.5px;
+  line-height: 1.5;
   color: var(--text);
   letter-spacing: -0.01em;
   transition: color 0.15s;
@@ -386,7 +387,7 @@ a:hover .nav-num {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .project-title {
@@ -394,6 +395,7 @@ a:hover .nav-num {
   font-weight: 500;
   color: var(--text);
   letter-spacing: -0.01em;
+  line-height: 1.5;
 }
 
 .project-year {
@@ -406,7 +408,7 @@ a:hover .nav-num {
 .project-desc {
   font-size: 12.5px;
   color: var(--muted);
-  line-height: 1.55;
+  line-height: 1.5;
   letter-spacing: -0.01em;
 }
 
