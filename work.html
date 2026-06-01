@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
 <div class="layout">
@@ -50,7 +50,10 @@
     </div>
 
     <div class="sidebar-spacer"></div>
-    <div class="sidebar-footer">&copy;2026 Serene Cheon</div>
+    <div class="sidebar-footer location-time">
+      <span>Berkeley, CA</span>
+      <span id="localTime"></span>
+    </div>
   </aside>
 
   <main class="main">
@@ -135,5 +138,17 @@
   <div class="scroll-blur bottom"><div></div><div></div><div></div><div></div><div></div></div>
 
 </div>
+<script>
+  function updateTime() {
+    const t = new Date().toLocaleTimeString('en-US', {
+      hour: 'numeric', minute: '2-digit', hour12: true,
+      timeZone: 'America/Los_Angeles'
+    }).toLowerCase();
+    const el = document.getElementById('localTime');
+    if (el) el.textContent = t;
+  }
+  updateTime();
+  setInterval(updateTime, 10000);
+</script>
 </body>
 </html>

@@ -234,8 +234,6 @@ a:hover .nav-num {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 24px;
-  margin-left: auto;
   width: fit-content;
   font-size: 11.5px;
   color: var(--muted);
