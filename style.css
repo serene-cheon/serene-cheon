@@ -342,7 +342,7 @@ a:hover .nav-num {
 /* ─── PROJECT GRID ─── */
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: min-content;
   gap: 16px;
   align-items: start;
@@ -354,14 +354,8 @@ a:hover .nav-num {
 }
 
 .project-card-inner {
-  border: 1px solid var(--border);
   border-radius: 6px;
   overflow: hidden;
-  transition: border-color 0.2s;
-}
-
-.project-card:hover .project-card-inner {
-  border-color: #bbb;
 }
 
 .project-img {
@@ -386,8 +380,7 @@ a:hover .nav-num {
 .img-misc       { background: linear-gradient(145deg, #f0f0ec 0%, #e8e5e0 100%); }
 
 .project-meta {
-  padding: 12px 14px 14px;
-  border-top: 1px solid var(--border);
+  padding: 10px 2px 14px;
 }
 
 .project-meta-row {
@@ -666,9 +659,13 @@ a:hover .nav-num {
 }
 
 /* ─── RESPONSIVE ─── */
+@media (max-width: 1100px) {
+  .projects-grid { grid-template-columns: 1fr 1fr; }
+}
+
 @media (max-width: 860px) {
   :root { --sidebar-w: 240px; }
-  .projects-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 640px) {
