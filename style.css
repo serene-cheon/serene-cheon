@@ -419,6 +419,7 @@ a:hover .nav-num {
 /* ─── INNER PAGES ─── */
 .page-content {
   max-width: 640px;
+  padding-top: 41px;
 }
 
 .page-title {
