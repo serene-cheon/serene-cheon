@@ -255,6 +255,44 @@ a:hover .nav-num {
 
 .nav-arrow { color: var(--muted); font-size: 11px; margin-left: auto; }
 
+/* ─── NAV CARDS ─── */
+.nav-cards {
+  margin-bottom: 28px;
+}
+
+.nav-cards ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: #f4f4f2;
+  transition: background 0.15s;
+}
+
+.nav-card:hover { background: #ececea; }
+
+.nav-card-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.nav-card-sub {
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
 /* ─── CONTACT ─── */
 .contact-btns {
   display: flex;
