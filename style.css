@@ -259,6 +259,7 @@ a:hover .nav-num {
 .sidebar-menus {
   display: flex;
   gap: 28px;
+  margin-top: 24px;
   margin-bottom: 28px;
 }
 
