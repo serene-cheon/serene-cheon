@@ -182,8 +182,8 @@ img { display: block; max-width: 100%; }
 }
 
 .sidebar-name {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   color: var(--text);
   letter-spacing: -0.01em;
   margin-bottom: 28px;
@@ -326,8 +326,9 @@ a:hover .nav-num {
 .sidebar-spacer { flex: 1; }
 
 .sidebar-footer {
-  font-size: 12.5px;
-  color: var(--muted);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text);
   line-height: 1.5;
   letter-spacing: -0.01em;
   font-variant-numeric: tabular-nums;
