@@ -265,12 +265,12 @@ a:hover .nav-num {
 .menu-col { flex: 1; min-width: 0; }
 
 .menu-title {
-  font-size: 14px;
+  font-size: 12.5px;
   font-weight: 500;
   color: #c6c6c6;
   letter-spacing: -0.01em;
-  line-height: 1.5;
-  margin-bottom: 6px;
+  line-height: 1.35;
+  margin-bottom: 5px;
 }
 
 .nav-links ul {
@@ -280,12 +280,12 @@ a:hover .nav-num {
 
 .nav-links li a {
   display: block;
-  font-size: 14px;
+  font-size: 12.5px;
   font-weight: 500;
   color: #737373;
   letter-spacing: -0.01em;
-  line-height: 1.5;
-  padding: 1px 0;
+  line-height: 1.35;
+  padding: 0;
   transition: color 0.15s;
 }
 
@@ -299,12 +299,12 @@ a:hover .nav-num {
 }
 
 .contact-btn {
-  font-size: 14px;
+  font-size: 12.5px;
   font-weight: 500;
   color: #737373;
-  padding: 1px 0;
+  padding: 0;
   letter-spacing: -0.01em;
-  line-height: 1.5;
+  line-height: 1.35;
   transition: color 0.15s;
 }
 
@@ -313,12 +313,12 @@ a:hover .nav-num {
 }
 
 .contact-email {
-  font-size: 14px;
+  font-size: 12.5px;
   font-weight: 500;
   color: #737373;
-  padding: 1px 0;
+  padding: 0;
   letter-spacing: -0.01em;
-  line-height: 1.5;
+  line-height: 1.35;
   cursor: pointer;
   transition: color 0.15s;
   display: flex;
