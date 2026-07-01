@@ -269,8 +269,8 @@ a:hover .nav-num {
   font-weight: 500;
   color: #c6c6c6;
   letter-spacing: -0.01em;
-  line-height: 1.35;
-  margin-bottom: 5px;
+  line-height: 1.45;
+  margin-bottom: 0;
 }
 
 .nav-links ul {
@@ -284,7 +284,7 @@ a:hover .nav-num {
   font-weight: 500;
   color: #737373;
   letter-spacing: -0.01em;
-  line-height: 1.35;
+  line-height: 1.45;
   padding: 0;
   transition: color 0.15s;
 }
@@ -304,7 +304,7 @@ a:hover .nav-num {
   color: #737373;
   padding: 0;
   letter-spacing: -0.01em;
-  line-height: 1.35;
+  line-height: 1.45;
   transition: color 0.15s;
 }
 
@@ -318,7 +318,7 @@ a:hover .nav-num {
   color: #737373;
   padding: 0;
   letter-spacing: -0.01em;
-  line-height: 1.35;
+  line-height: 1.45;
   cursor: pointer;
   transition: color 0.15s;
   display: flex;
