@@ -4,55 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=14" />
+  <link rel="stylesheet" href="style.css?v=15" />
 </head>
 <body>
 <div class="layout">
 
     <aside class="sidebar">
-    <div class="sidebar-logo">
-      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="14" cy="14" r="12" stroke="#1a1a1a" stroke-width="1.5"/>
-        <circle cx="14" cy="14" r="5" fill="#1a1a1a"/>
-      </svg>
-    </div>
+    <div class="sidebar-name">Serene Cheon</div>
 
     <p class="sidebar-bio">
-            Serene Cheon is a mixed-method UX researcher who tells stories with data to create real impact for users.<br><br>
-      Currently @ <a href="#">Fluke</a> · Studying Human-Computer Interaction @ <a href="#">UC Berkeley</a>
-    
+      Mixed-methods UX Researcher who tells stories with data to create real impact for users.<br><br>
+      UX Research Intern @ <a href="#">Fluke</a><br>
+      Studying HCI @ <a href="#">UC Berkeley</a>
     </p>
 
     <div class="sidebar-divider"></div>
 
-    <p class="sidebar-section-title">Table of Contents</p>
+    <p class="sidebar-section-title">Contents</p>
     <nav class="sidebar-nav">
       <ul>
-        <li><a href="index.html">
-          <span class="nav-num">01</span>Projects <span class="nav-arrow">→</span></a></li>
-        <li><a href="publication.html">
-          <span class="nav-num">02</span>Publication <span class="nav-arrow">→</span></a></li>
-        <li><a href="about.html">
-          <span class="nav-num">03</span>About <span class="nav-arrow">→</span></a></li>
+        <li><a href="index.html">Projects</a></li>
+        <li><a href="publication.html">Publication</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
 
     <div class="sidebar-divider"></div>
 
-        <p class="sidebar-section-title">Contact</p>
+    <p class="sidebar-section-title">Contacts</p>
     <div class="contact-btns">
-      <span class="contact-email" onclick="copyEmail(this)">
-        serenecheon@berkeley.edu
-        <span class="contact-copied">Copied!</span>
-      </span>
-      <a href="#" class="contact-btn">LinkedIn ↗</a>
-      <a href="#" class="contact-btn">Resume ↗</a>
+      <span class="contact-email" onclick="copyEmail(this)">Email<span class="contact-copied">Copied!</span></span>
+      <a href="#" class="contact-btn">LinkedIn</a>
+      <a href="#" class="contact-btn">Google Scholar</a>
     </div>
 
     <div class="sidebar-spacer"></div>
-    <div class="sidebar-footer location-time">
-      <span>Berkeley, CA</span>
-      <span id="localTime"></span>
+    <div class="sidebar-footer">
+      <div id="localTime"></div>
+      <div>Berkeley, CA</div>
     </div>
   </aside>
 
@@ -224,14 +213,14 @@
 <script>
   function updateTime() {
     const t = new Date().toLocaleTimeString('en-US', {
-      hour: 'numeric', minute: '2-digit', hour12: true,
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false,
       timeZone: 'America/Los_Angeles'
-    }).toLowerCase();
+    });
     const el = document.getElementById('localTime');
     if (el) el.textContent = t;
   }
   updateTime();
-  setInterval(updateTime, 10000);
+  setInterval(updateTime, 1000);
 </script>
 </body>
 </html>
