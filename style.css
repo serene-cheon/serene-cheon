@@ -1,29 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* ─── AEONIK (add licensed .woff2 files to /fonts) ─── */
+/* ─── AEONIK (self-hosted, /fonts) ─── */
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/Aeonik-Air.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/Aeonik-AirItalic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/Aeonik-Thin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/Aeonik-ThinItalic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/Aeonik-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/Aeonik-LightItalic.woff2') format('woff2');
+}
 @font-face {
   font-family: 'Aeonik';
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: local('Aeonik'), url('fonts/Aeonik-Regular.woff2') format('woff2');
+  src: url('fonts/Aeonik-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/Aeonik-RegularItalic.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Aeonik';
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: local('Aeonik Medium'), url('fonts/Aeonik-Medium.woff2') format('woff2');
+  src: url('fonts/Aeonik-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/Aeonik-MediumItalic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/Aeonik-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/Aeonik-SemiBoldItalic.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Aeonik';
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: local('Aeonik Bold'), url('fonts/Aeonik-Bold.woff2') format('woff2');
+  src: url('fonts/Aeonik-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/Aeonik-BoldItalic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/Aeonik-Black.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/Aeonik-BlackItalic.woff2') format('woff2');
 }
 
-/* Punctuation override → Inter, only for  "  "  ?  !  '  ─── */
+/* Punctuation override → Inter, only for  "  '  ?  !  (and curly quotes) */
 @font-face {
   font-family: 'Aeonik';
   font-weight: 400;
