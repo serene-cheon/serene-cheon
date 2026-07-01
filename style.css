@@ -255,9 +255,22 @@ a:hover .nav-num {
 
 .nav-arrow { color: var(--muted); font-size: 11px; margin-left: auto; }
 
-/* ─── NAV LINKS (plain, large) ─── */
-.nav-links {
-  margin-bottom: 2px;
+/* ─── SIDEBAR MENUS (two columns) ─── */
+.sidebar-menus {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.menu-col { flex: 1; min-width: 0; }
+
+.menu-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #c6c6c6;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  margin-bottom: 6px;
 }
 
 .nav-links ul {
@@ -269,27 +282,26 @@ a:hover .nav-num {
   display: block;
   font-size: 14px;
   font-weight: 500;
-  color: var(--text);
+  color: #737373;
   letter-spacing: -0.01em;
   line-height: 1.5;
   padding: 1px 0;
   transition: color 0.15s;
 }
 
-.nav-links li a:hover { color: var(--muted); }
+.nav-links li a:hover { color: var(--text); }
 
 /* ─── CONTACT ─── */
 .contact-btns {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  margin-bottom: 28px;
+  gap: 0;
 }
 
 .contact-btn {
   font-size: 14px;
   font-weight: 500;
-  color: var(--text);
+  color: #737373;
   padding: 1px 0;
   letter-spacing: -0.01em;
   line-height: 1.5;
@@ -297,13 +309,13 @@ a:hover .nav-num {
 }
 
 .contact-btn:hover {
-  color: var(--muted);
+  color: var(--text);
 }
 
 .contact-email {
   font-size: 14px;
   font-weight: 500;
-  color: var(--text);
+  color: #737373;
   padding: 1px 0;
   letter-spacing: -0.01em;
   line-height: 1.5;
@@ -314,7 +326,7 @@ a:hover .nav-num {
   gap: 8px;
 }
 
-.contact-email:hover { color: var(--muted); }
+.contact-email:hover { color: var(--text); }
 
 .contact-copied {
   font-size: 10.5px;
