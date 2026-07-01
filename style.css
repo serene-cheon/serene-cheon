@@ -1,5 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* ─── AEONIK (add licensed .woff2 files to /fonts) ─── */
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('Aeonik'), url('fonts/Aeonik-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local('Aeonik Medium'), url('fonts/Aeonik-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local('Aeonik Bold'), url('fonts/Aeonik-Bold.woff2') format('woff2');
+}
+
+/* Punctuation override → Inter, only for  "  "  ?  !  '  ─── */
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.woff2') format('woff2');
+  unicode-range: U+0022, U+0027, U+2018, U+2019, U+201C, U+201D, U+003F, U+0021;
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-500-normal.woff2') format('woff2');
+  unicode-range: U+0022, U+0027, U+2018, U+2019, U+201C, U+201D, U+003F, U+0021;
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0022, U+0027, U+2018, U+2019, U+201C, U+201D, U+003F, U+0021;
+}
+
 :root {
   --white: #ffffff;
   --text: #1a1a1a;
@@ -13,7 +59,7 @@
 html, body { height: 100%; }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Aeonik', 'Inter', system-ui, sans-serif;
   font-optical-sizing: auto;
   background: var(--white);
   color: var(--text);
@@ -601,70 +647,125 @@ a:hover .nav-num {
 .tl-company { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
 .tl-desc { font-size: 12px; color: #777; line-height: 1.65; }
 
-/* ─── PUBLICATION ─── */
-.pub-list {
-  margin-top: 32px;
+/* ─── PUBLICATION (breadcrumb) ─── */
+.breadcrumb {
+  font-size: 12.5px;
+  color: var(--muted);
+  letter-spacing: -0.01em;
+}
+.breadcrumb b { color: var(--text); font-weight: 400; }
+
+/* ─── PUBLICATION FEATURE ROWS ─── */
+.pub-rows {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
 
-.pub-entry {
+.pub-row {
   display: grid;
-  grid-template-columns: 52px 1fr;
-  gap: 24px;
-  padding: 24px 0;
+  grid-template-columns: 170px 1fr 300px;
+  gap: 36px;
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  align-items: start;
+}
+
+.pub-row-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 12.5px;
+  color: var(--muted);
+  letter-spacing: -0.01em;
+}
+
+.pub-row-tags { display: flex; flex-direction: column; }
+
+.pub-row-main {
+  display: block;
+  min-width: 0;
+}
+
+.pub-row-label {
+  font-size: 12.5px;
+  color: var(--muted);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.pub-row-title {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  transition: color 0.15s;
+}
+
+.pub-row-main:hover .pub-row-title { color: var(--muted); }
+
+.pub-row-thumb {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #e2e2e0;
+}
+
+/* ─── PUBLICATION BOTTOM GRID ─── */
+.pub-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 48px;
+  padding-top: 28px;
   border-top: 1px solid var(--border);
 }
 
-.pub-year {
-  font-size: 11.5px;
-  color: var(--muted);
-  padding-top: 2px;
+.pub-card {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  gap: 20px;
+  align-items: start;
 }
 
-.pub-title {
-  font-size: 13px;
+.pub-card-text { min-width: 0; }
+
+.pub-card-label {
+  font-size: 12.5px;
+  color: var(--muted);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.pub-card-title {
+  font-size: 15px;
   font-weight: 500;
   color: var(--text);
-  line-height: 1.5;
-  margin-bottom: 5px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  transition: color 0.15s;
 }
 
-.pub-venue {
-  font-size: 11.5px;
-  color: var(--muted);
-  margin-bottom: 4px;
-  font-style: italic;
-}
+.pub-card:hover .pub-card-title { color: var(--muted); }
 
-.pub-authors {
-  font-size: 11.5px;
-  color: var(--muted);
-  margin-bottom: 10px;
-}
-
-.pub-links {
-  display: flex;
-  gap: 12px;
-}
-
-.pub-link {
-  font-size: 11.5px;
-  color: var(--text);
-  text-decoration: underline;
-  text-decoration-color: var(--border);
-  text-underline-offset: 2px;
-  transition: text-decoration-color 0.15s;
-}
-
-.pub-link:hover {
-  text-decoration-color: var(--text);
+.pub-card-thumb {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #e2e2e0;
 }
 
 /* ─── RESPONSIVE ─── */
+@media (max-width: 1000px) {
+  .pub-row { grid-template-columns: 140px 1fr 220px; gap: 24px; }
+}
+
 @media (max-width: 860px) {
   :root { --sidebar-w: 260px; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
+  .pub-row { grid-template-columns: 1fr; gap: 14px; }
+  .pub-row-meta { flex-direction: row; flex-wrap: wrap; gap: 20px; }
+  .pub-row-thumb { max-width: 320px; }
+  .pub-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
