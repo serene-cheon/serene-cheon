@@ -803,12 +803,14 @@ a:hover .nav-num {
   display: grid;
   grid-template-columns: 170px 1fr 300px;
   gap: 36px;
-  padding: 0 0 40px;
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
   align-items: start;
 }
 
-.feed-row:last-child {
-  padding-bottom: 0;
+.feed-row:first-child {
+  border-top: none;
+  padding-top: 0;
 }
 
 .feed-row-meta {
@@ -835,7 +837,7 @@ a:hover .nav-num {
 }
 
 .feed-row-title {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--text);
   line-height: 1.35;
@@ -878,7 +880,7 @@ a:hover .nav-num {
 }
 
 .feed-card-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--text);
   line-height: 1.35;
