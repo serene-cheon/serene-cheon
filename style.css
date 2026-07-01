@@ -748,13 +748,13 @@ a:hover .nav-num {
 .breadcrumb a:hover { color: var(--text); }
 .breadcrumb b { color: var(--text); font-weight: 400; }
 
-/* ─── PUBLICATION FEATURE ROWS ─── */
-.pub-rows {
+/* ─── HOME FEATURE ROWS ─── */
+.feed-rows {
   display: flex;
   flex-direction: column;
 }
 
-.pub-row {
+.feed-row {
   display: grid;
   grid-template-columns: 170px 1fr 300px;
   gap: 36px;
@@ -763,7 +763,7 @@ a:hover .nav-num {
   align-items: start;
 }
 
-.pub-row-meta {
+.feed-row-meta {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -772,21 +772,21 @@ a:hover .nav-num {
   letter-spacing: -0.01em;
 }
 
-.pub-row-tags { display: flex; flex-direction: column; }
+.feed-row-tags { display: flex; flex-direction: column; }
 
-.pub-row-main {
+.feed-row-main {
   display: block;
   min-width: 0;
 }
 
-.pub-row-label {
+.feed-row-label {
   font-size: 12.5px;
   color: var(--muted);
   letter-spacing: -0.01em;
   margin-bottom: 6px;
 }
 
-.pub-row-title {
+.feed-row-title {
   font-size: 17px;
   font-weight: 500;
   color: var(--text);
@@ -795,16 +795,16 @@ a:hover .nav-num {
   transition: color 0.15s;
 }
 
-.pub-row-main:hover .pub-row-title { color: var(--muted); }
+.feed-row-main:hover .feed-row-title { color: var(--muted); }
 
-.pub-row-thumb {
+.feed-row-thumb {
   width: 100%;
   aspect-ratio: 4/3;
   background: #e2e2e0;
 }
 
-/* ─── PUBLICATION BOTTOM GRID ─── */
-.pub-grid {
+/* ─── HOME BOTTOM GRID ─── */
+.feed-grid {
   margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -813,23 +813,23 @@ a:hover .nav-num {
   border-top: 1px solid var(--border);
 }
 
-.pub-card {
+.feed-card {
   display: grid;
   grid-template-columns: 1fr 150px;
   gap: 20px;
   align-items: start;
 }
 
-.pub-card-text { min-width: 0; }
+.feed-card-text { min-width: 0; }
 
-.pub-card-label {
+.feed-card-label {
   font-size: 12.5px;
   color: var(--muted);
   letter-spacing: -0.01em;
   margin-bottom: 6px;
 }
 
-.pub-card-title {
+.feed-card-title {
   font-size: 15px;
   font-weight: 500;
   color: var(--text);
@@ -838,26 +838,86 @@ a:hover .nav-num {
   transition: color 0.15s;
 }
 
-.pub-card:hover .pub-card-title { color: var(--muted); }
+.feed-card:hover .feed-card-title { color: var(--muted); }
 
-.pub-card-thumb {
+.feed-card-thumb {
   width: 100%;
   aspect-ratio: 1/1;
   background: #e2e2e0;
 }
 
+/* ─── PUBLICATION (paper list) ─── */
+.pub-list {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-entry {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+}
+
+.pub-year {
+  font-size: 11.5px;
+  color: var(--muted);
+  padding-top: 2px;
+}
+
+.pub-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.pub-venue {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-bottom: 4px;
+  font-style: italic;
+}
+
+.pub-authors {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.pub-links {
+  display: flex;
+  gap: 12px;
+}
+
+.pub-link {
+  font-size: 11.5px;
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.15s;
+}
+
+.pub-link:hover {
+  text-decoration-color: var(--text);
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 1000px) {
-  .pub-row { grid-template-columns: 140px 1fr 220px; gap: 24px; }
+  .feed-row { grid-template-columns: 140px 1fr 220px; gap: 24px; }
 }
 
 @media (max-width: 860px) {
   :root { --sidebar-w: 260px; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
-  .pub-row { grid-template-columns: 1fr; gap: 14px; }
-  .pub-row-meta { flex-direction: row; flex-wrap: wrap; gap: 20px; }
-  .pub-row-thumb { max-width: 320px; }
-  .pub-grid { grid-template-columns: 1fr; }
+  .feed-row { grid-template-columns: 1fr; gap: 14px; }
+  .feed-row-meta { flex-direction: row; flex-wrap: wrap; gap: 20px; }
+  .feed-row-thumb { max-width: 320px; }
+  .feed-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
