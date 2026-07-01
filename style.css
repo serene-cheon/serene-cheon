@@ -803,14 +803,12 @@ a:hover .nav-num {
   display: grid;
   grid-template-columns: 170px 1fr 300px;
   gap: 36px;
-  padding: 28px 0;
-  border-top: 1px solid var(--border);
+  padding: 0 0 40px;
   align-items: start;
 }
 
-.feed-row:first-child {
-  border-top: none;
-  padding-top: 0;
+.feed-row:last-child {
+  padding-bottom: 0;
 }
 
 .feed-row-meta {
