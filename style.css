@@ -255,43 +255,28 @@ a:hover .nav-num {
 
 .nav-arrow { color: var(--muted); font-size: 11px; margin-left: auto; }
 
-/* ─── NAV CARDS ─── */
-.nav-cards {
-  margin-bottom: 28px;
+/* ─── NAV LINKS (plain, large) ─── */
+.nav-links {
+  margin-bottom: 2px;
 }
 
-.nav-cards ul {
+.nav-links ul {
   display: flex;
   flex-direction: column;
-  gap: 6px;
 }
 
-.nav-card {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding: 10px 12px;
-  border-radius: 9px;
-  background: #f4f4f2;
-  transition: background 0.15s;
-}
-
-.nav-card:hover { background: #ececea; }
-
-.nav-card-title {
-  font-size: 12px;
-  font-weight: 500;
+.nav-links li a {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
   color: var(--text);
   letter-spacing: -0.01em;
-  line-height: 1.35;
+  line-height: 1.5;
+  padding: 1px 0;
+  transition: color 0.15s;
 }
 
-.nav-card-sub {
-  font-size: 10.5px;
-  color: var(--muted);
-  letter-spacing: -0.01em;
-  line-height: 1.35;
-}
+.nav-links li a:hover { color: var(--muted); }
 
 /* ─── CONTACT ─── */
 .contact-btns {
@@ -302,9 +287,11 @@ a:hover .nav-num {
 }
 
 .contact-btn {
-  font-size: 12.5px;
+  font-size: 16px;
   color: var(--text);
-  padding: 5px 0;
+  padding: 1px 0;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
   transition: color 0.15s;
 }
 
@@ -313,9 +300,11 @@ a:hover .nav-num {
 }
 
 .contact-email {
-  font-size: 12.5px;
+  font-size: 16px;
   color: var(--text);
-  padding: 5px 0;
+  padding: 1px 0;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
   cursor: pointer;
   transition: color 0.15s;
   display: flex;
