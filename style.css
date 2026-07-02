@@ -180,6 +180,43 @@ img { display: block; max-width: 100%; }
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  background: #1a1a1a;
+  color: #f2f2f2;
+}
+
+/* dark-sidebar text overrides */
+.sidebar .sidebar-name,
+.sidebar .sidebar-bio,
+.sidebar .nav-links li a:hover,
+.sidebar .contact-email:hover,
+.sidebar .contact-btn:hover {
+  color: #f2f2f2;
+}
+
+.sidebar .sidebar-bio a {
+  text-decoration-color: #444;
+}
+
+.sidebar .sidebar-bio a:hover {
+  text-decoration-color: #f2f2f2;
+}
+
+.sidebar .sidebar-divider {
+  background: #333;
+}
+
+.sidebar .nav-links li a,
+.sidebar .contact-btn,
+.sidebar .contact-email {
+  color: #a8a8a8;
+}
+
+.sidebar .menu-title {
+  color: #666;
+}
+
+.sidebar .sidebar-footer {
+  color: #a8a8a8;
 }
 
 .sidebar-name {
