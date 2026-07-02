@@ -802,7 +802,7 @@ a:hover .nav-num {
 
 .feed-row {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 32px;
   padding: 28px 0;
   border-top: 1px solid var(--border);
@@ -816,6 +816,7 @@ a:hover .nav-num {
 .feed-row-text {
   flex: 1;
   min-width: 0;
+  min-height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -865,6 +866,7 @@ a:hover .nav-num {
   display: block;
   flex-shrink: 0;
   width: 300px;
+  aspect-ratio: 4/6;
   background: #e2e2e0;
 }
 
@@ -878,6 +880,10 @@ a:hover .nav-num {
 
 .feed-row-small {
   padding: 24px 0;
+}
+
+.feed-row-small .feed-row-text {
+  min-height: 210px;
 }
 
 .feed-row-small .feed-row-thumb {
