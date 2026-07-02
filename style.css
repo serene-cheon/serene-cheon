@@ -884,8 +884,8 @@ a:hover .nav-num {
 }
 
 .news-thumb {
-  width: 100%;
-  aspect-ratio: 1/1;
+  width: 65%;
+  aspect-ratio: 4/3;
   background: #e2e2e0;
   margin-bottom: 16px;
 }
