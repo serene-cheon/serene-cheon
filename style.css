@@ -180,7 +180,6 @@ img { display: block; max-width: 100%; }
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  border-right: 1px solid var(--border);
 }
 
 .sidebar-name {
