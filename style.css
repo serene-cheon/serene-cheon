@@ -796,6 +796,7 @@ a:hover .nav-num {
 .feed-rows {
   display: flex;
   flex-direction: column;
+  padding-top: 44px;
 }
 
 .feed-row {
