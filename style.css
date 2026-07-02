@@ -187,7 +187,7 @@ img { display: block; max-width: 100%; }
   font-weight: 600;
   color: var(--text);
   letter-spacing: -0.01em;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .sidebar-bio {
@@ -792,113 +792,50 @@ a:hover .nav-num {
 .breadcrumb a:hover { color: var(--text); }
 .breadcrumb b { color: var(--text); font-weight: 400; }
 
-/* ─── HOME FEATURE ROWS ─── */
-.feed-rows {
-  display: flex;
-  flex-direction: column;
-  padding-top: 44px;
-}
-
-.feed-row {
+/* ─── HOME NEWS GRID (3-col, NYT-style) ─── */
+.news-grid {
   display: grid;
-  grid-template-columns: 170px 1fr 300px;
-  gap: 36px;
-  padding: 28px 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 32px;
+  padding-top: 32px;
   border-top: 1px solid var(--border);
-  align-items: start;
 }
 
-.feed-row:first-child {
-  border-top: none;
-  padding-top: 0;
-}
-
-.feed-row-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  font-size: 12.5px;
-  color: var(--muted);
-  letter-spacing: -0.01em;
-}
-
-.feed-row-top {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.feed-row-main {
+.news-card {
   display: block;
   min-width: 0;
+  padding-left: 32px;
+  border-left: 1px solid var(--border);
 }
 
-.feed-row-label {
-  font-size: 12.5px;
-  font-weight: 500;
-  color: #c6c6c6;
-  letter-spacing: -0.01em;
+.news-card:first-child {
+  padding-left: 0;
+  border-left: none;
 }
 
-.feed-row-title {
+.news-thumb {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #e2e2e0;
+  margin-bottom: 16px;
+}
+
+.news-title {
   font-size: 16px;
   font-weight: 500;
   color: var(--text);
   line-height: 1.35;
   letter-spacing: -0.01em;
+  margin-bottom: 8px;
   transition: color 0.15s;
 }
 
-.feed-row-main:hover .feed-row-title { color: var(--muted); }
+.news-card:hover .news-title { color: var(--muted); }
 
-.feed-row-thumb {
-  width: 100%;
-  aspect-ratio: 16/9;
-  background: #e2e2e0;
-}
-
-/* ─── HOME BOTTOM GRID ─── */
-.feed-grid {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px 48px;
-  padding-top: 28px;
-  border-top: 1px solid var(--border);
-}
-
-.feed-card {
-  display: grid;
-  grid-template-columns: 1fr 150px;
-  gap: 20px;
-  align-items: start;
-}
-
-.feed-card-text { min-width: 0; }
-
-.feed-card-label {
+.news-meta {
   font-size: 12.5px;
-  font-weight: 500;
   color: #c6c6c6;
   letter-spacing: -0.01em;
-  margin-bottom: 6px;
-}
-
-.feed-card-title {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--text);
-  line-height: 1.35;
-  letter-spacing: -0.01em;
-  transition: color 0.15s;
-}
-
-.feed-card:hover .feed-card-title { color: var(--muted); }
-
-.feed-card-thumb {
-  width: 100%;
-  aspect-ratio: 1/1;
-  background: #e2e2e0;
 }
 
 /* ─── PUBLICATION (paper list) ─── */
@@ -965,7 +902,8 @@ a:hover .nav-num {
 @media (max-width: 860px) {
   :root { --sidebar-w: 260px; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
-  .feed-grid { grid-template-columns: 1fr; }
+  .news-grid { grid-template-columns: 1fr; }
+  .news-card { padding-left: 0; border-left: none; }
 }
 
 @media (max-width: 640px) {
