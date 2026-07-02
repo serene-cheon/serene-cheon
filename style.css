@@ -823,6 +823,12 @@ a:hover .nav-num {
   letter-spacing: -0.01em;
 }
 
+.feed-row-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .feed-row-main {
   display: block;
   min-width: 0;
