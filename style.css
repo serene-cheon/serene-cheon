@@ -819,7 +819,6 @@ a:hover .nav-num {
   min-height: 214px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .feed-row-top {
@@ -860,6 +859,7 @@ a:hover .nav-num {
   font-weight: 500;
   color: #c6c6c6;
   letter-spacing: -0.01em;
+  margin-top: auto;
 }
 
 .feed-row-thumb {
