@@ -792,12 +792,78 @@ a:hover .nav-num {
 .breadcrumb a:hover { color: var(--text); }
 .breadcrumb b { color: var(--text); font-weight: 400; }
 
-/* ─── HOME NEWS GRID (3-col, NYT-style) ─── */
+/* ─── HOME FEATURE ROWS ─── */
+.feed-rows {
+  display: flex;
+  flex-direction: column;
+  padding-top: 44px;
+}
+
+.feed-row {
+  display: grid;
+  grid-template-columns: 170px 1fr 300px;
+  gap: 36px;
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  align-items: start;
+}
+
+.feed-row:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.feed-row-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 12.5px;
+  color: var(--muted);
+  letter-spacing: -0.01em;
+}
+
+.feed-row-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.feed-row-main {
+  display: block;
+  min-width: 0;
+}
+
+.feed-row-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #c6c6c6;
+  letter-spacing: -0.01em;
+}
+
+.feed-row-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  transition: color 0.15s;
+}
+
+.feed-row-main:hover .feed-row-title { color: var(--muted); }
+
+.feed-row-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #e2e2e0;
+}
+
+/* ─── HOME NEWS GRID (3-col, NYT-style, small projects) ─── */
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0 32px;
-  padding-top: 32px;
+  margin-top: 20px;
+  padding-top: 28px;
   border-top: 1px solid var(--border);
 }
 
