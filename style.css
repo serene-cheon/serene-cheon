@@ -801,6 +801,9 @@ a:hover .nav-num {
 }
 
 .feed-row {
+  display: flex;
+  align-items: stretch;
+  gap: 32px;
   padding: 28px 0;
   border-top: 1px solid var(--border);
 }
@@ -810,16 +813,18 @@ a:hover .nav-num {
   padding-top: 0;
 }
 
-.feed-row-main {
-  display: block;
+.feed-row-text {
+  flex: 1;
   min-width: 0;
-  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .feed-row-top {
   display: flex;
-  justify-content: space-between;
   align-items: baseline;
+  gap: 10px;
   margin-bottom: 6px;
 }
 
@@ -828,12 +833,13 @@ a:hover .nav-num {
   font-weight: 500;
   color: #c6c6c6;
   letter-spacing: -0.01em;
+  flex-shrink: 0;
 }
 
 .feed-row-label {
   font-size: 12.5px;
   font-weight: 500;
-  color: #c6c6c6;
+  color: #737373;
   letter-spacing: -0.01em;
 }
 
@@ -846,64 +852,40 @@ a:hover .nav-num {
   transition: color 0.15s;
 }
 
-.feed-row-main:hover .feed-row-title { color: var(--muted); }
-
-.feed-row-thumb {
-  width: 100%;
-  aspect-ratio: 16/7;
-  background: #e2e2e0;
-  margin-bottom: 10px;
-}
+.feed-row-text:hover .feed-row-title { color: var(--muted); }
 
 .feed-row-read {
   font-size: 12.5px;
   font-weight: 500;
-  color: #737373;
-  letter-spacing: -0.01em;
-}
-
-/* ─── HOME BOTTOM GRID ─── */
-.feed-grid {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px 48px;
-  padding-top: 28px;
-  border-top: 1px solid var(--border);
-}
-
-.feed-card {
-  display: grid;
-  grid-template-columns: 1fr 150px;
-  gap: 20px;
-  align-items: start;
-}
-
-.feed-card-text { min-width: 0; }
-
-.feed-card-label {
-  font-size: 12.5px;
-  font-weight: 500;
   color: #c6c6c6;
   letter-spacing: -0.01em;
-  margin-bottom: 6px;
 }
 
-.feed-card-title {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--text);
-  line-height: 1.35;
-  letter-spacing: -0.01em;
-  transition: color 0.15s;
-}
-
-.feed-card:hover .feed-card-title { color: var(--muted); }
-
-.feed-card-thumb {
-  width: 100%;
-  aspect-ratio: 1/1;
+.feed-row-thumb {
+  display: block;
+  flex-shrink: 0;
+  width: 300px;
   background: #e2e2e0;
+}
+
+/* ─── HOME BOTTOM GRID (smaller, split in half) ─── */
+.feed-grid {
+  margin-top: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+}
+
+.feed-row-small {
+  padding: 24px 0;
+}
+
+.feed-row-small .feed-row-thumb {
+  width: 140px;
+}
+
+.feed-row-small .feed-row-title {
+  font-size: 14px;
 }
 
 /* ─── PUBLICATION (paper list) ─── */
