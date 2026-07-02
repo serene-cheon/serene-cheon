@@ -869,14 +869,18 @@ a:hover .nav-num {
 
 .news-card {
   display: block;
+  position: relative;
   min-width: 0;
-  padding-left: 32px;
-  border-left: 1px solid var(--border);
 }
 
-.news-card:first-child {
-  padding-left: 0;
-  border-left: none;
+.news-card:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -16px;
+  width: 1px;
+  background: var(--border);
 }
 
 .news-thumb {
@@ -968,8 +972,8 @@ a:hover .nav-num {
 @media (max-width: 860px) {
   :root { --sidebar-w: 260px; }
   .projects-grid { grid-template-columns: 1fr 1fr; }
-  .news-grid { grid-template-columns: 1fr; }
-  .news-card { padding-left: 0; border-left: none; }
+  .news-grid { grid-template-columns: 1fr; row-gap: 32px; }
+  .news-card:not(:first-child)::before { display: none; }
 }
 
 @media (max-width: 640px) {
