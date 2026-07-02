@@ -801,11 +801,12 @@ a:hover .nav-num {
 }
 
 .feed-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: 170px 1fr 300px;
+  gap: 36px;
   padding: 28px 0;
   border-top: 1px solid var(--border);
+  align-items: start;
 }
 
 .feed-row:first-child {
@@ -813,34 +814,28 @@ a:hover .nav-num {
   padding-top: 0;
 }
 
-.feed-row-text {
-  flex: 1;
-  min-width: 0;
-  min-height: 214px;
+.feed-row-meta {
   display: flex;
   flex-direction: column;
-}
-
-.feed-row-top {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  margin-bottom: 6px;
-}
-
-.feed-row-year {
+  gap: 16px;
   font-size: 12.5px;
-  font-weight: 500;
-  color: #c6c6c6;
+  color: var(--muted);
   letter-spacing: -0.01em;
-  flex-shrink: 0;
+}
+
+.feed-row-tags { display: flex; flex-direction: column; }
+
+.feed-row-main {
+  display: block;
+  min-width: 0;
 }
 
 .feed-row-label {
   font-size: 12.5px;
   font-weight: 500;
-  color: #737373;
+  color: #c6c6c6;
   letter-spacing: -0.01em;
+  margin-bottom: 6px;
 }
 
 .feed-row-title {
@@ -852,46 +847,56 @@ a:hover .nav-num {
   transition: color 0.15s;
 }
 
-.feed-row-text:hover .feed-row-title { color: var(--muted); }
-
-.feed-row-read {
-  font-size: 12.5px;
-  font-weight: 500;
-  color: #c6c6c6;
-  letter-spacing: -0.01em;
-  margin-top: auto;
-}
+.feed-row-main:hover .feed-row-title { color: var(--muted); }
 
 .feed-row-thumb {
-  display: block;
-  flex-shrink: 0;
-  width: 380px;
+  width: 100%;
   aspect-ratio: 16/9;
   background: #e2e2e0;
 }
 
-/* ─── HOME BOTTOM GRID (smaller, split in half) ─── */
+/* ─── HOME BOTTOM GRID ─── */
 .feed-grid {
-  margin-top: 4px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 40px;
+  gap: 40px 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
 }
 
-.feed-row-small {
-  padding: 24px 0;
+.feed-card {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  gap: 20px;
+  align-items: start;
 }
 
-.feed-row-small .feed-row-text {
-  min-height: 140px;
+.feed-card-text { min-width: 0; }
+
+.feed-card-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #c6c6c6;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
 }
 
-.feed-row-small .feed-row-thumb {
-  width: 250px;
+.feed-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  transition: color 0.15s;
 }
 
-.feed-row-small .feed-row-title {
-  font-size: 14px;
+.feed-card:hover .feed-card-title { color: var(--muted); }
+
+.feed-card-thumb {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #e2e2e0;
 }
 
 /* ─── PUBLICATION (paper list) ─── */
