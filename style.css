@@ -258,6 +258,12 @@ a:hover .nav-num {
 .nav-arrow { color: var(--muted); font-size: 11px; margin-left: auto; }
 
 /* ─── SIDEBAR MENUS (two columns) ─── */
+.sidebar-bottom {
+  background: #f4f4f2;
+  margin: 0 calc(-1 * var(--px)) calc(-1 * var(--px));
+  padding: 24px var(--px) var(--px);
+}
+
 .sidebar-menus {
   display: flex;
   gap: 28px;
