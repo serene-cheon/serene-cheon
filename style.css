@@ -823,8 +823,6 @@ a:hover .nav-num {
   letter-spacing: -0.01em;
 }
 
-.feed-row-tags { display: flex; flex-direction: column; }
-
 .feed-row-main {
   display: block;
   min-width: 0;
@@ -835,7 +833,6 @@ a:hover .nav-num {
   font-weight: 500;
   color: #c6c6c6;
   letter-spacing: -0.01em;
-  margin-bottom: 6px;
 }
 
 .feed-row-title {
