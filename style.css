@@ -860,8 +860,8 @@ a:hover .nav-num {
 /* ─── HOME NEWS GRID (3-col, NYT-style, small projects) ─── */
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 32px;
   margin-top: 20px;
   padding-top: 28px;
   border-top: 1px solid var(--border);
@@ -878,13 +878,13 @@ a:hover .nav-num {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -8px;
+  left: -16px;
   width: 1px;
   background: var(--border);
 }
 
 .news-thumb {
-  width: 65%;
+  width: 100%;
   aspect-ratio: 4/3;
   background: #e2e2e0;
   margin-bottom: 16px;
@@ -896,7 +896,7 @@ a:hover .nav-num {
   color: var(--text);
   line-height: 1.35;
   letter-spacing: -0.01em;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   transition: color 0.15s;
 }
 
