@@ -183,7 +183,7 @@ img { display: block; max-width: 100%; }
 }
 
 .sidebar-name {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--text);
   letter-spacing: -0.01em;
@@ -283,7 +283,7 @@ a:hover .nav-num {
 
 .nav-links li a {
   display: block;
-  font-size: 12.5px;
+  font-size: 15px;
   font-weight: 500;
   color: #737373;
   letter-spacing: -0.01em;
@@ -302,7 +302,7 @@ a:hover .nav-num {
 }
 
 .contact-btn {
-  font-size: 12.5px;
+  font-size: 15px;
   font-weight: 500;
   color: #737373;
   padding: 0;
@@ -316,7 +316,7 @@ a:hover .nav-num {
 }
 
 .contact-email {
-  font-size: 12.5px;
+  font-size: 15px;
   font-weight: 500;
   color: #737373;
   padding: 0;
