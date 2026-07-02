@@ -806,6 +806,10 @@ a:hover .nav-num {
   flex-direction: column;
 }
 
+.proj-col--wide {
+  flex: 1.6;
+}
+
 .proj-col + .proj-col {
   border-left: 1px solid var(--border);
   padding-left: 40px;
@@ -885,8 +889,6 @@ a:hover .nav-num {
 }
 
 .proj-entry--stacked .proj-entry-thumb {
-  width: 100%;
-  aspect-ratio: 16/9;
   margin-bottom: 16px;
 }
 
