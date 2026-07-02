@@ -880,6 +880,16 @@ a:hover .nav-num {
   background: #e2e2e0;
 }
 
+.proj-entry--stacked {
+  flex-direction: column;
+}
+
+.proj-entry--stacked .proj-entry-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin-bottom: 16px;
+}
+
 /* ─── PUBLICATION (paper list) ─── */
 .pub-list {
   margin-top: 8px;
