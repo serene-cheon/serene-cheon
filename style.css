@@ -832,7 +832,14 @@ img { display: block; max-width: 100%; }
   margin-bottom: 48px;
 }
 
+.shelf-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
 .shelf {
+  flex: 1;
   display: flex;
   align-items: flex-end;
   justify-content: center;           /* grow-in-place pushes both sides apart */
@@ -842,6 +849,93 @@ img { display: block; max-width: 100%; }
   perspective: 2200px;
   perspective-origin: 50% 28%;      /* look slightly from above */
 }
+
+/* ─── STICKER TAGS (left of shelf) ─── */
+.shelf-tags {
+  flex-shrink: 0;
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.tag-shape {
+  position: relative;
+  background: var(--tag);
+  color: var(--tagfg);
+  padding: 16px 20px;
+  margin-top: -14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 74px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
+  transition: transform 0.25s ease, z-index 0s;
+}
+
+.tag-shape:first-child { margin-top: 0; }
+
+.tag-shape:hover {
+  transform: translateX(-6px) scale(1.03);
+  z-index: 10;
+}
+
+.tag-shape:nth-child(1) { transform: rotate(-3deg); z-index: 5; }
+.tag-shape:nth-child(2) { transform: rotate(2deg);  z-index: 4; }
+.tag-shape:nth-child(3) { transform: rotate(-2deg); z-index: 3; }
+.tag-shape:nth-child(4) { transform: rotate(3deg);  z-index: 2; }
+.tag-shape:nth-child(5) { transform: rotate(-1deg); z-index: 1; }
+
+.tag-shape:nth-child(1):hover { transform: rotate(-3deg) translateX(-6px) scale(1.04); }
+.tag-shape:nth-child(2):hover { transform: rotate(2deg) translateX(-6px) scale(1.04); }
+.tag-shape:nth-child(3):hover { transform: rotate(-2deg) translateX(-6px) scale(1.04); }
+.tag-shape:nth-child(4):hover { transform: rotate(3deg) translateX(-6px) scale(1.04); }
+.tag-shape:nth-child(5):hover { transform: rotate(-1deg) translateX(-6px) scale(1.04); }
+
+.tag-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 3px;
+}
+
+.tag-blurb {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  opacity: 0.75;
+}
+
+/* organic shape variants */
+.tag-oval { border-radius: 50% / 42%; padding: 22px 34px; }
+
+.tag-ticket { border-radius: 8px; }
+.tag-ticket::before,
+.tag-ticket::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--white);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tag-ticket::before { left: -8px; }
+.tag-ticket::after { right: -8px; }
+
+.tag-flag {
+  clip-path: polygon(
+    0 0, 92% 0, 100% 18%, 92% 36%, 100% 54%, 92% 72%, 100% 90%, 92% 100%,
+    0 100%
+  );
+  padding-right: 30px;
+}
+
+.tag-arch { border-radius: 50% 50% 10px 10px / 65% 65% 10px 10px; padding-top: 26px; }
+
+.tag-rounded { border-radius: 18px; }
 
 /* flow slot = just the spine thickness; grows on hover so neighbours make room */
 .book {
