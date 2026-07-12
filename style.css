@@ -142,10 +142,10 @@ img { display: block; max-width: 100%; }
 .topbar-left { min-width: 0; }
 
 .topbar-name {
-  font-size: 16px;
+  font-size: 26px;
   font-weight: 500;
   color: var(--text);
-  letter-spacing: -0.01em;
+  letter-spacing: -1.3px;
   margin-bottom: 8px;
 }
 
