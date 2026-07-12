@@ -990,14 +990,14 @@ a:hover .nav-num {
   justify-content: center;           /* grow-in-place pushes both sides apart */
   gap: 14px;
   padding: 44px 20px 0;
-  min-height: 380px;
+  min-height: 450px;
   perspective: 2200px;
   perspective-origin: 50% 28%;      /* look slightly from above */
 }
 
 /* flow slot = just the spine thickness; grows on hover so neighbours make room */
 .book {
-  --w: 210px;                        /* cover width (revealed on hover) */
+  --w: 252px;                        /* cover width (revealed on hover) */
   position: relative;
   width: var(--t, 40px);
   height: var(--h, 290px);
@@ -1007,7 +1007,7 @@ a:hover .nav-num {
 }
 
 .book:hover {
-  width: 230px;                      /* widen the slot → siblings slide aside */
+  width: 276px;                      /* widen the slot → siblings slide aside */
   z-index: 20;
 }
 
@@ -1022,7 +1022,7 @@ a:hover .nav-num {
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.20), rgba(0,0,0,0) 72%);
   transition: width 0.6s cubic-bezier(.2,.75,.25,1);
 }
-.book:hover::after { width: 215px; }
+.book:hover::after { width: 258px; }
 
 /* the rigid 3D box */
 .book-box {
@@ -1081,7 +1081,7 @@ a:hover .nav-num {
 }
 
 .book-cover-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.22;
   letter-spacing: -0.01em;
