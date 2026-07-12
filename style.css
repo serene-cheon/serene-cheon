@@ -833,9 +833,9 @@ img { display: block; max-width: 100%; }
 }
 
 .shelf-row {
+  position: relative;
   display: flex;
-  align-items: flex-end;
-  gap: 8px;
+  justify-content: center;
 }
 
 .shelf {
@@ -852,28 +852,33 @@ img { display: block; max-width: 100%; }
 
 /* ─── STICKER TAGS (left of shelf) ─── */
 .shelf-tags {
-  flex-shrink: 0;
-  width: 190px;
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  width: 130px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
+  opacity: 0.85;
 }
 
 .tag-shape {
   position: relative;
   background: var(--tag);
   color: var(--tagfg);
-  padding: 16px 20px;
-  margin-top: -14px;
+  padding: 10px 13px;
+  margin-top: -12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 74px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.14);
-  transition: transform 0.25s ease, z-index 0s;
+  min-height: 48px;
+  box-shadow: 0 4px 9px rgba(0,0,0,0.10);
+  transition: transform 0.25s ease, opacity 0.25s ease, z-index 0s;
 }
 
 .tag-shape:first-child { margin-top: 0; }
+
+.shelf-tags:hover .tag-shape { opacity: 0.6; }
+.shelf-tags .tag-shape:hover { opacity: 1; }
 
 .tag-shape:hover {
   transform: translateX(-6px) scale(1.03);
@@ -893,49 +898,49 @@ img { display: block; max-width: 100%; }
 .tag-shape:nth-child(5):hover { transform: rotate(-1deg) translateX(-6px) scale(1.04); }
 
 .tag-label {
-  font-size: 12.5px;
+  font-size: 10px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   letter-spacing: -0.01em;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .tag-blurb {
-  font-size: 10.5px;
+  font-size: 8.5px;
   font-weight: 500;
   letter-spacing: 0.01em;
   opacity: 0.75;
 }
 
 /* organic shape variants */
-.tag-oval { border-radius: 50% / 42%; padding: 22px 34px; }
+.tag-oval { border-radius: 50% / 42%; padding: 15px 22px; }
 
-.tag-ticket { border-radius: 8px; }
+.tag-ticket { border-radius: 6px; }
 .tag-ticket::before,
 .tag-ticket::after {
   content: '';
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 11px;
+  height: 11px;
   background: var(--white);
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
 }
-.tag-ticket::before { left: -8px; }
-.tag-ticket::after { right: -8px; }
+.tag-ticket::before { left: -5.5px; }
+.tag-ticket::after { right: -5.5px; }
 
 .tag-flag {
   clip-path: polygon(
     0 0, 92% 0, 100% 18%, 92% 36%, 100% 54%, 92% 72%, 100% 90%, 92% 100%,
     0 100%
   );
-  padding-right: 30px;
+  padding-right: 20px;
 }
 
-.tag-arch { border-radius: 50% 50% 10px 10px / 65% 65% 10px 10px; padding-top: 26px; }
+.tag-arch { border-radius: 50% 50% 8px 8px / 65% 65% 8px 8px; padding-top: 18px; }
 
-.tag-rounded { border-radius: 18px; }
+.tag-rounded { border-radius: 14px; }
 
 /* flow slot = just the spine thickness; grows on hover so neighbours make room */
 .book {
