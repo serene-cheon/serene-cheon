@@ -134,7 +134,7 @@ img { display: block; max-width: 100%; }
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  max-width: 1360px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 24px var(--px) 20px;
 }
@@ -225,13 +225,13 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 
 /* ─── PAGE ─── */
 .page {
-  max-width: 1360px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 var(--px) 80px;
 }
 
 .page-footer {
-  max-width: 1360px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 24px var(--px) 40px;
   font-size: 12.5px;
