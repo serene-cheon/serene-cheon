@@ -987,18 +987,18 @@ a:hover .nav-num {
 .shelf {
   display: flex;
   align-items: flex-end;
-  gap: 30px;
-  padding: 44px 40px 0 20px;
-  min-height: 400px;
+  gap: 14px;
+  padding: 44px 200px 0 8px;         /* right room for a book turning out */
+  min-height: 380px;
   perspective: 2200px;
   perspective-origin: 50% 28%;      /* look slightly from above */
 }
 
-/* flow slot ≈ the book's projected footprint at rest */
+/* flow slot = just the spine thickness, so spines pack tightly at rest */
 .book {
-  --w: 210px;                        /* cover width */
+  --w: 210px;                        /* cover width (revealed on hover) */
   position: relative;
-  width: 150px;
+  width: var(--t, 40px);
   height: var(--h, 290px);
   flex-shrink: 0;
   transform-style: preserve-3d;
@@ -1008,14 +1008,14 @@ a:hover .nav-num {
 .book::after {
   content: "";
   position: absolute;
-  left: 8px;
+  left: -6px;
   bottom: -12px;
-  width: 130px;
-  height: 16px;
+  width: calc(var(--t, 40px) + 12px);
+  height: 15px;
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.20), rgba(0,0,0,0) 72%);
-  transition: transform 0.6s cubic-bezier(.2,.75,.25,1);
+  transition: width 0.6s cubic-bezier(.2,.75,.25,1), transform 0.6s cubic-bezier(.2,.75,.25,1);
 }
-.book:hover::after { transform: translateX(24px) scaleX(1.15); }
+.book:hover::after { width: 150px; transform: translateX(40px); }
 
 /* the rigid 3D box */
 .book-box {
@@ -1026,14 +1026,14 @@ a:hover .nav-num {
   height: 100%;
   transform-style: preserve-3d;
   transform-origin: center center;
-  transform: translateX(-50%) rotateY(52deg);   /* rest: spine + cover both visible */
+  transform: translateX(-50%) rotateY(90deg);   /* rest: spine only, facing viewer */
   transition: transform 0.6s cubic-bezier(.2,.75,.25,1);
   cursor: pointer;
 }
 
 .book:hover { z-index: 20; }
 .book:hover .book-box {
-  transform: translateX(-50%) rotateY(16deg) translateZ(30px);  /* turn toward cover */
+  transform: translateX(-50%) rotateY(22deg) translateZ(36px);  /* turn to reveal cover */
 }
 
 /* every face centered on the box centre, then pushed out into 3D */
