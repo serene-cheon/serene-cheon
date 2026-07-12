@@ -136,8 +136,23 @@ img { display: block; max-width: 100%; }
   gap: 40px;
   max-width: 1360px;
   margin: 0 auto;
-  padding: 40px var(--px) 32px;
+  padding: 24px var(--px) 20px;
 }
+
+/* ─── HOME: single-screen, no-scroll layout ─── */
+body.home { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+body.home .topbar,
+body.home .page-footer { flex-shrink: 0; }
+body.home .page {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 0;
+}
+body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 
 .topbar-left { min-width: 0; }
 
@@ -784,7 +799,7 @@ img { display: block; max-width: 100%; }
 
 /* ─── DIGITAL BOOKSHELF (real 3D, 3/4 view) ─── */
 .shelf-section {
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .shelf-label {
@@ -808,8 +823,8 @@ img { display: block; max-width: 100%; }
   align-items: flex-end;
   justify-content: center;           /* grow-in-place pushes both sides apart */
   gap: 14px;
-  padding: 44px 20px 0;
-  min-height: 450px;
+  padding: 20px 20px 0;
+  min-height: 420px;
   perspective: 2200px;
   perspective-origin: 50% 28%;      /* look slightly from above */
 }
