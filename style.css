@@ -131,9 +131,8 @@ img { display: block; max-width: 100%; }
 /* ─── TOP NAV LAYOUT ─── */
 .topbar {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 56px;
   max-width: 1600px;
   margin: 0 auto;
   padding: 24px var(--px) 20px;
@@ -154,17 +153,23 @@ body.home .page {
 }
 body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 
-.topbar-left { min-width: 0; }
-
-.topbar-name {
-  font-size: 26px;
-  font-weight: 400;
+.topbar-logo {
+  font-size: 16px;
+  font-weight: 500;
   color: var(--text);
-  letter-spacing: -1.3px;
-  margin-bottom: 8px;
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.topbar-menu {
+  display: flex;
+  gap: 48px;
+  flex-shrink: 0;
 }
 
 .topbar-bio {
+  margin-left: auto;
   font-size: 12.5px;
   color: var(--text);
   line-height: 1.4;
@@ -181,13 +186,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 
 .topbar-bio a:hover { text-decoration-color: var(--text); }
 
-.topbar-right {
-  display: flex;
-  gap: 40px;
-  flex-shrink: 0;
-}
-
-.topbar-group { text-align: right; }
+.topbar-group { text-align: left; }
 
 .topbar-group-title {
   display: block;
@@ -208,7 +207,6 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   line-height: 1.45;
   cursor: pointer;
   transition: color 0.15s;
-  justify-content: flex-end;
 }
 
 .topbar-group a:hover,
