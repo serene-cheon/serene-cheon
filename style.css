@@ -968,7 +968,7 @@ a:hover .nav-num {
   text-decoration-color: var(--text);
 }
 
-/* ─── DIGITAL BOOKSHELF (real 3D) ─── */
+/* ─── DIGITAL BOOKSHELF (real 3D, 3/4 view) ─── */
 .shelf-section {
   margin-top: 56px;
   padding-top: 28px;
@@ -981,120 +981,142 @@ a:hover .nav-num {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 44px;
+  margin-bottom: 48px;
 }
 
 .shelf {
   display: flex;
   align-items: flex-end;
-  gap: 20px;
-  padding: 40px 220px 0 8px;      /* right room so a turned book never clips out */
-  min-height: 360px;
-  perspective: 1500px;
-  perspective-origin: 50% 32%;    /* look slightly from above → tops visible */
+  gap: 30px;
+  padding: 44px 40px 0 20px;
+  min-height: 400px;
+  perspective: 2200px;
+  perspective-origin: 50% 28%;      /* look slightly from above */
 }
 
-/* the flow slot: only the spine thickness, so books never overlap at rest */
+/* flow slot ≈ the book's projected footprint at rest */
 .book {
-  --w: 188px;                     /* cover width (revealed on hover) */
+  --w: 210px;                        /* cover width */
   position: relative;
-  width: var(--t, 40px);
+  width: 150px;
   height: var(--h, 290px);
   flex-shrink: 0;
   transform-style: preserve-3d;
 }
 
-/* soft ground shadow */
+/* ground shadow */
 .book::after {
   content: "";
   position: absolute;
-  left: -6px;
-  bottom: -10px;
-  width: calc(var(--t, 40px) + 12px);
-  height: 14px;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0.22), rgba(0,0,0,0) 70%);
-  transition: width 0.6s cubic-bezier(.2,.75,.25,1), transform 0.6s cubic-bezier(.2,.75,.25,1);
+  left: 8px;
+  bottom: -12px;
+  width: 130px;
+  height: 16px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.20), rgba(0,0,0,0) 72%);
+  transition: transform 0.6s cubic-bezier(.2,.75,.25,1);
 }
-.book:hover::after {
-  width: 150px;
-  transform: translateX(30px);
-}
+.book:hover::after { transform: translateX(24px) scaleX(1.15); }
 
-/* the rotating 3D box, hinged on the binding (left) edge */
+/* the rigid 3D box */
 .book-box {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 50%;
   width: var(--w);
   height: 100%;
   transform-style: preserve-3d;
-  transform-origin: left center;
-  transform: rotateY(90deg);      /* rest: spine faces us, cover edge-on */
+  transform-origin: center center;
+  transform: translateX(-50%) rotateY(52deg);   /* rest: spine + cover both visible */
   transition: transform 0.6s cubic-bezier(.2,.75,.25,1);
   cursor: pointer;
 }
 
 .book:hover { z-index: 20; }
 .book:hover .book-box {
-  transform: rotateY(26deg) translateZ(34px);   /* turn to reveal the cover */
+  transform: translateX(-50%) rotateY(16deg) translateZ(30px);  /* turn toward cover */
 }
 
-/* shared face setup */
+/* every face centered on the box centre, then pushed out into 3D */
 .book-cover,
+.book-back,
 .book-spine,
 .book-pages,
 .book-top {
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 50%;
+  top: 50%;
   backface-visibility: hidden;
+  overflow: hidden;
 }
 
-/* front cover (the box's own plane, z = 0) */
+/* faint paper grain shared by all faces */
+.book-cover::before,
+.book-spine::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* FRONT COVER — the face that was empty before */
 .book-cover {
   width: var(--w);
-  height: 100%;
-  background:
-    linear-gradient(90deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0) 7%),
-    var(--cover);
+  height: var(--h, 290px);
+  transform: translate(-50%, -50%) translateZ(calc(var(--t, 40px) / 2));
+  background: var(--cover);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px 22px;
-  box-sizing: border-box;
+  padding: 26px 24px;
+  box-shadow: inset 12px 0 22px rgba(0,0,0,0.12);   /* gutter shadow near spine */
 }
 
 .book-cover-title {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.22;
   letter-spacing: -0.01em;
   color: var(--cfg, #1a1a1a);
+  position: relative;
+  z-index: 1;
 }
 
 .book-cover-author {
   font-size: 11px;
   font-weight: 500;
   color: var(--cfg, #1a1a1a);
-  opacity: 0.66;
+  opacity: 0.68;
+  position: relative;
+  z-index: 1;
 }
 
-/* spine — the binding, on the left, folded back */
+/* BACK cover — keeps the box from looking hollow */
+.book-back {
+  width: var(--w);
+  height: var(--h, 290px);
+  transform: translate(-50%, -50%) rotateY(180deg) translateZ(calc(var(--t, 40px) / 2));
+  background: color-mix(in srgb, var(--cover) 82%, #000);
+}
+
+/* SPINE — the binding on the left, vertical title */
 .book-spine {
   width: var(--t, 40px);
-  height: 100%;
+  height: var(--h, 290px);
+  transform: translate(-50%, -50%) rotateY(-90deg) translateZ(calc(var(--w) / 2));
   background: var(--spine);
-  transform-origin: left center;
-  transform: rotateY(-90deg);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset -6px 0 12px rgba(0,0,0,0.22), inset 4px 0 6px rgba(255,255,255,0.12);
+  box-shadow: inset -8px 0 14px rgba(0,0,0,0.22), inset 5px 0 6px rgba(255,255,255,0.12);
 }
 
 .book-spine span {
   writing-mode: vertical-rl;
-  font-size: 11.5px;
+  transform: rotate(180deg);
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.03em;
   color: var(--sfg, #fff);
@@ -1104,24 +1126,21 @@ a:hover .nav-num {
   text-overflow: ellipsis;
 }
 
-/* page block — the right side, cream with page lines */
+/* PAGE block — right side, cream with page lines */
 .book-pages {
   width: var(--t, 40px);
-  height: 100%;
-  left: var(--w);
-  transform-origin: left center;
-  transform: rotateY(-90deg);
+  height: var(--h, 290px);
+  transform: translate(-50%, -50%) rotateY(90deg) translateZ(calc(var(--w) / 2));
   background:
     repeating-linear-gradient(0deg, #efe9dc 0 2px, #e2dccb 2px 3px),
     #efe9dc;
 }
 
-/* top edge — the pages seen from above */
+/* TOP edge — page block seen from above */
 .book-top {
   width: var(--w);
   height: var(--t, 40px);
-  transform-origin: top center;
-  transform: rotateX(90deg);
+  transform: translate(-50%, -50%) rotateX(90deg) translateZ(calc(var(--h, 290px) / 2));
   background:
     repeating-linear-gradient(90deg, #efe9dc 0 2px, #e5dfce 2px 3px),
     #efe9dc;
