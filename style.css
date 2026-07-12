@@ -134,9 +134,9 @@ img { display: block; max-width: 100%; }
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 40px var(--px) 32px;
+  max-width: none;
+  margin: 0;
+  padding: 40px 48px 32px;
 }
 
 .topbar-left { min-width: 0; }
