@@ -1,90 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* ─── PP NEUE MONTREAL (self-hosted, /fonts) ─── */
-/* weight ranges fill the 500/700 gaps so the site's hierarchy is preserved */
+/* ─── ABC MONUMENT GROTESK (self-hosted, /fonts) ─── */
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 1 200;               /* Hairline */
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 100;                 /* Thin */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-Hairline.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-Thin.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 1 200;
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 100;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-HairlineItalic.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-ThinItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 201 350;             /* Light */
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 300;                 /* Light */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-Light.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-Light.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 201 350;
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 300;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-LightItalic.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-LightItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 351 430;             /* Text Book — body copy (400) */
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 400;                 /* Regular */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-TextBook.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-Regular.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 351 430;
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 400;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-TextBookItalic.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-RegularItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 431 550;             /* Regular (covers 500) */
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 500;                 /* Medium */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-Regular.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-Medium.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 431 550;
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 500;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-Italic.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-MediumItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 551 700;             /* Semibold (also covers 700) */
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 600 700;             /* Bold — covers 600 & 700 */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-Semibold.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-Bold.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 551 700;
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 600 700;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-SemiboldItalic.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-BoldItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 701 900;             /* Extrabold */
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 800;                 /* Heavy */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-Extrabold.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-Heavy.otf') format('opentype');
 }
 @font-face {
-  font-family: 'PP Neue Montreal';
-  font-weight: 701 900;
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 800;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/PPNeueMontreal-ExtraboldItalic.otf') format('opentype');
+  src: url('fonts/ABCMonumentGrotesk-HeavyItalic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 900;                 /* Black */
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/ABCMonumentGrotesk-Black.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ABC Monument Grotesk';
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/ABCMonumentGrotesk-BlackItalic.otf') format('opentype');
 }
 
 :root {
@@ -100,7 +113,7 @@
 html, body { height: 100%; }
 
 body {
-  font-family: 'PP Neue Montreal', 'Inter', system-ui, sans-serif;
+  font-family: 'ABC Monument Grotesk', 'Inter', system-ui, sans-serif;
   font-optical-sizing: auto;
   background: var(--white);
   color: var(--text);
