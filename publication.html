@@ -4,116 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publication — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=82" />
+  <link rel="stylesheet" href="style.css?v=83" />
 </head>
 <body>
-<div class="layout">
 
-    <aside class="sidebar">
-    <div class="sidebar-name">Serene Cheon</div>
-
-    <p class="sidebar-bio">
+<header class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-name">Serene Cheon</div>
+    <p class="topbar-bio">
       Mixed-methods UX Researcher who tells stories with data to create real impact for users.<br><br>
-      UX Research Intern @ <a href="#">Fluke</a><br>
-      Studying HCI @ <a href="#">UC Berkeley</a>
+      UX Research Intern @ <a href="#">Fluke</a> · Studying HCI @ <a href="#">UC Berkeley</a>
     </p>
+  </div>
+  <nav class="topbar-right">
+    <div class="topbar-group">
+      <span class="topbar-group-title">Contents</span>
+      <a href="index.html">Projects</a>
+      <a href="publication.html">Publication</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="topbar-group">
+      <span class="topbar-group-title">Contacts</span>
+      <span class="contact-email" onclick="copyEmail(this)">Email<span class="contact-copied">Copied!</span></span>
+      <a href="#">LinkedIn</a>
+      <a href="#">Google Scholar</a>
+    </div>
+  </nav>
+</header>
 
-    <div class="sidebar-menus">
-      <div class="menu-col">
-        <p class="menu-title">Contents</p>
-        <nav class="nav-links">
-          <ul>
-            <li><a href="index.html">Projects</a></li>
-            <li><a href="publication.html">Publication</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="menu-col">
-        <p class="menu-title">Contacts</p>
-        <div class="contact-btns">
-          <span class="contact-email" onclick="copyEmail(this)">Email<span class="contact-copied">Copied!</span></span>
-          <a href="#" class="contact-btn">LinkedIn</a>
-          <a href="#" class="contact-btn">Google Scholar</a>
+<main class="page">
+  <div class="page-content">
+    <div class="page-body">
+      <p>Peer-reviewed research, conference papers, and writing on human-computer interaction, inclusive design, and qualitative methodology.</p>
+    </div>
+
+    <div class="pub-list">
+
+      <article class="pub-entry">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <div class="pub-title">"Trust Calibration in FinTech Onboarding: A Mixed-Methods Study of Anxiety, Terminology, and Early Drop-Off"</div>
+          <div class="pub-venue">CHI '25 — ACM Conference on Human Factors in Computing Systems</div>
+          <div class="pub-authors">Cheon, S., Nakamura, T., &amp; Reyes, M.</div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">Paper ↗</a>
+            <a href="#" class="pub-link">Talk slides ↗</a>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <article class="pub-entry">
+        <div class="pub-year">2024</div>
+        <div class="pub-body">
+          <div class="pub-title">"Beyond Compliance: Centering Disabled Users in Accessibility Auditing Practice"</div>
+          <div class="pub-venue">ASSETS '24 — ACM SIGACCESS Conference on Computers and Accessibility</div>
+          <div class="pub-authors">Cheon, S.</div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">Paper ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub-entry">
+        <div class="pub-year">2024</div>
+        <div class="pub-body">
+          <div class="pub-title">"Contextual Inquiry at Scale: Methodological Considerations for Embedded Fieldwork in Enterprise Environments"</div>
+          <div class="pub-venue">CSCW '24 — ACM Conference on Computer-Supported Cooperative Work</div>
+          <div class="pub-authors">Cheon, S. &amp; Okonkwo, A.</div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">Paper ↗</a>
+            <a href="#" class="pub-link">Poster ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub-entry">
+        <div class="pub-year">2023</div>
+        <div class="pub-body">
+          <div class="pub-title">"Closing the Intention–Action Gap: Diary Studies as a Window into Habitual Financial Behavior"</div>
+          <div class="pub-venue">DIS '23 — ACM Designing Interactive Systems</div>
+          <div class="pub-authors">Cheon, S., Park, J., &amp; Williams, E.</div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">Paper ↗</a>
+          </div>
+        </div>
+      </article>
+
     </div>
+  </div>
+</main>
 
-    <div class="sidebar-spacer"></div>
-    <div class="sidebar-footer">
-      <div id="localTime"></div>
-      <div>Berkeley, CA</div>
-    </div>
-  </aside>
+<footer class="page-footer">
+  <span id="localTime"></span> · Berkeley, CA
+</footer>
 
-  <main class="main">
-    <div class="breadcrumb"><a href="index.html">Home</a> / <b>Publication</b></div>
-
-    <div class="page-content">
-      <div class="page-body">
-        <p>Peer-reviewed research, conference papers, and writing on human-computer interaction, inclusive design, and qualitative methodology.</p>
-      </div>
-
-      <div class="pub-list">
-
-        <article class="pub-entry">
-          <div class="pub-year">2025</div>
-          <div class="pub-body">
-            <div class="pub-title">"Trust Calibration in FinTech Onboarding: A Mixed-Methods Study of Anxiety, Terminology, and Early Drop-Off"</div>
-            <div class="pub-venue">CHI '25 — ACM Conference on Human Factors in Computing Systems</div>
-            <div class="pub-authors">Cheon, S., Nakamura, T., &amp; Reyes, M.</div>
-            <div class="pub-links">
-              <a href="#" class="pub-link">Paper ↗</a>
-              <a href="#" class="pub-link">Talk slides ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="pub-entry">
-          <div class="pub-year">2024</div>
-          <div class="pub-body">
-            <div class="pub-title">"Beyond Compliance: Centering Disabled Users in Accessibility Auditing Practice"</div>
-            <div class="pub-venue">ASSETS '24 — ACM SIGACCESS Conference on Computers and Accessibility</div>
-            <div class="pub-authors">Cheon, S.</div>
-            <div class="pub-links">
-              <a href="#" class="pub-link">Paper ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="pub-entry">
-          <div class="pub-year">2024</div>
-          <div class="pub-body">
-            <div class="pub-title">"Contextual Inquiry at Scale: Methodological Considerations for Embedded Fieldwork in Enterprise Environments"</div>
-            <div class="pub-venue">CSCW '24 — ACM Conference on Computer-Supported Cooperative Work</div>
-            <div class="pub-authors">Cheon, S. &amp; Okonkwo, A.</div>
-            <div class="pub-links">
-              <a href="#" class="pub-link">Paper ↗</a>
-              <a href="#" class="pub-link">Poster ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="pub-entry">
-          <div class="pub-year">2023</div>
-          <div class="pub-body">
-            <div class="pub-title">"Closing the Intention–Action Gap: Diary Studies as a Window into Habitual Financial Behavior"</div>
-            <div class="pub-venue">DIS '23 — ACM Designing Interactive Systems</div>
-            <div class="pub-authors">Cheon, S., Park, J., &amp; Williams, E.</div>
-            <div class="pub-links">
-              <a href="#" class="pub-link">Paper ↗</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </main>
-
-  <div class="scroll-blur top"><div></div><div></div><div></div><div></div><div></div></div>
-  <div class="scroll-blur bottom"><div></div><div></div><div></div><div></div><div></div></div>
-
-</div>
 <script>
   function updateTime() {
     const t = new Date().toLocaleTimeString('en-US', {
@@ -125,6 +109,13 @@
   }
   updateTime();
   setInterval(updateTime, 1000);
+
+  function copyEmail(el) {
+    navigator.clipboard.writeText('serenecheon@berkeley.edu');
+    const tag = el.querySelector('.contact-copied');
+    tag.classList.add('show');
+    setTimeout(() => tag.classList.remove('show'), 1800);
+  }
 </script>
 </body>
 </html>

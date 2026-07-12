@@ -4,132 +4,116 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=82" />
+  <link rel="stylesheet" href="style.css?v=83" />
 </head>
 <body>
-<div class="layout">
 
-    <aside class="sidebar">
-    <div class="sidebar-name">Serene Cheon</div>
-
-    <p class="sidebar-bio">
+<header class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-name">Serene Cheon</div>
+    <p class="topbar-bio">
       Mixed-methods UX Researcher who tells stories with data to create real impact for users.<br><br>
-      UX Research Intern @ <a href="#">Fluke</a><br>
-      Studying HCI @ <a href="#">UC Berkeley</a>
+      UX Research Intern @ <a href="#">Fluke</a> · Studying HCI @ <a href="#">UC Berkeley</a>
     </p>
+  </div>
+  <nav class="topbar-right">
+    <div class="topbar-group">
+      <span class="topbar-group-title">Contents</span>
+      <a href="index.html">Projects</a>
+      <a href="publication.html">Publication</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="topbar-group">
+      <span class="topbar-group-title">Contacts</span>
+      <span class="contact-email" onclick="copyEmail(this)">Email<span class="contact-copied">Copied!</span></span>
+      <a href="#">LinkedIn</a>
+      <a href="#">Google Scholar</a>
+    </div>
+  </nav>
+</header>
 
-    <div class="sidebar-menus">
-      <div class="menu-col">
-        <p class="menu-title">Contents</p>
-        <nav class="nav-links">
-          <ul>
-            <li><a href="index.html">Projects</a></li>
-            <li><a href="publication.html">Publication</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="menu-col">
-        <p class="menu-title">Contacts</p>
-        <div class="contact-btns">
-          <span class="contact-email" onclick="copyEmail(this)">Email<span class="contact-copied">Copied!</span></span>
-          <a href="#" class="contact-btn">LinkedIn</a>
-          <a href="#" class="contact-btn">Google Scholar</a>
+<main class="page">
+  <div class="page-content">
+    <div class="case-list">
+
+      <article class="case-entry">
+        <aside class="case-sidebar">
+          <span class="case-num">01</span>
+          <div class="case-meta-label">Role</div>
+          <div class="case-meta-value">Lead UX Researcher</div>
+          <div class="case-meta-label">Duration</div>
+          <div class="case-meta-value">10 weeks</div>
+          <div class="case-meta-label">Methods</div>
+          <div class="case-meta-value">User Interviews<br>Usability Testing<br>Affinity Mapping</div>
+        </aside>
+        <div class="case-body-wrap">
+          <div class="case-banner img-fintech">FinTech Onboarding</div>
+          <div class="case-tags">
+            <span class="tag">Mobile UX</span>
+            <span class="tag">FinTech</span>
+            <span class="tag">User Interviews</span>
+            <span class="tag">Usability Testing</span>
+          </div>
+          <h2>Redesigning Onboarding for a FinTech App</h2>
+          <p>First-time users were abandoning a mobile investment app within the first three screens — but no one knew exactly why. I led a mixed-methods study combining 14 in-depth user interviews with five rounds of think-aloud usability testing to map the emotional and cognitive journey new users experience.</p>
+          <p>The research revealed a trust deficit: unfamiliar terminology and aggressive data-collection prompts caused anxiety before users had experienced any value. By reordering the onboarding flow, simplifying copy, and deferring optional permissions, the redesign achieved a <strong>34% reduction in early drop-off</strong> within six weeks of launch.</p>
         </div>
-      </div>
-    </div>
+      </article>
 
-    <div class="sidebar-spacer"></div>
-    <div class="sidebar-footer">
-      <div id="localTime"></div>
-      <div>Berkeley, CA</div>
-    </div>
-  </aside>
-
-  <main class="main">
-    <div class="breadcrumb"><a href="index.html">Home</a> / <b>Work</b></div>
-
-    <div class="page-content">
-      <div class="case-list">
-
-        <article class="case-entry">
-          <aside class="case-sidebar">
-            <span class="case-num">01</span>
-            <div class="case-meta-label">Role</div>
-            <div class="case-meta-value">Lead UX Researcher</div>
-            <div class="case-meta-label">Duration</div>
-            <div class="case-meta-value">10 weeks</div>
-            <div class="case-meta-label">Methods</div>
-            <div class="case-meta-value">User Interviews<br>Usability Testing<br>Affinity Mapping</div>
-          </aside>
-          <div class="case-body-wrap">
-            <div class="case-banner img-fintech">FinTech Onboarding</div>
-            <div class="case-tags">
-              <span class="tag">Mobile UX</span>
-              <span class="tag">FinTech</span>
-              <span class="tag">User Interviews</span>
-              <span class="tag">Usability Testing</span>
-            </div>
-            <h2>Redesigning Onboarding for a FinTech App</h2>
-            <p>First-time users were abandoning a mobile investment app within the first three screens — but no one knew exactly why. I led a mixed-methods study combining 14 in-depth user interviews with five rounds of think-aloud usability testing to map the emotional and cognitive journey new users experience.</p>
-            <p>The research revealed a trust deficit: unfamiliar terminology and aggressive data-collection prompts caused anxiety before users had experienced any value. By reordering the onboarding flow, simplifying copy, and deferring optional permissions, the redesign achieved a <strong>34% reduction in early drop-off</strong> within six weeks of launch.</p>
+      <article class="case-entry">
+        <aside class="case-sidebar">
+          <span class="case-num">02</span>
+          <div class="case-meta-label">Role</div>
+          <div class="case-meta-value">UX Researcher &amp; Accessibility Specialist</div>
+          <div class="case-meta-label">Duration</div>
+          <div class="case-meta-value">8 weeks</div>
+          <div class="case-meta-label">Methods</div>
+          <div class="case-meta-value">Heuristic Evaluation<br>Screen Reader Testing<br>Automated Auditing</div>
+        </aside>
+        <div class="case-body-wrap">
+          <div class="case-banner img-access">Accessibility Audit</div>
+          <div class="case-tags">
+            <span class="tag">Inclusive Design</span>
+            <span class="tag">WCAG 2.1</span>
+            <span class="tag">Heuristic Evaluation</span>
           </div>
-        </article>
+          <h2>Accessibility Audit &amp; Redesign</h2>
+          <p>A consumer app with over two million active users had never undergone a formal accessibility review. I designed and executed a comprehensive audit combining heuristic evaluation against WCAG 2.1 AA criteria, automated scanning, and moderated sessions with seven participants who rely on assistive technologies.</p>
+          <p>The audit surfaced 47 critical and high-severity issues. Working with engineering in a two-sprint remediation cycle, we resolved all critical issues and <strong>brought the app into full WCAG 2.1 AA compliance</strong>, improving experience scores among assistive-technology users by 61%.</p>
+        </div>
+      </article>
 
-        <article class="case-entry">
-          <aside class="case-sidebar">
-            <span class="case-num">02</span>
-            <div class="case-meta-label">Role</div>
-            <div class="case-meta-value">UX Researcher &amp; Accessibility Specialist</div>
-            <div class="case-meta-label">Duration</div>
-            <div class="case-meta-value">8 weeks</div>
-            <div class="case-meta-label">Methods</div>
-            <div class="case-meta-value">Heuristic Evaluation<br>Screen Reader Testing<br>Automated Auditing</div>
-          </aside>
-          <div class="case-body-wrap">
-            <div class="case-banner img-access">Accessibility Audit</div>
-            <div class="case-tags">
-              <span class="tag">Inclusive Design</span>
-              <span class="tag">WCAG 2.1</span>
-              <span class="tag">Heuristic Evaluation</span>
-            </div>
-            <h2>Accessibility Audit &amp; Redesign</h2>
-            <p>A consumer app with over two million active users had never undergone a formal accessibility review. I designed and executed a comprehensive audit combining heuristic evaluation against WCAG 2.1 AA criteria, automated scanning, and moderated sessions with seven participants who rely on assistive technologies.</p>
-            <p>The audit surfaced 47 critical and high-severity issues. Working with engineering in a two-sprint remediation cycle, we resolved all critical issues and <strong>brought the app into full WCAG 2.1 AA compliance</strong>, improving experience scores among assistive-technology users by 61%.</p>
+      <article class="case-entry">
+        <aside class="case-sidebar">
+          <span class="case-num">03</span>
+          <div class="case-meta-label">Role</div>
+          <div class="case-meta-value">Lead UX Researcher</div>
+          <div class="case-meta-label">Duration</div>
+          <div class="case-meta-value">12 weeks</div>
+          <div class="case-meta-label">Methods</div>
+          <div class="case-meta-value">Contextual Inquiry<br>Journey Mapping<br>Affinity Diagramming<br>Diary Study</div>
+        </aside>
+        <div class="case-body-wrap">
+          <div class="case-banner img-enterprise">Enterprise Dashboard</div>
+          <div class="case-tags">
+            <span class="tag">B2B</span>
+            <span class="tag">Contextual Inquiry</span>
+            <span class="tag">Journey Mapping</span>
           </div>
-        </article>
+          <h2>Enterprise Dashboard Research</h2>
+          <p>A logistics company's internal analytics platform had grown organically over five years, resulting in a fragmented dashboard analysts described as "a guessing game." I embedded with two regional operations teams for three weeks, conducting contextual inquiry sessions to observe workflows in their natural environment.</p>
+          <p>The research identified <strong>12 high-value improvement opportunities</strong> — including a critical data-latency issue users had developed workarounds for — and revealed two entirely new use cases, directly informing the next two quarters of the product roadmap.</p>
+        </div>
+      </article>
 
-        <article class="case-entry">
-          <aside class="case-sidebar">
-            <span class="case-num">03</span>
-            <div class="case-meta-label">Role</div>
-            <div class="case-meta-value">Lead UX Researcher</div>
-            <div class="case-meta-label">Duration</div>
-            <div class="case-meta-value">12 weeks</div>
-            <div class="case-meta-label">Methods</div>
-            <div class="case-meta-value">Contextual Inquiry<br>Journey Mapping<br>Affinity Diagramming<br>Diary Study</div>
-          </aside>
-          <div class="case-body-wrap">
-            <div class="case-banner img-enterprise">Enterprise Dashboard</div>
-            <div class="case-tags">
-              <span class="tag">B2B</span>
-              <span class="tag">Contextual Inquiry</span>
-              <span class="tag">Journey Mapping</span>
-            </div>
-            <h2>Enterprise Dashboard Research</h2>
-            <p>A logistics company's internal analytics platform had grown organically over five years, resulting in a fragmented dashboard analysts described as "a guessing game." I embedded with two regional operations teams for three weeks, conducting contextual inquiry sessions to observe workflows in their natural environment.</p>
-            <p>The research identified <strong>12 high-value improvement opportunities</strong> — including a critical data-latency issue users had developed workarounds for — and revealed two entirely new use cases, directly informing the next two quarters of the product roadmap.</p>
-          </div>
-        </article>
-
-      </div>
     </div>
-  </main>
+  </div>
+</main>
 
-  <div class="scroll-blur top"><div></div><div></div><div></div><div></div><div></div></div>
-  <div class="scroll-blur bottom"><div></div><div></div><div></div><div></div><div></div></div>
+<footer class="page-footer">
+  <span id="localTime"></span> · Berkeley, CA
+</footer>
 
-</div>
 <script>
   function updateTime() {
     const t = new Date().toLocaleTimeString('en-US', {
@@ -141,6 +125,13 @@
   }
   updateTime();
   setInterval(updateTime, 1000);
+
+  function copyEmail(el) {
+    navigator.clipboard.writeText('serenecheon@berkeley.edu');
+    const tag = el.querySelector('.contact-copied');
+    tag.classList.add('show');
+    setTimeout(() => tag.classList.remove('show'), 1800);
+  }
 </script>
 </body>
 </html>

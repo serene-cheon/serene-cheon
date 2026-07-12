@@ -4,171 +4,156 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=82" />
+  <link rel="stylesheet" href="style.css?v=83" />
 </head>
 <body>
-<div class="layout">
 
-    <aside class="sidebar">
-    <div class="sidebar-name">Serene Cheon</div>
-
-    <p class="sidebar-bio">
+<header class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-name">Serene Cheon</div>
+    <p class="topbar-bio">
       Mixed-methods UX Researcher who tells stories with data to create real impact for users.<br><br>
-      UX Research Intern @ <a href="#">Fluke</a><br>
-      Studying HCI @ <a href="#">UC Berkeley</a>
+      UX Research Intern @ <a href="#">Fluke</a> · Studying HCI @ <a href="#">UC Berkeley</a>
     </p>
+  </div>
+  <nav class="topbar-right">
+    <div class="topbar-group">
+      <span class="topbar-group-title">Contents</span>
+      <a href="index.html">Projects</a>
+      <a href="publication.html">Publication</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="topbar-group">
+      <span class="topbar-group-title">Contacts</span>
+      <span class="contact-email" onclick="copyEmail(this)">Email<span class="contact-copied">Copied!</span></span>
+      <a href="#">LinkedIn</a>
+      <a href="#">Google Scholar</a>
+    </div>
+  </nav>
+</header>
 
-    <div class="sidebar-menus">
-      <div class="menu-col">
-        <p class="menu-title">Contents</p>
-        <nav class="nav-links">
+<main class="page">
+
+  <!-- music player — swap src to your mp3 path -->
+  <audio id="audio" src="" preload="none"></audio>
+
+  <div class="player">
+    <span class="player-label">Listening to</span>
+    <div class="player-info">
+      <span class="player-track" id="trackName">track title</span>
+      <span class="player-artist" id="trackArtist">artist</span>
+    </div>
+    <div class="player-bar" id="progressBar">
+      <div class="player-bar-fill" id="progressFill"></div>
+    </div>
+    <span class="player-time" id="playerTime">0:00</span>
+    <button class="player-btn" id="playBtn" aria-label="Play">
+      <svg id="iconPlay" viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg>
+      <svg id="iconPause" viewBox="0 0 10 10" style="display:none"><rect x="2" y="1" width="2.5" height="8"/><rect x="5.5" y="1" width="2.5" height="8"/></svg>
+    </button>
+  </div>
+
+  <div class="page-content">
+
+    <div class="about-grid">
+      <div class="about-avatar">photo</div>
+      <div class="about-bio-text">
+        <p>I graduated from UC Berkeley with a focus on human-computer interaction and cognitive science, which gave me a rigorous, evidence-based lens for understanding how people think, feel, and behave with technology.</p>
+        <p>Good research, to me, is less about methods and more about curiosity. It's about sitting with ambiguity long enough to ask the right question — and then designing the study that can actually answer it.</p>
+        <p>I've worked across mobile apps, enterprise software, and public-facing services, always with the same goal: making sure the people who matter most have a voice in the room when decisions get made.</p>
+        <p>Outside of work, I volunteer as an accessibility auditor for non-profit websites, mentor early-career researchers, and explore Bay Area hiking trails.</p>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <p class="section-label">Skills &amp; Tools</p>
+      <div class="skills-cols">
+        <div class="skill-col">
+          <p class="skill-col-title">Research</p>
           <ul>
-            <li><a href="index.html">Projects</a></li>
-            <li><a href="publication.html">Publication</a></li>
-            <li><a href="about.html">About</a></li>
+            <li>User Interviews</li>
+            <li>Usability Testing</li>
+            <li>Contextual Inquiry</li>
+            <li>Diary Studies</li>
+            <li>Card Sorting</li>
+            <li>Tree Testing</li>
+            <li>Surveys</li>
           </ul>
-        </nav>
-      </div>
-      <div class="menu-col">
-        <p class="menu-title">Contacts</p>
-        <div class="contact-btns">
-          <span class="contact-email" onclick="copyEmail(this)">Email<span class="contact-copied">Copied!</span></span>
-          <a href="#" class="contact-btn">LinkedIn</a>
-          <a href="#" class="contact-btn">Google Scholar</a>
+        </div>
+        <div class="skill-col">
+          <p class="skill-col-title">Synthesis</p>
+          <ul>
+            <li>Affinity Diagramming</li>
+            <li>Journey Mapping</li>
+            <li>Persona Development</li>
+            <li>Thematic Analysis</li>
+            <li>Jobs-to-be-Done</li>
+            <li>Research Repos</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <p class="skill-col-title">Tools</p>
+          <ul>
+            <li>Figma</li>
+            <li>Miro</li>
+            <li>Dovetail</li>
+            <li>Lookback</li>
+            <li>UserZoom</li>
+            <li>Maze</li>
+            <li>Optimal Workshop</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <p class="skill-col-title">Strengths</p>
+          <ul>
+            <li>Stakeholder Comms</li>
+            <li>Research Evangelism</li>
+            <li>Workshop Facilitation</li>
+            <li>Storytelling</li>
+            <li>Mentoring</li>
+            <li>Accessibility</li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="sidebar-spacer"></div>
-    <div class="sidebar-footer">
-      <div id="localTime"></div>
-      <div>Berkeley, CA</div>
-    </div>
-  </aside>
-
-  <main class="main">
-    <div class="breadcrumb"><a href="index.html">Home</a> / <b>About</b></div>
-
-    <!-- music player — swap src to your mp3 path -->
-    <audio id="audio" src="" preload="none"></audio>
-
-    <div class="player">
-      <span class="player-label">Listening to</span>
-      <div class="player-info">
-        <span class="player-track" id="trackName">track title</span>
-        <span class="player-artist" id="trackArtist">artist</span>
-      </div>
-      <div class="player-bar" id="progressBar">
-        <div class="player-bar-fill" id="progressFill"></div>
-      </div>
-      <span class="player-time" id="playerTime">0:00</span>
-      <button class="player-btn" id="playBtn" aria-label="Play">
-        <svg id="iconPlay" viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg>
-        <svg id="iconPause" viewBox="0 0 10 10" style="display:none"><rect x="2" y="1" width="2.5" height="8"/><rect x="5.5" y="1" width="2.5" height="8"/></svg>
-      </button>
-    </div>
-
-    <div class="page-content">
-
-      <div class="about-grid">
-        <div class="about-avatar">photo</div>
-        <div class="about-bio-text">
-          <p>I graduated from UC Berkeley with a focus on human-computer interaction and cognitive science, which gave me a rigorous, evidence-based lens for understanding how people think, feel, and behave with technology.</p>
-          <p>Good research, to me, is less about methods and more about curiosity. It's about sitting with ambiguity long enough to ask the right question — and then designing the study that can actually answer it.</p>
-          <p>I've worked across mobile apps, enterprise software, and public-facing services, always with the same goal: making sure the people who matter most have a voice in the room when decisions get made.</p>
-          <p>Outside of work, I volunteer as an accessibility auditor for non-profit websites, mentor early-career researchers, and explore Bay Area hiking trails.</p>
+    <div class="timeline-section">
+      <p class="section-label">Experience</p>
+      <div>
+        <div class="tl-entry">
+          <div class="tl-year">Summer 2023</div>
+          <div>
+            <p class="tl-role">UX Research Intern</p>
+            <p class="tl-company">Bloom Finance · San Francisco, CA</p>
+            <p class="tl-desc">Conducted 20+ participant studies evaluating a redesigned investment onboarding flow. Findings adopted by the product team within one quarter.</p>
+          </div>
         </div>
-      </div>
-
-      <div class="skills-section">
-        <p class="section-label">Skills &amp; Tools</p>
-        <div class="skills-cols">
-          <div class="skill-col">
-            <p class="skill-col-title">Research</p>
-            <ul>
-              <li>User Interviews</li>
-              <li>Usability Testing</li>
-              <li>Contextual Inquiry</li>
-              <li>Diary Studies</li>
-              <li>Card Sorting</li>
-              <li>Tree Testing</li>
-              <li>Surveys</li>
-            </ul>
+        <div class="tl-entry">
+          <div class="tl-year">2024</div>
+          <div>
+            <p class="tl-role">UX Researcher</p>
+            <p class="tl-company">Luminary Labs · Remote</p>
+            <p class="tl-desc">Owned the full research programme end-to-end. Led an accessibility initiative that brought two core products into WCAG 2.1 AA compliance.</p>
           </div>
-          <div class="skill-col">
-            <p class="skill-col-title">Synthesis</p>
-            <ul>
-              <li>Affinity Diagramming</li>
-              <li>Journey Mapping</li>
-              <li>Persona Development</li>
-              <li>Thematic Analysis</li>
-              <li>Jobs-to-be-Done</li>
-              <li>Research Repos</li>
-            </ul>
-          </div>
-          <div class="skill-col">
-            <p class="skill-col-title">Tools</p>
-            <ul>
-              <li>Figma</li>
-              <li>Miro</li>
-              <li>Dovetail</li>
-              <li>Lookback</li>
-              <li>UserZoom</li>
-              <li>Maze</li>
-              <li>Optimal Workshop</li>
-            </ul>
-          </div>
-          <div class="skill-col">
-            <p class="skill-col-title">Strengths</p>
-            <ul>
-              <li>Stakeholder Comms</li>
-              <li>Research Evangelism</li>
-              <li>Workshop Facilitation</li>
-              <li>Storytelling</li>
-              <li>Mentoring</li>
-              <li>Accessibility</li>
-            </ul>
+        </div>
+        <div class="tl-entry">
+          <div class="tl-year">2025 – Present</div>
+          <div>
+            <p class="tl-role">Senior UX Researcher</p>
+            <p class="tl-company">Luminary Labs · Remote</p>
+            <p class="tl-desc">Leading the enterprise research stream, mentoring two junior researchers, and building a shared research repository to democratise insights.</p>
           </div>
         </div>
       </div>
-
-      <div class="timeline-section">
-        <p class="section-label">Experience</p>
-        <div>
-          <div class="tl-entry">
-            <div class="tl-year">Summer 2023</div>
-            <div>
-              <p class="tl-role">UX Research Intern</p>
-              <p class="tl-company">Bloom Finance · San Francisco, CA</p>
-              <p class="tl-desc">Conducted 20+ participant studies evaluating a redesigned investment onboarding flow. Findings adopted by the product team within one quarter.</p>
-            </div>
-          </div>
-          <div class="tl-entry">
-            <div class="tl-year">2024</div>
-            <div>
-              <p class="tl-role">UX Researcher</p>
-              <p class="tl-company">Luminary Labs · Remote</p>
-              <p class="tl-desc">Owned the full research programme end-to-end. Led an accessibility initiative that brought two core products into WCAG 2.1 AA compliance.</p>
-            </div>
-          </div>
-          <div class="tl-entry">
-            <div class="tl-year">2025 – Present</div>
-            <div>
-              <p class="tl-role">Senior UX Researcher</p>
-              <p class="tl-company">Luminary Labs · Remote</p>
-              <p class="tl-desc">Leading the enterprise research stream, mentoring two junior researchers, and building a shared research repository to democratise insights.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </main>
 
-  <div class="scroll-blur top"><div></div><div></div><div></div><div></div><div></div></div>
-  <div class="scroll-blur bottom"><div></div><div></div><div></div><div></div><div></div></div>
+  </div>
+</main>
 
-</div>
+<footer class="page-footer">
+  <span id="localTime"></span> · Berkeley, CA
+</footer>
+
 <script>
   const TRACK = {
     src:    '',           // e.g. 'music/my-song.mp3'
@@ -222,6 +207,13 @@
   }
   updateTime();
   setInterval(updateTime, 1000);
+
+  function copyEmail(el) {
+    navigator.clipboard.writeText('serenecheon@berkeley.edu');
+    const tag = el.querySelector('.contact-copied');
+    tag.classList.add('show');
+    setTimeout(() => tag.classList.remove('show'), 1800);
+  }
 </script>
 </body>
 </html>
