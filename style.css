@@ -1,103 +1,140 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* ─── ABC MONUMENT GROTESK (self-hosted, /fonts) ─── */
+/* ─── AEONIK (self-hosted, /fonts) ─── */
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 100;                 /* Thin */
+  font-family: 'Aeonik';
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Thin.otf') format('opentype');
+  src: url('fonts/Aeonik-Air.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
+  font-family: 'Aeonik';
   font-weight: 100;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-ThinItalic.otf') format('opentype');
+  src: url('fonts/Aeonik-AirItalic.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 300;                 /* Light */
+  font-family: 'Aeonik';
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Light.otf') format('opentype');
+  src: url('fonts/Aeonik-Thin.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
+  font-family: 'Aeonik';
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/Aeonik-ThinItalic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/Aeonik-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Aeonik';
   font-weight: 300;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-LightItalic.otf') format('opentype');
+  src: url('fonts/Aeonik-LightItalic.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 400;                 /* Regular */
+  font-family: 'Aeonik';
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Regular.otf') format('opentype');
+  src: url('fonts/Aeonik-Regular.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
+  font-family: 'Aeonik';
   font-weight: 400;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-RegularItalic.otf') format('opentype');
+  src: url('fonts/Aeonik-RegularItalic.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 500;                 /* Medium */
+  font-family: 'Aeonik';
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Medium.otf') format('opentype');
+  src: url('fonts/Aeonik-Medium.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
+  font-family: 'Aeonik';
   font-weight: 500;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-MediumItalic.otf') format('opentype');
+  src: url('fonts/Aeonik-MediumItalic.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 600 700;             /* Bold — covers 600 & 700 */
+  font-family: 'Aeonik';
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Bold.otf') format('opentype');
+  src: url('fonts/Aeonik-SemiBold.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 600 700;
+  font-family: 'Aeonik';
+  font-weight: 600;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-BoldItalic.otf') format('opentype');
+  src: url('fonts/Aeonik-SemiBoldItalic.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 800;                 /* Heavy */
+  font-family: 'Aeonik';
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Heavy.otf') format('opentype');
+  src: url('fonts/Aeonik-Bold.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 800;
+  font-family: 'Aeonik';
+  font-weight: 700;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-HeavyItalic.otf') format('opentype');
+  src: url('fonts/Aeonik-BoldItalic.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 900;                 /* Black */
+  font-family: 'Aeonik';
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Black.otf') format('opentype');
+  src: url('fonts/Aeonik-Black.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
+  font-family: 'Aeonik';
   font-weight: 900;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-BlackItalic.otf') format('opentype');
+  src: url('fonts/Aeonik-BlackItalic.woff2') format('woff2');
+}
+
+/* Punctuation override → Inter, only for  "  '  ?  !  (and curly quotes) */
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.woff2') format('woff2');
+  unicode-range: U+0022, U+0027, U+2018, U+2019, U+201C, U+201D, U+003F, U+0021;
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-500-normal.woff2') format('woff2');
+  unicode-range: U+0022, U+0027, U+2018, U+2019, U+201C, U+201D, U+003F, U+0021;
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0022, U+0027, U+2018, U+2019, U+201C, U+201D, U+003F, U+0021;
 }
 
 :root {
@@ -113,7 +150,7 @@
 html, body { height: 100%; }
 
 body {
-  font-family: 'ABC Monument Grotesk', 'Inter', system-ui, sans-serif;
+  font-family: 'Aeonik', 'Inter', system-ui, sans-serif;
   font-optical-sizing: auto;
   background: var(--white);
   color: var(--text);
