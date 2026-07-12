@@ -855,7 +855,7 @@ img { display: block; max-width: 100%; }
   position: absolute;
   left: 0;
   bottom: 40px;
-  width: 130px;
+  width: 152px;
   display: flex;
   flex-direction: column;
   opacity: 0.85;
@@ -865,14 +865,15 @@ img { display: block; max-width: 100%; }
   position: relative;
   background: var(--tag);
   color: var(--tagfg);
-  padding: 10px 13px;
-  margin-top: -12px;
+  padding: 12px 15px;
+  margin-top: -13px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 48px;
+  min-height: 56px;
   box-shadow: 0 4px 9px rgba(0,0,0,0.10);
-  transition: transform 0.25s ease, opacity 0.25s ease, z-index 0s;
+  filter: grayscale(1);
+  transition: transform 0.25s ease, opacity 0.25s ease, filter 0.25s ease, z-index 0s;
 }
 
 .tag-shape:first-child { margin-top: 0; }
@@ -882,6 +883,7 @@ img { display: block; max-width: 100%; }
 
 .tag-shape:hover {
   transform: translateX(-6px) scale(1.03);
+  filter: grayscale(0);
   z-index: 10;
 }
 
@@ -898,7 +900,7 @@ img { display: block; max-width: 100%; }
 .tag-shape:nth-child(5):hover { transform: rotate(-1deg) translateX(-6px) scale(1.04); }
 
 .tag-label {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -906,7 +908,7 @@ img { display: block; max-width: 100%; }
 }
 
 .tag-blurb {
-  font-size: 8.5px;
+  font-size: 9.5px;
   font-weight: 500;
   letter-spacing: 0.01em;
   opacity: 0.75;
@@ -953,7 +955,8 @@ img { display: block; max-width: 100%; }
   transition: width 0.6s cubic-bezier(.2,.75,.25,1);
 }
 
-.book:hover {
+.book:hover,
+.book.is-open {
   width: 276px;                      /* widen the slot → siblings slide aside */
   z-index: 20;
 }
@@ -969,7 +972,8 @@ img { display: block; max-width: 100%; }
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.20), rgba(0,0,0,0) 72%);
   transition: width 0.6s cubic-bezier(.2,.75,.25,1);
 }
-.book:hover::after { width: 258px; }
+.book:hover::after,
+.book.is-open::after { width: 258px; }
 
 /* the rigid 3D box */
 .book-box {
@@ -985,7 +989,8 @@ img { display: block; max-width: 100%; }
   cursor: pointer;
 }
 
-.book:hover .book-box {
+.book:hover .book-box,
+.book.is-open .book-box {
   transform: translateX(-50%) rotateY(20deg) translateZ(16px);  /* turn to reveal cover */
 }
 
