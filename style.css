@@ -858,6 +858,7 @@ img { display: block; max-width: 100%; }
   width: 152px;
   display: flex;
   flex-direction: column;
+  gap: 7px;
   z-index: 30;
 }
 
@@ -866,7 +867,7 @@ img { display: block; max-width: 100%; }
   background: transparent;
   color: #a4a49f;
   border: 1.5px solid #d4d4cf;
-  border-top: none;
+  border-radius: 20px;
   padding: 11px 16px;
   display: flex;
   flex-direction: column;
@@ -877,17 +878,13 @@ img { display: block; max-width: 100%; }
   transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease, z-index 0s;
 }
 
-.tag-shape:first-child {
-  border-top: 1.5px solid #d4d4cf;
-  border-radius: 18px 18px 0 0;
-}
-
-.tag-shape:last-child {
-  border-radius: 0 0 18px 18px;
-}
-
-.tag-shape:not(:first-child) {
-  border-top: 1.5px dashed #d4d4cf;
+.tag-shape:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: -5.5px;
+  border-top: 1.5px dashed #c2c2bc;
 }
 
 .tag-shape:hover {
