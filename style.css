@@ -987,14 +987,15 @@ a:hover .nav-num {
 .shelf {
   display: flex;
   align-items: flex-end;
+  justify-content: center;           /* grow-in-place pushes both sides apart */
   gap: 14px;
-  padding: 44px 200px 0 8px;         /* right room for a book turning out */
+  padding: 44px 20px 0;
   min-height: 380px;
   perspective: 2200px;
   perspective-origin: 50% 28%;      /* look slightly from above */
 }
 
-/* flow slot = just the spine thickness, so spines pack tightly at rest */
+/* flow slot = just the spine thickness; grows on hover so neighbours make room */
 .book {
   --w: 210px;                        /* cover width (revealed on hover) */
   position: relative;
@@ -1002,6 +1003,12 @@ a:hover .nav-num {
   height: var(--h, 290px);
   flex-shrink: 0;
   transform-style: preserve-3d;
+  transition: width 0.6s cubic-bezier(.2,.75,.25,1);
+}
+
+.book:hover {
+  width: 230px;                      /* widen the slot → siblings slide aside */
+  z-index: 20;
 }
 
 /* ground shadow */
@@ -1013,9 +1020,9 @@ a:hover .nav-num {
   width: calc(var(--t, 40px) + 12px);
   height: 15px;
   background: radial-gradient(ellipse at center, rgba(0,0,0,0.20), rgba(0,0,0,0) 72%);
-  transition: width 0.6s cubic-bezier(.2,.75,.25,1), transform 0.6s cubic-bezier(.2,.75,.25,1);
+  transition: width 0.6s cubic-bezier(.2,.75,.25,1);
 }
-.book:hover::after { width: 150px; transform: translateX(40px); }
+.book:hover::after { width: 215px; }
 
 /* the rigid 3D box */
 .book-box {
@@ -1031,9 +1038,8 @@ a:hover .nav-num {
   cursor: pointer;
 }
 
-.book:hover { z-index: 20; }
 .book:hover .book-box {
-  transform: translateX(-50%) rotateY(22deg) translateZ(36px);  /* turn to reveal cover */
+  transform: translateX(-50%) rotateY(20deg) translateZ(16px);  /* turn to reveal cover */
 }
 
 /* every face centered on the box centre, then pushed out into 3D */
