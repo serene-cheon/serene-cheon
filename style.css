@@ -1,140 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* ─── AEONIK (self-hosted, /fonts) ─── */
+/* ─── PP NEUE MONTREAL (self-hosted, /fonts) ─── */
+/* weight ranges fill the 500/700 gaps so the site's hierarchy is preserved */
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 100;
+  font-family: 'PP Neue Montreal';
+  font-weight: 1 200;               /* Hairline */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/Aeonik-Air.woff2') format('woff2');
+  src: url('fonts/PPNeueMontreal-Hairline.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 100;
+  font-family: 'PP Neue Montreal';
+  font-weight: 1 200;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/Aeonik-AirItalic.woff2') format('woff2');
+  src: url('fonts/PPNeueMontreal-HairlineItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 200;
+  font-family: 'PP Neue Montreal';
+  font-weight: 201 350;             /* Light */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/Aeonik-Thin.woff2') format('woff2');
+  src: url('fonts/PPNeueMontreal-Light.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 200;
+  font-family: 'PP Neue Montreal';
+  font-weight: 201 350;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/Aeonik-ThinItalic.woff2') format('woff2');
+  src: url('fonts/PPNeueMontreal-LightItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 300;
+  font-family: 'PP Neue Montreal';
+  font-weight: 351 430;             /* Text Book — body copy (400) */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/Aeonik-Light.woff2') format('woff2');
+  src: url('fonts/PPNeueMontreal-TextBook.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 300;
+  font-family: 'PP Neue Montreal';
+  font-weight: 351 430;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/Aeonik-LightItalic.woff2') format('woff2');
+  src: url('fonts/PPNeueMontreal-TextBookItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 400;
+  font-family: 'PP Neue Montreal';
+  font-weight: 431 550;             /* Regular (covers 500) */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/Aeonik-Regular.woff2') format('woff2');
+  src: url('fonts/PPNeueMontreal-Regular.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 400;
+  font-family: 'PP Neue Montreal';
+  font-weight: 431 550;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/Aeonik-RegularItalic.woff2') format('woff2');
+  src: url('fonts/PPNeueMontreal-Italic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 500;
+  font-family: 'PP Neue Montreal';
+  font-weight: 551 700;             /* Semibold (also covers 700) */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/Aeonik-Medium.woff2') format('woff2');
+  src: url('fonts/PPNeueMontreal-Semibold.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 500;
+  font-family: 'PP Neue Montreal';
+  font-weight: 551 700;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/Aeonik-MediumItalic.woff2') format('woff2');
+  src: url('fonts/PPNeueMontreal-SemiboldItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 600;
+  font-family: 'PP Neue Montreal';
+  font-weight: 701 900;             /* Extrabold */
   font-style: normal;
   font-display: swap;
-  src: url('fonts/Aeonik-SemiBold.woff2') format('woff2');
+  src: url('fonts/PPNeueMontreal-Extrabold.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Aeonik';
-  font-weight: 600;
+  font-family: 'PP Neue Montreal';
+  font-weight: 701 900;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/Aeonik-SemiBoldItalic.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Aeonik';
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url('fonts/Aeonik-Bold.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Aeonik';
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-  src: url('fonts/Aeonik-BoldItalic.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Aeonik';
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-  src: url('fonts/Aeonik-Black.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Aeonik';
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-  src: url('fonts/Aeonik-BlackItalic.woff2') format('woff2');
-}
-
-/* Punctuation override → Inter, only for  "  '  ?  !  (and curly quotes) */
-@font-face {
-  font-family: 'Aeonik';
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.woff2') format('woff2');
-  unicode-range: U+0022, U+0027, U+2018, U+2019, U+201C, U+201D, U+003F, U+0021;
-}
-@font-face {
-  font-family: 'Aeonik';
-  font-weight: 500;
-  font-display: swap;
-  src: url('https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-500-normal.woff2') format('woff2');
-  unicode-range: U+0022, U+0027, U+2018, U+2019, U+201C, U+201D, U+003F, U+0021;
-}
-@font-face {
-  font-family: 'Aeonik';
-  font-weight: 700;
-  font-display: swap;
-  src: url('https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-700-normal.woff2') format('woff2');
-  unicode-range: U+0022, U+0027, U+2018, U+2019, U+201C, U+201D, U+003F, U+0021;
+  src: url('fonts/PPNeueMontreal-ExtraboldItalic.otf') format('opentype');
 }
 
 :root {
@@ -150,7 +100,7 @@
 html, body { height: 100%; }
 
 body {
-  font-family: 'Aeonik', 'Inter', system-ui, sans-serif;
+  font-family: 'PP Neue Montreal', 'Inter', system-ui, sans-serif;
   font-optical-sizing: auto;
   background: var(--white);
   color: var(--text);
