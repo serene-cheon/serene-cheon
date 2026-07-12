@@ -140,7 +140,7 @@ img { display: block; max-width: 100%; }
 }
 
 /* ─── HOME: single-screen, no-scroll layout ─── */
-body.home { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+body.home { display: flex; flex-direction: column; height: 100vh; height: 100dvh; overflow: hidden; }
 body.home .topbar,
 body.home .page-footer { flex-shrink: 0; }
 body.home .page {
