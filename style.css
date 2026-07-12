@@ -134,7 +134,7 @@ img { display: block; max-width: 100%; }
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  max-width: 1280px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 40px var(--px) 32px;
 }
@@ -210,13 +210,13 @@ img { display: block; max-width: 100%; }
 
 /* ─── PAGE ─── */
 .page {
-  max-width: 1280px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 0 var(--px) 80px;
 }
 
 .page-footer {
-  max-width: 1280px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 24px var(--px) 40px;
   font-size: 12.5px;
