@@ -977,15 +977,17 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   top: 0;
   left: 0;
   transform: translate(-50%, -50%) scale(0.6);
-  width: 84px;
-  height: 44px;
-  background: url('fish-cursor.png') center / contain no-repeat;
+  width: 104px;
+  height: 60px;
+  background: #faf9f4;               /* paper */
+  border-radius: 3px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22), 0 1px 3px rgba(0,0,0,0.12);
   display: flex;
   align-items: center;
   justify-content: center;
   padding-right: 6px;   /* body center (eye→tail) sits just left of middle */
   color: #fff;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: -0.01em;
   pointer-events: none;
@@ -993,6 +995,18 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   opacity: 0;
   z-index: 999;
   transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.read-cursor::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  background: url('fish-cursor.png') center / contain no-repeat;
+}
+
+.read-cursor .read-label {
+  position: relative;
+  z-index: 1;
 }
 
 .read-cursor.visible {
