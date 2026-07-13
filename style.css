@@ -994,17 +994,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   transition: opacity 0.18s ease, transform 0.18s ease;
 }
 
-/* cream fish-shaped paper behind, slightly larger, with shadow */
-.read-cursor::before {
-  content: '';
-  position: absolute;
-  inset: -9px;
-  background: url('fish-paper.png') center / contain no-repeat;
-  filter: drop-shadow(0 5px 7px rgba(0,0,0,0.28));
-  z-index: 0;
-}
-
-/* blue fish stamp on top of the paper */
+/* blue fish stamp only */
 .read-cursor::after {
   content: '';
   position: absolute;
