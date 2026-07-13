@@ -1,103 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* ─── ABC MONUMENT GROTESK (self-hosted, /fonts) ─── */
+
+/* ─── ABC SOCIAL (self-hosted, /fonts) ─── */
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 100;                 /* Thin */
+  font-family: 'ABC Social';
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Thin.otf') format('opentype');
+  src: url('fonts/ABCSocial-Hairline.otf') format('opentype');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
+  font-family: 'ABC Social';
   font-weight: 100;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-ThinItalic.otf') format('opentype');
+  src: url('fonts/ABCSocial-HairlineItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 300;                 /* Light */
+  font-family: 'ABC Social';
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Light.otf') format('opentype');
+  src: url('fonts/ABCSocial-Thin.otf') format('opentype');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
+  font-family: 'ABC Social';
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/ABCSocial-ThinItalic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ABC Social';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/ABCSocial-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ABC Social';
   font-weight: 300;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-LightItalic.otf') format('opentype');
+  src: url('fonts/ABCSocial-LightItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 400;                 /* Regular */
+  font-family: 'ABC Social';
+  font-weight: 350;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Regular.otf') format('opentype');
+  src: url('fonts/ABCSocial-Book.otf') format('opentype');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
+  font-family: 'ABC Social';
+  font-weight: 350;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/ABCSocial-BookItalic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ABC Social';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/ABCSocial-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ABC Social';
   font-weight: 400;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-RegularItalic.otf') format('opentype');
+  src: url('fonts/ABCSocial-RegularItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 500;                 /* Medium */
+  font-family: 'ABC Social';
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Medium.otf') format('opentype');
+  src: url('fonts/ABCSocial-Medium.otf') format('opentype');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
+  font-family: 'ABC Social';
   font-weight: 500;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-MediumItalic.otf') format('opentype');
+  src: url('fonts/ABCSocial-MediumItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 600 700;             /* Bold — covers 600 & 700 */
+  font-family: 'ABC Social';
+  font-weight: 600 700;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Bold.otf') format('opentype');
+  src: url('fonts/ABCSocial-Bold.otf') format('opentype');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
+  font-family: 'ABC Social';
   font-weight: 600 700;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-BoldItalic.otf') format('opentype');
+  src: url('fonts/ABCSocial-BoldItalic.otf') format('opentype');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 800;                 /* Heavy */
+  font-family: 'ABC Social';
+  font-weight: 800 900;
   font-style: normal;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Heavy.otf') format('opentype');
+  src: url('fonts/ABCSocial-Black.otf') format('opentype');
 }
 @font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 800;
+  font-family: 'ABC Social';
+  font-weight: 800 900;
   font-style: italic;
   font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-HeavyItalic.otf') format('opentype');
-}
-@font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 900;                 /* Black */
-  font-style: normal;
-  font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-Black.otf') format('opentype');
-}
-@font-face {
-  font-family: 'ABC Monument Grotesk';
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-  src: url('fonts/ABCMonumentGrotesk-BlackItalic.otf') format('opentype');
+  src: url('fonts/ABCSocial-BlackItalic.otf') format('opentype');
 }
 
 :root {
@@ -113,7 +128,7 @@
 html, body { height: 100%; }
 
 body {
-  font-family: 'ABC Monument Grotesk', 'Inter', system-ui, sans-serif;
+  font-family: 'ABC Social', 'Inter', system-ui, sans-serif;
   font-optical-sizing: auto;
   background: var(--white);
   color: var(--text);
