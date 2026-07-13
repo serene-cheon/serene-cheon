@@ -194,7 +194,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 
 .topbar-bio {
   margin-left: auto;
-  width: max-content;
+  max-width: 340px;
 }
 
 .topbar-bio-title {
