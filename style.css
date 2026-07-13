@@ -194,11 +194,23 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 
 .topbar-bio {
   margin-left: auto;
-  font-size: 12.5px;
-  color: var(--text);
-  line-height: 1.4;
-  letter-spacing: -0.01em;
   max-width: 360px;
+}
+
+.topbar-bio-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.topbar-bio p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #737373;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
 }
 
 .topbar-bio a {
