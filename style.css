@@ -976,7 +976,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   position: fixed;
   top: 0;
   left: 0;
-  transform: translate(-50%, -50%) scale(0.6) rotate(-4deg);
+  transform: translate(-50%, -50%) scale(0.6);
   width: 84px;
   height: 44px;
   background: url('fish-cursor.png') center / contain no-repeat;
@@ -997,7 +997,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 
 .read-cursor.visible {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1) rotate(-4deg);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .book:hover .book-box,
