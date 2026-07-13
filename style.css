@@ -909,16 +909,16 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .tag-shape:hover::after { border-color: transparent; }
 
 .tag-label {
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.25;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.45;
   letter-spacing: -0.01em;
 }
 
 .tag-blurb {
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 1.25;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.45;
   letter-spacing: -0.01em;
   opacity: 0.7;
 }
