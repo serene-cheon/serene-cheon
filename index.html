@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Serene Cheon — UX Researcher</title>
   <meta name="description" content="Serene Cheon is a UX researcher based in Berkeley." />
-  <link rel="stylesheet" href="style.css?v=138" />
+  <link rel="stylesheet" href="style.css?v=139" />
 </head>
 <body class="home">
 
@@ -188,6 +188,21 @@
       tag.addEventListener('mouseleave', () => {
         book.classList.remove('is-open');
         hideInfo();
+      });
+    });
+
+    // custom "Read" cursor over books
+    const readCursor = document.createElement('div');
+    readCursor.className = 'read-cursor';
+    readCursor.textContent = 'Read';
+    document.body.appendChild(readCursor);
+
+    books.forEach(book => {
+      book.addEventListener('mouseenter', () => readCursor.classList.add('visible'));
+      book.addEventListener('mouseleave', () => readCursor.classList.remove('visible'));
+      book.addEventListener('mousemove', (e) => {
+        readCursor.style.left = e.clientX + 'px';
+        readCursor.style.top  = e.clientY + 'px';
       });
     });
   }
