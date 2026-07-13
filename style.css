@@ -269,8 +269,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   max-width: 1600px;
   margin: 0 auto;
   padding: 24px var(--px) 40px;
-  font-size: 12.5px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   color: #737373;
   letter-spacing: -0.01em;
   font-variant-numeric: tabular-nums;
