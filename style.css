@@ -977,12 +977,12 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   top: 0;
   left: 0;
   transform: translate(-50%, -50%) scale(0.6);
-  width: 74px;
-  height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 6px;   /* body center (eye→tail) sits just left of middle */
+  background: #1e2b8b;
+  border-radius: 999px;
+  padding: 10px 20px;
   color: #fff;
   font-size: 12px;
   font-weight: 500;
@@ -992,20 +992,6 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   opacity: 0;
   z-index: 999;
   transition: opacity 0.18s ease, transform 0.18s ease;
-}
-
-/* blue fish stamp only */
-.read-cursor::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('fish-cursor.png') center / contain no-repeat;
-  z-index: 1;
-}
-
-.read-cursor .read-label {
-  position: relative;
-  z-index: 2;
 }
 
 .read-cursor.visible {
