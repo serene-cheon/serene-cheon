@@ -200,9 +200,10 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .topbar-bio-title {
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.45;
   color: var(--text);
   letter-spacing: -0.01em;
-  margin-bottom: 6px;
+  margin-bottom: 0;
 }
 
 .topbar-bio p {
