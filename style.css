@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@font-face {
+  font-family: 'Egypt Sea';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/EgyptSea.woff2') format('woff2');
+}
+
 
 /* ─── ABC SOCIAL (self-hosted, /fonts) ─── */
 @font-face {
@@ -924,6 +932,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 /* read time — hidden, unfolds on hover / active */
 .tag-read {
   display: block;
+  font-family: 'ABC Social', 'Egypt Sea', 'Inter', system-ui, sans-serif;
   font-size: 11px;
   font-weight: 400;
   line-height: 1.3;
