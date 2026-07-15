@@ -159,6 +159,8 @@ img { display: block; max-width: 100%; }
   max-width: 1600px;
   margin: 0 auto;
   padding: 24px var(--px) 20px;
+  position: relative;
+  z-index: 40;          /* keep nav clickable above the 3D shelf */
 }
 
 /* ─── HOME: single-screen, no-scroll layout ─── */
@@ -258,13 +260,22 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .topbar-group .contact-email:hover { color: var(--text); }
 
 .contact-copied {
-  font-size: 10.5px;
-  color: var(--muted);
+  display: inline-block;
+  margin-left: 8px;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1;
   opacity: 0;
-  transition: opacity 0.2s;
+  transform: scale(0.8);
+  transition: opacity 0.2s, transform 0.2s;
 }
 
-.contact-copied.show { opacity: 1; }
+.contact-copied.show { opacity: 1; transform: scale(1); }
 
 /* ─── PAGE ─── */
 .page {
