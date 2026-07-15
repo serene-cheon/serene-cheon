@@ -902,13 +902,9 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 
 .tag-shape:hover,
 .tag-shape.is-active {
-  background: var(--tag);
-  color: var(--tagfg);
+  color: var(--text);
   z-index: 10;
 }
-
-.tag-shape:hover::after,
-.tag-shape.is-active::after { border-color: transparent; }
 
 .tag-label {
   font-size: 13px;
