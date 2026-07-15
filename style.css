@@ -963,6 +963,13 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   transition: width 0.6s cubic-bezier(.2,.75,.25,1);
 }
 
+/* depth order: books nearer the viewing center occlude outer ones */
+.book:nth-child(1) { z-index: 1; }
+.book:nth-child(2) { z-index: 2; }
+.book:nth-child(3) { z-index: 3; }
+.book:nth-child(4) { z-index: 2; }
+.book:nth-child(5) { z-index: 1; }
+
 .book:hover,
 .book.is-open {
   width: 276px;                      /* widen the slot → siblings slide aside */
