@@ -877,7 +877,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   position: absolute;
   left: 0;
   bottom: 40px;
-  width: 158px;
+  width: 210px;
   display: flex;
   flex-direction: column;
   z-index: 30;
@@ -893,7 +893,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   flex-direction: column;
   gap: 2px;
   justify-content: center;
-  width: 158px;
+  width: 210px;
   min-height: 52px;
   box-sizing: border-box;
   transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, z-index 0s;
