@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Serene Cheon — UX Researcher</title>
   <meta name="description" content="Serene Cheon is a UX researcher based in Berkeley." />
-  <link rel="stylesheet" href="style.css?v=177" />
+  <link rel="stylesheet" href="style.css?v=178" />
 </head>
 <body class="home">
 
@@ -117,18 +117,6 @@
       </div>
 
     </div>
-
-    <div class="shelf-info" id="shelfInfo">
-      <div class="shelf-info-text">
-        <div class="shelf-info-top">
-          <span class="shelf-info-year" id="shelfInfoYear"></span>
-          <span class="shelf-info-label" id="shelfInfoLabel"></span>
-        </div>
-        <div class="shelf-info-title" id="shelfInfoTitle"></div>
-        <div class="shelf-info-read" id="shelfInfoRead"></div>
-      </div>
-      <a href="work.html" class="shelf-info-btn" id="shelfInfoBtn">Read</a>
-    </div>
   </section>
 
 </main>
@@ -156,54 +144,33 @@
     setTimeout(() => tag.classList.remove('show'), 1800);
   }
 
-  const shelfInfo = document.getElementById('shelfInfo');
-  if (shelfInfo) {
-    const yearEl  = document.getElementById('shelfInfoYear');
-    const labelEl = document.getElementById('shelfInfoLabel');
-    const titleEl = document.getElementById('shelfInfoTitle');
-    const readEl  = document.getElementById('shelfInfoRead');
-    const btnEl   = document.getElementById('shelfInfoBtn');
+  const books = Array.from(document.querySelectorAll('.book'));
+  const tags  = Array.from(document.querySelectorAll('.tag-shape'));
 
-    const books = Array.from(document.querySelectorAll('.book'));
+  function activate(i) {
+    const book = books[i], tag = tags[i];
+    if (book) book.classList.add('is-open');
+    if (tag) tag.classList.add('is-active');
+  }
+  function deactivate(i) {
+    const book = books[i], tag = tags[i];
+    if (book) book.classList.remove('is-open');
+    if (tag) tag.classList.remove('is-active');
+  }
 
-    function showInfo(book) {
-      yearEl.textContent  = book.dataset.year;
-      labelEl.textContent = book.dataset.label;
-      titleEl.textContent = book.dataset.title;
-      readEl.textContent  = book.dataset.read;
-      btnEl.href = book.getAttribute('href');
-      shelfInfo.classList.add('visible');
-    }
-    function hideInfo() {
-      shelfInfo.classList.remove('visible');
-    }
+  books.forEach((book, i) => {
+    book.addEventListener('mouseenter', () => activate(i));
+    book.addEventListener('mouseleave', () => deactivate(i));
+  });
 
-    const tags = Array.from(document.querySelectorAll('.tag-shape'));
+  tags.forEach((tag) => {
+    const idx = Number(tag.dataset.idx);
+    tag.addEventListener('mouseenter', () => activate(idx));
+    tag.addEventListener('mouseleave', () => deactivate(idx));
+  });
 
-    function activate(i) {
-      const book = books[i], tag = tags[i];
-      if (book) { book.classList.add('is-open'); showInfo(book); }
-      if (tag) tag.classList.add('is-active');
-    }
-    function deactivate(i) {
-      const book = books[i], tag = tags[i];
-      if (book) book.classList.remove('is-open');
-      if (tag) tag.classList.remove('is-active');
-      hideInfo();
-    }
-
-    books.forEach((book, i) => {
-      book.addEventListener('mouseenter', () => activate(i));
-      book.addEventListener('mouseleave', () => deactivate(i));
-    });
-
-    tags.forEach((tag, i) => {
-      const idx = Number(tag.dataset.idx);
-      tag.addEventListener('mouseenter', () => activate(idx));
-      tag.addEventListener('mouseleave', () => deactivate(idx));
-    });
-
-    // custom "Read" cursor over books
+  // custom "Read" cursor over books
+  if (books.length) {
     const readCursor = document.createElement('div');
     readCursor.className = 'read-cursor';
     readCursor.innerHTML = '<span class="read-label">Read</span>';
