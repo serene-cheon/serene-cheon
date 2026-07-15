@@ -843,6 +843,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 /* ─── DIGITAL BOOKSHELF (real 3D, 3/4 view) ─── */
 .shelf-section {
   margin-top: 0;
+  margin-bottom: 84px;   /* offset topbar > footer so shelf reads visually centered */
 }
 
 .shelf-label {
