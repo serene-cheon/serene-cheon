@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Serene Cheon — UX Researcher</title>
   <meta name="description" content="Serene Cheon is a UX researcher based in Berkeley." />
-  <link rel="stylesheet" href="style.css?v=157" />
+  <link rel="stylesheet" href="style.css?v=158" />
 </head>
 <body class="home">
 
@@ -38,22 +38,27 @@
         <div class="tag-shape" data-idx="0" style="--tag:#f2a7c3; --tagfg:#3a1420;">
           <span class="tag-label">Fluke Internship</span>
           <span class="tag-blurb">Qualitative Research</span>
+          <span class="tag-read">5 min read</span>
         </div>
         <div class="tag-shape" data-idx="1" style="--tag:#22314e; --tagfg:#fff;">
           <span class="tag-label">JSTOR GPT</span>
           <span class="tag-blurb">Field Study</span>
+          <span class="tag-read">7 min read</span>
         </div>
         <div class="tag-shape" data-idx="2" style="--tag:#d93a2b; --tagfg:#fff;">
           <span class="tag-label">ChipXR</span>
           <span class="tag-blurb">Concept Testing</span>
+          <span class="tag-read">5 min read</span>
         </div>
         <div class="tag-shape" data-idx="3" style="--tag:#e6e3dc; --tagfg:#1a1a1a;">
           <span class="tag-label">Inclusify</span>
           <span class="tag-blurb">Usability Testing</span>
+          <span class="tag-read">6 min read</span>
         </div>
         <div class="tag-shape" data-idx="4" style="--tag:#e8742c; --tagfg:#fff;">
           <span class="tag-label">Kodi</span>
           <span class="tag-blurb">User Interviews</span>
+          <span class="tag-read">5 min read</span>
         </div>
       </div>
 
@@ -173,22 +178,29 @@
       shelfInfo.classList.remove('visible');
     }
 
-    books.forEach(book => {
-      book.addEventListener('mouseenter', () => showInfo(book));
-      book.addEventListener('mouseleave', hideInfo);
+    const tags = Array.from(document.querySelectorAll('.tag-shape'));
+
+    function activate(i) {
+      const book = books[i], tag = tags[i];
+      if (book) { book.classList.add('is-open'); showInfo(book); }
+      if (tag) tag.classList.add('is-active');
+    }
+    function deactivate(i) {
+      const book = books[i], tag = tags[i];
+      if (book) book.classList.remove('is-open');
+      if (tag) tag.classList.remove('is-active');
+      hideInfo();
+    }
+
+    books.forEach((book, i) => {
+      book.addEventListener('mouseenter', () => activate(i));
+      book.addEventListener('mouseleave', () => deactivate(i));
     });
 
-    document.querySelectorAll('.tag-shape').forEach(tag => {
-      const book = books[Number(tag.dataset.idx)];
-      if (!book) return;
-      tag.addEventListener('mouseenter', () => {
-        book.classList.add('is-open');
-        showInfo(book);
-      });
-      tag.addEventListener('mouseleave', () => {
-        book.classList.remove('is-open');
-        hideInfo();
-      });
+    tags.forEach((tag, i) => {
+      const idx = Number(tag.dataset.idx);
+      tag.addEventListener('mouseenter', () => activate(idx));
+      tag.addEventListener('mouseleave', () => deactivate(idx));
     });
 
     // custom "Read" cursor over books

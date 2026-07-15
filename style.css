@@ -900,13 +900,15 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   border-top: 1px solid var(--border);
 }
 
-.tag-shape:hover {
+.tag-shape:hover,
+.tag-shape.is-active {
   background: var(--tag);
   color: var(--tagfg);
   z-index: 10;
 }
 
-.tag-shape:hover::after { border-color: transparent; }
+.tag-shape:hover::after,
+.tag-shape.is-active::after { border-color: transparent; }
 
 .tag-label {
   font-size: 13px;
@@ -921,6 +923,26 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   line-height: 1.45;
   letter-spacing: -0.01em;
   opacity: 0.7;
+}
+
+/* read time — hidden, unfolds on hover / active */
+.tag-read {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease, opacity 0.2s ease, margin-top 0.25s ease;
+}
+
+.tag-shape:hover .tag-read,
+.tag-shape.is-active .tag-read {
+  opacity: 0.85;
+  max-height: 18px;
+  margin-top: 3px;
 }
 
 
