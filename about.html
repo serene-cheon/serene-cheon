@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=189" />
+  <link rel="stylesheet" href="style.css?v=191" />
 </head>
 <body>
 
@@ -45,112 +45,137 @@
     </button>
   </div>
 
-  <div class="spread">
-    <div class="spread-page spread-left">
-      <div class="spread-run"><span>01.1</span><span>About Serene</span></div>
-      <div class="spread-display">Curious by default,<br>rigorous by training.</div>
-      <div class="about-grid">
-        <div class="about-avatar">photo</div>
-        <div class="about-bio-text">
-          <p>I graduated from UC Berkeley with a focus on human-computer interaction and cognitive science, which gave me a rigorous, evidence-based lens for understanding how people think, feel, and behave with technology.</p>
-          <p>Good research, to me, is less about methods and more about curiosity. It's about sitting with ambiguity long enough to ask the right question — and then designing the study that can actually answer it.</p>
-          <p>I've worked across mobile apps, enterprise software, and public-facing services, always with the same goal: making sure the people who matter most have a voice in the room when decisions get made.</p>
-          <p>Outside of work, I volunteer as an accessibility auditor for non-profit websites, mentor early-career researchers, and explore Bay Area hiking trails.</p>
-        </div>
-      </div>
+  <div class="book3d-scene">
+    <div class="b3-scale">
+      <div class="book3d state-0" id="book3d">
 
-      <div class="skills-section">
-        <p class="section-label">Skills &amp; Tools</p>
-        <div class="skills-cols">
-          <div class="skill-col">
-            <p class="skill-col-title">Research</p>
-            <ul>
-              <li>User Interviews</li>
-              <li>Usability Testing</li>
-              <li>Contextual Inquiry</li>
-              <li>Diary Studies</li>
-              <li>Card Sorting</li>
-              <li>Tree Testing</li>
-              <li>Surveys</li>
-            </ul>
+        <div class="b3-shadow"></div>
+
+        <!-- static left of first spread -->
+        <div class="b3-base b3-base-left">
+          <div class="b3-photo">photo</div>
+        </div>
+
+        <!-- static right of last spread -->
+        <div class="b3-base b3-base-right">
+          <div class="spread-run"><span>03.2</span><span>Now</span></div>
+          <div class="timeline-section" style="margin-top:0">
+            <div>
+              <div class="tl-entry">
+                <div class="tl-year">2025 – Present</div>
+                <div>
+                  <p class="tl-role">Senior UX Researcher</p>
+                  <p class="tl-company">Luminary Labs · Remote</p>
+                  <p class="tl-desc">Leading the enterprise research stream, mentoring two junior researchers, and building a shared research repository to democratise insights.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="skill-col">
-            <p class="skill-col-title">Synthesis</p>
-            <ul>
-              <li>Affinity Diagramming</li>
-              <li>Journey Mapping</li>
-              <li>Persona Development</li>
-              <li>Thematic Analysis</li>
-              <li>Jobs-to-be-Done</li>
-              <li>Research Repos</li>
-            </ul>
+          <p class="b3-note">Always happy to talk research, books, and Bay Area trails —<br>say hi at serenecheon@berkeley.edu</p>
+        </div>
+
+        <!-- leaf 0 : front = spread1 right / back = spread2 left -->
+        <div class="b3-leaf" data-i="0">
+          <div class="b3-face b3-front">
+            <div class="spread-run"><span>01.1</span><span>About Serene</span></div>
+            <div class="spread-display">Curious by default,<br>rigorous by training.</div>
+            <div class="about-bio-text">
+              <p>I graduated from UC Berkeley with a focus on human-computer interaction and cognitive science, which gave me a rigorous, evidence-based lens for understanding how people think, feel, and behave with technology.</p>
+              <p>Good research, to me, is less about methods and more about curiosity. It's about sitting with ambiguity long enough to ask the right question — and then designing the study that can actually answer it.</p>
+            </div>
+          </div>
+          <div class="b3-face b3-back">
+            <div class="spread-run"><span>02.1</span><span>How I Work</span></div>
+            <div class="about-bio-text">
+              <p>I've worked across mobile apps, enterprise software, and public-facing services, always with the same goal: making sure the people who matter most have a voice in the room when decisions get made.</p>
+              <p>Outside of work, I volunteer as an accessibility auditor for non-profit websites, mentor early-career researchers, and explore Bay Area hiking trails.</p>
+            </div>
+            <div class="skills-section">
+              <p class="section-label">Research &amp; Synthesis</p>
+              <div class="skills-cols">
+                <div class="skill-col">
+                  <ul>
+                    <li>User Interviews</li>
+                    <li>Usability Testing</li>
+                    <li>Contextual Inquiry</li>
+                    <li>Diary Studies</li>
+                  </ul>
+                </div>
+                <div class="skill-col">
+                  <ul>
+                    <li>Affinity Diagramming</li>
+                    <li>Journey Mapping</li>
+                    <li>Thematic Analysis</li>
+                    <li>Jobs-to-be-Done</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- leaf 1 : front = spread2 right / back = spread3 left -->
+        <div class="b3-leaf" data-i="1">
+          <div class="b3-face b3-front">
+            <div class="spread-run"><span>02.2</span><span>Toolkit</span></div>
+            <div class="skills-section" style="margin-top:0">
+              <p class="section-label">Tools &amp; Strengths</p>
+              <div class="skills-cols">
+                <div class="skill-col">
+                  <p class="skill-col-title">Tools</p>
+                  <ul>
+                    <li>Figma</li>
+                    <li>Miro</li>
+                    <li>Dovetail</li>
+                    <li>Lookback</li>
+                    <li>Maze</li>
+                  </ul>
+                </div>
+                <div class="skill-col">
+                  <p class="skill-col-title">Strengths</p>
+                  <ul>
+                    <li>Stakeholder Comms</li>
+                    <li>Workshop Facilitation</li>
+                    <li>Storytelling</li>
+                    <li>Mentoring</li>
+                    <li>Accessibility</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="b3-face b3-back">
+            <div class="spread-run"><span>03.1</span><span>Experience</span></div>
+            <div class="timeline-section" style="margin-top:0">
+              <div>
+                <div class="tl-entry">
+                  <div class="tl-year">Summer 2023</div>
+                  <div>
+                    <p class="tl-role">UX Research Intern</p>
+                    <p class="tl-company">Bloom Finance · San Francisco, CA</p>
+                    <p class="tl-desc">Conducted 20+ participant studies evaluating a redesigned investment onboarding flow. Findings adopted within one quarter.</p>
+                  </div>
+                </div>
+                <div class="tl-entry">
+                  <div class="tl-year">2024</div>
+                  <div>
+                    <p class="tl-role">UX Researcher</p>
+                    <p class="tl-company">Luminary Labs · Remote</p>
+                    <p class="tl-desc">Owned the full research programme end-to-end. Led an accessibility initiative reaching WCAG 2.1 AA compliance.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-
-    <div class="spread-page spread-right">
-      <div class="spread-run"><span>01.2</span><span>Toolkit &amp; Experience</span></div>
-      <div class="skills-section" style="margin-top:0">
-        <p class="section-label">Tools &amp; Strengths</p>
-        <div class="skills-cols">
-          <div class="skill-col">
-            <p class="skill-col-title">Tools</p>
-            <ul>
-              <li>Figma</li>
-              <li>Miro</li>
-              <li>Dovetail</li>
-              <li>Lookback</li>
-              <li>UserZoom</li>
-              <li>Maze</li>
-              <li>Optimal Workshop</li>
-            </ul>
-          </div>
-          <div class="skill-col">
-            <p class="skill-col-title">Strengths</p>
-            <ul>
-              <li>Stakeholder Comms</li>
-              <li>Research Evangelism</li>
-              <li>Workshop Facilitation</li>
-              <li>Storytelling</li>
-              <li>Mentoring</li>
-              <li>Accessibility</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-section">
-        <p class="section-label">Experience</p>
-        <div>
-          <div class="tl-entry">
-            <div class="tl-year">Summer 2023</div>
-            <div>
-              <p class="tl-role">UX Research Intern</p>
-              <p class="tl-company">Bloom Finance · San Francisco, CA</p>
-              <p class="tl-desc">Conducted 20+ participant studies evaluating a redesigned investment onboarding flow. Findings adopted by the product team within one quarter.</p>
-            </div>
-          </div>
-          <div class="tl-entry">
-            <div class="tl-year">2024</div>
-            <div>
-              <p class="tl-role">UX Researcher</p>
-              <p class="tl-company">Luminary Labs · Remote</p>
-              <p class="tl-desc">Owned the full research programme end-to-end. Led an accessibility initiative that brought two core products into WCAG 2.1 AA compliance.</p>
-            </div>
-          </div>
-          <div class="tl-entry">
-            <div class="tl-year">2025 – Present</div>
-            <div>
-              <p class="tl-role">Senior UX Researcher</p>
-              <p class="tl-company">Luminary Labs · Remote</p>
-              <p class="tl-desc">Leading the enterprise research stream, mentoring two junior researchers, and building a shared research repository to democratise insights.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="b3-nav b3-nav-left" aria-label="Previous page"></div>
+    <div class="b3-nav b3-nav-right" aria-label="Next page"></div>
+    <div class="b3-hint" id="b3Hint">Click the page to turn →</div>
   </div>
+
 </main>
 
 <footer class="page-footer">
@@ -217,6 +242,31 @@
     tag.classList.add('show');
     setTimeout(() => tag.classList.remove('show'), 1800);
   }
+</script>
+
+<script>
+  const book3d = document.getElementById('book3d');
+  const leaves = Array.from(book3d.querySelectorAll('.b3-leaf'));
+  const hint = document.getElementById('b3Hint');
+  const MAX = leaves.length;   // number of turnable pages
+  let state = 0;
+
+  function render() {
+    book3d.classList.remove('state-0','state-1','state-2');
+    book3d.classList.add('state-' + state);
+    leaves.forEach((l, i) => l.classList.toggle('flipped', i < state));
+    hint.textContent = state === 0 ? 'Click the page to turn →'
+                     : state < MAX ? '← / → Click either side to browse'
+                     : '← Click the left page to go back';
+  }
+
+  document.querySelector('.b3-nav-right').addEventListener('click', () => { if (state < MAX) { state++; render(); } });
+  document.querySelector('.b3-nav-left').addEventListener('click',  () => { if (state > 0)  { state--; render(); } });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' && state < MAX) { state++; render(); }
+    if (e.key === 'ArrowLeft'  && state > 0)  { state--; render(); }
+  });
+  render();
 </script>
 </body>
 </html>
