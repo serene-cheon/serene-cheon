@@ -1248,3 +1248,61 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   .case-entry { grid-template-columns: 1fr; gap: 20px; }
   .about-grid { grid-template-columns: 1fr; }
 }
+
+/* ─── ABOUT: open-book spread ─── */
+.spread {
+  display: flex;
+  max-width: 1040px;
+  margin: 28px auto 60px;
+  background: #fbfaf5;
+  border-radius: 4px 10px 10px 4px;
+  position: relative;
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.16),
+    0 4px 12px rgba(0,0,0,0.08),
+    /* stacked page edges peeking below */
+    0 2px 0 -1px #f1efe6,
+    0 3px 0 -1px #d9d6c9,
+    0 5px 0 -2px #f1efe6,
+    0 6px 0 -2px #d9d6c9,
+    0 8px 0 -3px #f1efe6,
+    0 9px 0 -3px #d9d6c9;
+}
+
+.spread-page {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 52px 48px 56px;
+  position: relative;
+}
+
+/* center gutter shading */
+.spread-left {
+  border-radius: 4px 0 0 4px;
+  background:
+    linear-gradient(to left, rgba(0,0,0,0.10), rgba(0,0,0,0.035) 5%, rgba(0,0,0,0) 12%),
+    #fbfaf5;
+}
+
+.spread-right {
+  border-radius: 0 10px 10px 0;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.10), rgba(0,0,0,0.035) 5%, rgba(0,0,0,0) 12%),
+    linear-gradient(to left, rgba(0,0,0,0.045), rgba(0,0,0,0) 3%),
+    #fbfaf5;
+}
+
+/* thin fold line at the gutter */
+.spread-left::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 1px;
+  background: rgba(0,0,0,0.14);
+}
+
+@media (max-width: 820px) {
+  .spread { flex-direction: column; }
+  .spread-page { padding: 40px 30px; }
+  .spread-left::after { display: none; }
+}
