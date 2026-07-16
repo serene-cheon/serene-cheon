@@ -1271,8 +1271,9 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 /* camera states: centered, slightly folded & small → flat & zoomed */
 .book3d { --foldL: 0deg; --foldR: 0deg; }
 .book3d.state-0 { --foldL: 26deg; --foldR: -26deg; transform: rotateX(10deg) scale(0.9); }
-.book3d.state-1 { transform: rotateX(5deg) scale(1.0); }
-.book3d.state-2 { transform: rotateX(2deg) scale(1.06); }
+.book3d.state-1 { transform: rotateX(4deg) scale(1.04); }   /* first click: just open & zoom into spread 1 */
+.book3d.state-2 { transform: rotateX(3deg) scale(1.05); }
+.book3d.state-3 { transform: rotateX(2deg) scale(1.06); }
 
 /* ground shadow */
 .b3-shadow {

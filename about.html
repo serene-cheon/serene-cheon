@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=193" />
+  <link rel="stylesheet" href="style.css?v=194" />
 </head>
 <body>
 
@@ -248,14 +248,14 @@
   const book3d = document.getElementById('book3d');
   const leaves = Array.from(book3d.querySelectorAll('.b3-leaf'));
   const hint = document.getElementById('b3Hint');
-  const MAX = leaves.length;   // number of turnable pages
+  const MAX = leaves.length + 1;   // state 1 = opened, 2.. = pages turned
   let state = 0;
 
   function render() {
-    book3d.classList.remove('state-0','state-1','state-2');
+    book3d.classList.remove('state-0','state-1','state-2','state-3');
     book3d.classList.add('state-' + state);
-    leaves.forEach((l, i) => l.classList.toggle('flipped', i < state));
-    hint.textContent = state === 0 ? 'Click the page to turn →'
+    leaves.forEach((l, i) => l.classList.toggle('flipped', i < state - 1));
+    hint.textContent = state === 0 ? 'Click to open the book →'
                      : state < MAX ? '← / → Click either side to browse'
                      : '← Click the left page to go back';
   }
