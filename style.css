@@ -1256,14 +1256,12 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   flex-direction: column;
   align-items: center;
   padding: 0;
-  margin-top: 56px;
+  margin-top: 76px;
 }
 
-@media (max-height: 830px) {
-  .book3d-scene { margin-top: 4px; }
-}
 
-.b3-scale { transform-origin: top center; }
+
+.b3-scale { transform-origin: top center; height: 530px; }
 
 .book3d {
   position: relative;
@@ -1425,5 +1423,9 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .book3d .about-bio-text p { color: #3a3a33; }
 .book3d .section-label { color: #7e96cf; }
 
-@media (max-width: 1060px) { .b3-scale { transform: scale(0.72); } .book3d-scene { padding-bottom: 0; } .b3-hint { margin-top: -80px; } }
-@media (max-width: 740px)  { .b3-scale { transform: scale(0.46); } .b3-hint { margin-top: -260px; } }
+@media (max-width: 1060px) { .b3-scale { transform: scale(0.72); height: 382px; } }
+@media (max-width: 740px)  { .b3-scale { transform: scale(0.46); height: 244px; } }
+/* short viewports: shrink book so it never slides under the top menu */
+@media (max-height: 850px) { .book3d-scene { margin-top: 20px; } .b3-scale { transform: scale(0.86); height: 456px; } .b3-hint { margin-top: 44px; } }
+@media (max-height: 720px) { .book3d-scene { margin-top: 8px; }  .b3-scale { transform: scale(0.70); height: 371px; } .b3-hint { margin-top: 32px; } }
+@media (max-height: 600px) { .b3-scale { transform: scale(0.55); height: 292px; } .b3-hint { margin-top: 24px; } }
