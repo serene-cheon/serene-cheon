@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=200" />
+  <link rel="stylesheet" href="style.css?v=204" />
 </head>
 <body class="home">
 
@@ -45,7 +45,7 @@
     </button>
   </div>
 
-  <div class="book3d-scene">
+  <div class="book3d-scene" style="display:none">
     <div class="b3-scale">
       <div class="book3d state-0" id="book3d">
 
@@ -176,6 +176,39 @@
     <div class="b3-hint" id="b3Hint">Click the page to turn →</div>
   </div>
 
+
+  <div class="env-scene">
+    <div class="envelope" id="envelope">
+      <!-- opened flap (navy, peak up) -->
+      <div class="env-back"></div>
+
+      <!-- letters inside -->
+      <div class="env-item env-letter" data-item>
+        <div class="env-letter-head">Dear visitor,</div>
+        <p>Thanks for stopping by. I'm Serene — a mixed-methods UX researcher who believes good research is equal parts curiosity and rigor.</p>
+        <p>Have a look around the shelf, and say hi anytime.</p>
+        <div class="env-letter-sign">— Serene ✳</div>
+      </div>
+
+      <div class="env-item env-polaroid" data-item>
+        <div class="env-polaroid-img">photo</div>
+        <div class="env-polaroid-cap">Berkeley, CA</div>
+      </div>
+
+      <div class="env-item env-vellum" data-item></div>
+
+      <!-- front pocket -->
+      <div class="env-front"></div>
+
+      <!-- ticket label -->
+      <div class="env-ticket">
+        <div class="env-ticket-title">About Serene</div>
+        <div class="env-ticket-sub">by serene · berkeley, ca</div>
+      </div>
+    </div>
+    <div class="b3-hint">Click a letter to pull it out</div>
+  </div>
+
 </main>
 
 <footer class="page-footer">
@@ -267,6 +300,21 @@
     if (e.key === 'ArrowLeft'  && state > 0)  { state--; render(); }
   });
   render();
+</script>
+
+<script>
+  const envItems = Array.from(document.querySelectorAll('.env-item'));
+  envItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const wasOut = item.classList.contains('out');
+      envItems.forEach(i => i.classList.remove('out'));
+      if (!wasOut) item.classList.add('out');
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.env-item')) envItems.forEach(i => i.classList.remove('out'));
+  });
 </script>
 </body>
 </html>
