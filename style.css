@@ -1235,10 +1235,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 
 /* ─── RESPONSIVE ─── */
 /* let the bio give way first so the row survives narrower widths */
-@media (max-width: 1060px) {
-  .topbar { gap: 36px; }
-  .topbar-menu { gap: 32px; }
-  .topbar-bio { max-width: 260px; }
+@media (max-width: 920px) {
+  .topbar-bio { max-width: 250px; }
 }
 
 @media (max-width: 820px) {
