@@ -1665,6 +1665,32 @@ background: url("data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F
   color: var(--ink, #444);
 }
 
+/* ── photo stamps ── */
+.stamp-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+/* soft scrims top & bottom so the value and caption stay legible on any photo */
+.has-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0) 24%),
+    linear-gradient(rgba(0,0,0,0) 68%, rgba(0,0,0,0.38));
+}
+.has-photo .stamp-val,
+.has-photo .stamp-name {
+  z-index: 2;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.55);
+}
+
 @media (max-width: 1100px) {
   .about-ed-gallery { flex-wrap: wrap; }
   .stamp-item { flex: 0 1 calc(25% - 18px); }
