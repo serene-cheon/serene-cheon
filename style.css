@@ -1622,13 +1622,16 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   --pr: 2.9px;   /* perforation bite radius */
   --nx: 13;      /* holes across each horizontal edge */
   --ny: 16;      /* holes down each vertical edge */
-  --bd: 9px;     /* cream border band thickness */
+  --bd: 9px;     /* border band thickness */
+  --lw: 1.4px;   /* perforation outline thickness */
+  --line: #b9ad83;  /* perforation outline colour */
+  position: relative;
   /* Lock the whole stamp's ratio to the hole counts so pitchX == pitchY at
      ANY size → corner-to-hole gap is identical on all four corners always. */
   aspect-ratio: var(--nx) / var(--ny);
-  background: #f2ecd8;
+  background: var(--line);
   padding: var(--bd);
-  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.22)) drop-shadow(0 0 0.5px rgba(0,0,0,0.30));
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.14));
   /* Punch the perforation holes OUT of one solid rectangle (XOR) so every
      hole is a full semicircle — including the ones beside each corner —
      instead of unioning four frame bands that fill each other's corner holes. */
@@ -1648,11 +1651,35 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   mask-composite: exclude;
 }
 
+/* Hollow out the inside of the scalloped shape so only its edge remains,
+   turning the filled perforation band into a thin outline. */
+.stamp::before {
+  content: "";
+  position: absolute;
+  inset: var(--lw);
+  background: var(--white, #fff);
+  -webkit-mask:
+    radial-gradient(circle var(--pr) at 50% 0,    #000 98%, #0000) top    / calc(100%/var(--nx)) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 50% 100%, #000 98%, #0000) bottom / calc(100%/var(--nx)) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 0 50%,    #000 98%, #0000) left   / var(--bd) calc(100%/var(--ny)) repeat-y,
+    radial-gradient(circle var(--pr) at 100% 50%, #000 98%, #0000) right  / var(--bd) calc(100%/var(--ny)) repeat-y,
+    linear-gradient(#000 0 0);
+  mask:
+    radial-gradient(circle var(--pr) at 50% 0,    #000 98%, #0000) top    / calc(100%/var(--nx)) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 50% 100%, #000 98%, #0000) bottom / calc(100%/var(--nx)) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 0 50%,    #000 98%, #0000) left   / var(--bd) calc(100%/var(--ny)) repeat-y,
+    radial-gradient(circle var(--pr) at 100% 50%, #000 98%, #0000) right  / var(--bd) calc(100%/var(--ny)) repeat-y,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor, xor, xor, xor;
+  mask-composite: exclude;
+}
+
 .stamp-body {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background: var(--ph, #e3ded2);
-  position: relative;
   overflow: hidden;
 }
 
