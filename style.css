@@ -1651,6 +1651,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   color: var(--ink, #444);
 }
 .stamp-val {
+  display: none;   /* value/caption text removed — photos & art only */
   position: absolute;
   top: 9px; left: 10px;
   font-family: Georgia, 'Times New Roman', serif;
@@ -1661,6 +1662,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 .stamp-val sup { font-size: 6.5px; margin-left: 0.5px; }
 .stamp-name {
+  display: none;   /* value/caption text removed — photos & art only */
   position: absolute;
   left: 0; right: 0; bottom: 9px;
   text-align: center;
@@ -1680,9 +1682,9 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   object-fit: cover;
   z-index: 0;
 }
-/* soft scrims top & bottom so the value and caption stay legible on any photo */
+/* scrim disabled — no text to keep legible, so the photo stays clean */
 .has-photo::before {
-  content: "";
+  content: none;
   position: absolute;
   inset: 0;
   z-index: 1;
