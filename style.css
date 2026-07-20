@@ -1682,9 +1682,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   object-fit: cover;
   z-index: 0;
 }
-/* photo stamps: drop the perforated border entirely — plain rectangular image */
+/* photo stamps: keep the perforated (scalloped) shape but drop the grey edge line */
 .stamp:has(.has-photo)::after { content: none; }
-.has-photo { -webkit-mask: none; mask: none; }
 /* scrim disabled — no text to keep legible, so the photo stays clean */
 .has-photo::before {
   content: none;
