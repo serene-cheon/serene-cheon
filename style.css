@@ -1623,6 +1623,9 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   --nx: 9;       /* holes across each horizontal edge (odd → symmetric) */
   --ny: 11;      /* holes down each vertical edge (odd → symmetric) */
   --bd: 9px;     /* cream border band thickness */
+  /* Lock the whole stamp's ratio to the hole counts so pitchX == pitchY at
+     ANY size → corner-to-hole gap is identical on all four corners always. */
+  aspect-ratio: var(--nx) / var(--ny);
   background: #f2ecd8;
   padding: var(--bd);
   filter: drop-shadow(0 3px 8px rgba(0,0,0,0.22)) drop-shadow(0 0 0.5px rgba(0,0,0,0.30));
@@ -1646,7 +1649,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 
 .stamp-body {
-  aspect-ratio: 4 / 5;
+  width: 100%;
+  height: 100%;
   background: var(--ph, #e3ded2);
   position: relative;
   overflow: hidden;
