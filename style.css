@@ -1620,8 +1620,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
    with a solid cream border band left between the holes and the photo */
 .stamp {
   --pr: 2.9px;   /* perforation bite radius */
-  --nx: 9;       /* holes across each horizontal edge (odd → symmetric) */
-  --ny: 11;      /* holes down each vertical edge (odd → symmetric) */
+  --nx: 13;      /* holes across each horizontal edge */
+  --ny: 16;      /* holes down each vertical edge */
   --bd: 9px;     /* cream border band thickness */
   /* Lock the whole stamp's ratio to the hole counts so pitchX == pitchY at
      ANY size → corner-to-hole gap is identical on all four corners always. */
