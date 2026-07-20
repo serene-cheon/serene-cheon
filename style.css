@@ -1609,7 +1609,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   margin-top: 26px;
 }
 
-.stamp-item { flex: 1 1 0; min-width: 0; }
+.stamp-item { flex: 1 1 0; min-width: 0; position: relative; }
 .stamp-item figcaption {
   font-size: 12.5px;
   color: #737373;
@@ -1624,7 +1624,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   aspect-ratio: 13 / 16;   /* matches the SVG viewBox */
 }
 .stamp::after {
-  content: "";
+  content: none;   /* perforation edge line hidden */
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1682,8 +1682,26 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   object-fit: cover;
   z-index: 0;
 }
-/* photo stamps: keep the perforated (scalloped) shape but drop the grey edge line */
-.stamp:has(.has-photo)::after { content: none; }
+/* hover caption shown below a stamp */
+.stamp-caption {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  width: 150px;
+  transform: translateX(-50%) translateY(4px);
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.4;
+  font-style: italic;
+  color: #6b6b6b;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+.stamp-item:hover .stamp-caption {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 /* scrim disabled — no text to keep legible, so the photo stays clean */
 .has-photo::before {
   content: none;
