@@ -1565,3 +1565,90 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .env-ticket-sub { font-size: 10px; color: #8a8676; margin-top: 3px; }
 
 @media (max-height: 850px) { .env-scene { margin-top: 8px; transform: scale(0.86); transform-origin: top center; } }
+
+/* ─── ABOUT: editorial layout with stamp gallery ─── */
+.about-ed {
+  width: 100%;
+  padding-top: 8px;
+}
+
+.about-ed-cols {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 420px);
+  gap: 48px;
+  max-width: 1000px;
+}
+
+.about-ed-col p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #4a4a45;
+  margin-bottom: 16px;
+}
+
+.about-ed-col a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.about-ed-accent { color: #1e2b8b; }
+
+.about-ed-gallery-label {
+  margin-top: 64px;
+  font-size: 13.5px;
+  color: var(--text);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-ed-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  margin-top: 26px;
+}
+
+.stamp-item { flex: 1 1 0; min-width: 0; }
+.stamp-item figcaption {
+  font-size: 12.5px;
+  color: #737373;
+  margin-bottom: 12px;
+}
+
+/* postage-stamp shape: semicircle bites along every edge */
+.stamp {
+  --h: 5px;    /* bite radius / ring depth */
+  --s: 14px;   /* perforation spacing */
+  background: #fbfaf6;
+  padding: var(--h);
+  filter: drop-shadow(0 3px 7px rgba(0,0,0,0.17));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    radial-gradient(circle var(--h) at 50% 0,    #0000 98%, #000) top    / var(--s) var(--h) repeat-x,
+    radial-gradient(circle var(--h) at 50% 100%, #0000 98%, #000) bottom / var(--s) var(--h) repeat-x,
+    radial-gradient(circle var(--h) at 0 50%,    #0000 98%, #000) left   / var(--h) var(--s) repeat-y,
+    radial-gradient(circle var(--h) at 100% 50%, #0000 98%, #000) right  / var(--h) var(--s) repeat-y;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    radial-gradient(circle var(--h) at 50% 0,    #0000 98%, #000) top    / var(--s) var(--h) repeat-x,
+    radial-gradient(circle var(--h) at 50% 100%, #0000 98%, #000) bottom / var(--s) var(--h) repeat-x,
+    radial-gradient(circle var(--h) at 0 50%,    #0000 98%, #000) left   / var(--h) var(--s) repeat-y,
+    radial-gradient(circle var(--h) at 100% 50%, #0000 98%, #000) right  / var(--h) var(--s) repeat-y;
+}
+
+.stamp-body {
+  margin: 8px;
+  aspect-ratio: 4 / 5;
+  background: var(--ph, #e3ded2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-style: italic;
+  color: rgba(0,0,0,0.32);
+}
+
+@media (max-width: 1100px) {
+  .about-ed-gallery { flex-wrap: wrap; }
+  .stamp-item { flex: 0 1 calc(25% - 18px); }
+}
