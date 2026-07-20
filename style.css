@@ -1638,7 +1638,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 
 .stamp-body {
-  margin: 8px;
+  margin: 3px;
   aspect-ratio: 4 / 5;
   background: var(--ph, #e3ded2);
   display: flex;
