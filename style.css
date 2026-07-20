@@ -1619,7 +1619,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 /* postage-stamp shape: even perforations biting only the outer edge,
    with a solid cream border band left between the holes and the photo */
 .stamp {
-  --pr: 3.4px;   /* perforation bite radius */
+  --pr: 2.9px;   /* perforation bite radius */
   --nx: 9;       /* holes across each horizontal edge (odd → symmetric) */
   --ny: 11;      /* holes down each vertical edge (odd → symmetric) */
   --bd: 9px;     /* cream border band thickness */
