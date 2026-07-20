@@ -1616,37 +1616,64 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   margin-bottom: 12px;
 }
 
-/* postage-stamp shape: semicircle bites along every edge */
+/* postage-stamp shape: even perforations biting only the outer edge,
+   with a solid cream border band left between the holes and the photo */
 .stamp {
-  --h: 5px;    /* bite radius / ring depth */
-  --s: 14px;   /* perforation spacing */
+  --pr: 3.4px;   /* perforation bite radius */
+  --ps: 10.5px;  /* perforation pitch (centre-to-centre spacing) */
+  --bd: 9px;     /* cream border band thickness */
   background: #f2ecd8;
-  padding: var(--h);
-  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.22)) drop-shadow(0 0 0.5px rgba(0,0,0,0.35));
+  padding: var(--bd);
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.22)) drop-shadow(0 0 0.5px rgba(0,0,0,0.30));
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
-    radial-gradient(circle var(--h) at 50% 0,    #0000 98%, #000) top    / var(--s) var(--h) repeat-x,
-    radial-gradient(circle var(--h) at 50% 100%, #0000 98%, #000) bottom / var(--s) var(--h) repeat-x,
-    radial-gradient(circle var(--h) at 0 50%,    #0000 98%, #000) left   / var(--h) var(--s) repeat-y,
-    radial-gradient(circle var(--h) at 100% 50%, #0000 98%, #000) right  / var(--h) var(--s) repeat-y;
+    radial-gradient(circle var(--pr) at 50% 0,    #0000 98%, #000) top    / var(--ps) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 50% 100%, #0000 98%, #000) bottom / var(--ps) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 0 50%,    #0000 98%, #000) left   / var(--bd) var(--ps) repeat-y,
+    radial-gradient(circle var(--pr) at 100% 50%, #0000 98%, #000) right  / var(--bd) var(--ps) repeat-y;
   mask:
     linear-gradient(#000 0 0) content-box,
-    radial-gradient(circle var(--h) at 50% 0,    #0000 98%, #000) top    / var(--s) var(--h) repeat-x,
-    radial-gradient(circle var(--h) at 50% 100%, #0000 98%, #000) bottom / var(--s) var(--h) repeat-x,
-    radial-gradient(circle var(--h) at 0 50%,    #0000 98%, #000) left   / var(--h) var(--s) repeat-y,
-    radial-gradient(circle var(--h) at 100% 50%, #0000 98%, #000) right  / var(--h) var(--s) repeat-y;
+    radial-gradient(circle var(--pr) at 50% 0,    #0000 98%, #000) top    / var(--ps) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 50% 100%, #0000 98%, #000) bottom / var(--ps) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 0 50%,    #0000 98%, #000) left   / var(--bd) var(--ps) repeat-y,
+    radial-gradient(circle var(--pr) at 100% 50%, #0000 98%, #000) right  / var(--bd) var(--ps) repeat-y;
+  -webkit-mask-composite: source-over;
+  mask-composite: add;
 }
 
 .stamp-body {
-  margin: 3px;
   aspect-ratio: 4 / 5;
   background: var(--ph, #e3ded2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-style: italic;
-  color: rgba(0,0,0,0.32);
+  position: relative;
+  overflow: hidden;
+}
+
+.stamp-art {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 66%;
+  transform: translate(-50%, -54%);
+  color: var(--ink, #444);
+}
+.stamp-val {
+  position: absolute;
+  top: 6px; left: 7px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--ink, #444);
+}
+.stamp-val sup { font-size: 6.5px; margin-left: 0.5px; }
+.stamp-name {
+  position: absolute;
+  left: 0; right: 0; bottom: 7px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink, #444);
 }
 
 @media (max-width: 1100px) {
