@@ -1620,9 +1620,9 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .stamp {
   --h: 5px;    /* bite radius / ring depth */
   --s: 14px;   /* perforation spacing */
-  background: #fbfaf6;
+  background: #f2ecd8;
   padding: var(--h);
-  filter: drop-shadow(0 3px 7px rgba(0,0,0,0.17));
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.22)) drop-shadow(0 0 0.5px rgba(0,0,0,0.35));
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     radial-gradient(circle var(--h) at 50% 0,    #0000 98%, #000) top    / var(--s) var(--h) repeat-x,
