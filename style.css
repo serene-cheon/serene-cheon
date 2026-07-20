@@ -1625,6 +1625,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   --bd: 9px;     /* cream border band thickness */
   background: #f2ecd8;
   padding: var(--bd);
+  border-radius: 5px;   /* round the corner teeth so they read like the edge scallops */
   filter: drop-shadow(0 3px 8px rgba(0,0,0,0.22)) drop-shadow(0 0 0.5px rgba(0,0,0,0.30));
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
