@@ -1684,13 +1684,12 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .stamp-caption {
   position: absolute;
   top: calc(100% + 10px);
-  left: 50%;
+  left: 0;
   width: 150px;
-  transform: translateX(-50%) translateY(4px);
-  text-align: center;
+  transform: translateY(4px);
+  text-align: left;
   font-size: 11px;
   line-height: 1.4;
-  font-style: italic;
   color: #6b6b6b;
   opacity: 0;
   pointer-events: none;
@@ -1698,7 +1697,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 .stamp-item:hover .stamp-caption {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 /* scrim disabled — no text to keep legible, so the photo stays clean */
 .has-photo::before {
