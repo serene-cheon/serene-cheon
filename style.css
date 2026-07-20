@@ -1620,23 +1620,24 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
    with a solid cream border band left between the holes and the photo */
 .stamp {
   --pr: 3.4px;   /* perforation bite radius */
-  --ps: 10.5px;  /* perforation pitch (centre-to-centre spacing) */
+  --nx: 9;       /* holes across each horizontal edge (odd → symmetric) */
+  --ny: 11;      /* holes down each vertical edge (odd → symmetric) */
   --bd: 9px;     /* cream border band thickness */
   background: #f2ecd8;
   padding: var(--bd);
   filter: drop-shadow(0 3px 8px rgba(0,0,0,0.22)) drop-shadow(0 0 0.5px rgba(0,0,0,0.30));
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
-    radial-gradient(circle var(--pr) at 50% 0,    #0000 98%, #000) top    / var(--ps) var(--bd) repeat-x,
-    radial-gradient(circle var(--pr) at 50% 100%, #0000 98%, #000) bottom / var(--ps) var(--bd) repeat-x,
-    radial-gradient(circle var(--pr) at 0 50%,    #0000 98%, #000) left   / var(--bd) var(--ps) repeat-y,
-    radial-gradient(circle var(--pr) at 100% 50%, #0000 98%, #000) right  / var(--bd) var(--ps) repeat-y;
+    radial-gradient(circle var(--pr) at 50% 0,    #0000 98%, #000) top    / calc(100%/var(--nx)) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 50% 100%, #0000 98%, #000) bottom / calc(100%/var(--nx)) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 0 50%,    #0000 98%, #000) left   / var(--bd) calc(100%/var(--ny)) repeat-y,
+    radial-gradient(circle var(--pr) at 100% 50%, #0000 98%, #000) right  / var(--bd) calc(100%/var(--ny)) repeat-y;
   mask:
     linear-gradient(#000 0 0) content-box,
-    radial-gradient(circle var(--pr) at 50% 0,    #0000 98%, #000) top    / var(--ps) var(--bd) repeat-x,
-    radial-gradient(circle var(--pr) at 50% 100%, #0000 98%, #000) bottom / var(--ps) var(--bd) repeat-x,
-    radial-gradient(circle var(--pr) at 0 50%,    #0000 98%, #000) left   / var(--bd) var(--ps) repeat-y,
-    radial-gradient(circle var(--pr) at 100% 50%, #0000 98%, #000) right  / var(--bd) var(--ps) repeat-y;
+    radial-gradient(circle var(--pr) at 50% 0,    #0000 98%, #000) top    / calc(100%/var(--nx)) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 50% 100%, #0000 98%, #000) bottom / calc(100%/var(--nx)) var(--bd) repeat-x,
+    radial-gradient(circle var(--pr) at 0 50%,    #0000 98%, #000) left   / var(--bd) calc(100%/var(--ny)) repeat-y,
+    radial-gradient(circle var(--pr) at 100% 50%, #0000 98%, #000) right  / var(--bd) calc(100%/var(--ny)) repeat-y;
   -webkit-mask-composite: source-over;
   mask-composite: add;
 }
