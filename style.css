@@ -257,7 +257,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 
 .topbar-group a:hover,
-.topbar-group .contact-email:hover { color: var(--text); }
+.topbar-group .contact-email:hover,
+.topbar-group a.active { color: var(--text); }
 
 .topbar-group .contact-email { position: relative; }
 
