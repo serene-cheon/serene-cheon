@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap');
 
 @font-face {
   font-family: 'Egypt Sea';
@@ -1699,6 +1700,138 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ─── PUNCH CARDS: doodle-style fun-fact cards in the logo's linocut palette ─── */
+.pc-label { margin-top: 72px; }
+
+.punch-cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 28px;
+  max-width: 1000px;
+}
+@media (max-width: 900px) {
+  .punch-cards { grid-template-columns: 1fr; max-width: 400px; }
+}
+
+.punch-card {
+  position: relative;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 4px;
+  padding: 16px 18px 14px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+}
+
+/* palettes: logo cobalt/cream twice (straight + inverted) plus the shelf pink */
+.pc-cream {
+  --ink: #1e2b8b;
+  --paper: #f2ecd8;
+  --slot:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 32'%3E%3Cellipse cx='22' cy='16' rx='18' ry='12' fill='none' stroke='%231e2b8b' stroke-width='2.6'/%3E%3C/svg%3E");
+  --slot-p: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 32'%3E%3Cellipse cx='22' cy='16' rx='19' ry='13' fill='%231e2b8b'/%3E%3C/svg%3E");
+}
+.pc-blue {
+  --ink: #f2ecd8;
+  --paper: #2438a8;
+  --slot:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Ccircle cx='18' cy='18' r='13' fill='none' stroke='%23f2ecd8' stroke-width='2.6'/%3E%3C/svg%3E");
+  --slot-p: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Ccircle cx='18' cy='18' r='14' fill='%23f2ecd8'/%3E%3C/svg%3E");
+}
+.pc-pink {
+  --ink: #7c1f33;
+  --paper: #f2b9cd;
+  --slot:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath d='M18 2l3 8.5 8.5-3.5-3.5 8.5 8.5 2.5-8.5 2.5 3.5 8.5-8.5-3.5-3 8.5-3-8.5-8.5 3.5 3.5-8.5-8.5-2.5 8.5-2.5-3.5-8.5 8.5 3.5z' fill='none' stroke='%237c1f33' stroke-width='2.2' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --slot-p: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cpath d='M18 2l3 8.5 8.5-3.5-3.5 8.5 8.5 2.5-8.5 2.5 3.5 8.5-8.5-3.5-3 8.5-3-8.5-8.5 3.5 3.5-8.5-8.5-2.5 8.5-2.5-3.5-8.5 8.5 3.5z' fill='%237c1f33'/%3E%3C/svg%3E");
+}
+
+.pc-official {
+  font-size: 8.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+.pc-doodle { width: 46px; margin: 8px auto 0; display: block; }
+.pc-title {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 0.92;
+  margin: 8px 0 2px;
+}
+.pc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  gap: 10px 12px;
+  margin: 16px 0 4px;
+}
+.pc-slot {
+  width: 44px;
+  height: 34px;
+  border: 0;
+  padding: 0;
+  background: transparent var(--slot) center / contain no-repeat;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.pc-slot:hover { transform: scale(1.1); }
+.pc-slot.punched {
+  background-image: var(--slot-p);
+  transform: rotate(var(--rot, 0deg));
+  animation: pcPop 0.4s cubic-bezier(0.2, 1.6, 0.4, 1);
+}
+.pc-slot.no-anim { animation: none; }
+@keyframes pcPop {
+  0%   { transform: scale(0.3) rotate(-24deg); }
+  60%  { transform: scale(1.18) rotate(var(--rot, 0deg)); }
+  100% { transform: scale(1) rotate(var(--rot, 0deg)); }
+}
+
+.pc-waves { width: 72%; margin: 10px auto 8px; display: block; }
+
+.pc-prize {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  font-size: 9.5px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.pc-prize-text {
+  font-family: 'Caveat', cursive;
+  font-size: 17px;
+  letter-spacing: 0;
+  text-transform: none;
+  min-width: 120px;
+  min-height: 20px;
+  border-bottom: 1.6px solid var(--ink);
+  display: inline-block;
+}
+
+/* hand-drawn speech bubble for fun facts */
+.pc-bubble {
+  position: absolute;
+  z-index: 5;
+  transform: translate(-50%, -100%) rotate(-1.5deg);
+  background: #fffdf4;
+  color: #1e2b8b;
+  border: 1.6px solid #1e2b8b;
+  border-radius: 10px;
+  padding: 7px 12px 6px;
+  font-family: 'Caveat', cursive;
+  font-size: 17.5px;
+  line-height: 1.12;
+  max-width: 230px;
+  text-align: center;
+  box-shadow: 2.5px 3px 0 rgba(30, 43, 139, 0.22);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s;
+}
+.pc-bubble.show { opacity: 1; }
 /* scrim disabled — no text to keep legible, so the photo stays clean */
 .has-photo::before {
   content: none;
