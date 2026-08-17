@@ -1727,10 +1727,6 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   width: 12px;
   border-left: 1px dashed #c3c3ba;
   border-right: 1px dashed #c3c3ba;
-  background: linear-gradient(90deg,
-    rgba(30, 43, 139, 0.02),
-    rgba(30, 43, 139, 0.07) 50%,
-    rgba(30, 43, 139, 0.02));
   pointer-events: none;
 }
 
