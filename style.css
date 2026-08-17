@@ -1836,8 +1836,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .cover .cl {
   position: absolute;
   font-family: 'PP Writer', Georgia, serif;
-  font-weight: 700;
-  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 100;
+  font-size: clamp(15px, 1.8vw, 23px);
   line-height: 1;
   color: #1e2b8b;
 }
