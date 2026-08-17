@@ -1746,14 +1746,12 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   font-size: 11.5px;
   letter-spacing: 0.08em;
   color: #1e2b8b;
 }
 
 .sheet-label {
-  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   font-size: 12px;
   color: #6d6d66;
   margin-bottom: 22px;
@@ -1783,7 +1781,6 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   padding: 10px 12px 9px;
 }
 .barcode-meta {
-  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   font-size: 10px;
   line-height: 1.55;
   color: #1a1a1a;
