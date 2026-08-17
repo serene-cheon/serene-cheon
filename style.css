@@ -1701,24 +1701,35 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   transform: translateY(0);
 }
 
-/* ─── SHEETS: bookbinding-signature frames around about sections ─── */
-.sheet {
+/* ─── BOOK: about content laid out as bound spreads (left/right pages) ─── */
+.about-book {
   position: relative;
   border: 1px dashed #c3c3ba;
-  padding: 26px 28px 34px;
-  margin-top: 38px;
+  margin-top: 10px;
 }
-.about-ed > .sheet:first-of-type { margin-top: 10px; }
 
-/* folio mark sitting on (and breaking) the top rule, like a signature number */
-.sheet::before {
-  content: "-" attr(data-folio) "-";
+.spread {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.spread + .spread { border-top: 1px dashed #c3c3ba; }
+
+.bpage {
+  position: relative;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 30px 54px;
+}
+.bpage:first-child { border-right: 1px dashed #c3c3ba; }
+
+/* page number centered at the foot of each page */
+.bpage::after {
+  content: "-" attr(data-pno) "-";
   position: absolute;
-  top: -9px;
+  bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--white);
-  padding: 0 12px;
   font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   font-size: 11.5px;
   letter-spacing: 0.08em;
@@ -1733,9 +1744,41 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 .sheet-label span { margin-right: 16px; color: var(--text); }
 
-/* labels used to carry the spacing; inside a sheet the label does */
-.sheet .about-ed-gallery { margin-top: 0; }
-.sheet .punch-cards { margin-top: 0; }
+/* half-width layouts inside a page */
+.bpage .about-ed-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 0;
+}
+.bpage .punch-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: none;
+  margin-top: 0;
+}
+
+/* back-cover barcode block */
+.barcode-box {
+  margin-top: 28px;
+  align-self: flex-start;
+  width: 200px;
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 10px 12px 9px;
+}
+.barcode-meta {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 10px;
+  line-height: 1.55;
+  color: #1a1a1a;
+  margin-bottom: 7px;
+}
+.barcode { display: block; width: 100%; height: 34px; }
+
+@media (max-width: 860px) {
+  .spread { grid-template-columns: 1fr; }
+  .bpage:first-child { border-right: 0; border-bottom: 1px dashed #c3c3ba; }
+}
 
 /* ─── PUNCH CARDS: doodle-style fun-fact cards in the logo's linocut palette ─── */
 .pc-label { margin-top: 72px; }
