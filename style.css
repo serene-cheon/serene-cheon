@@ -1835,17 +1835,13 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 .cover {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.cover-title {
-  position: absolute;
-  top: 30px;
-  left: 34px;
-  font-family: 'PP Writer', Georgia, serif;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 18px;
-  letter-spacing: 0.02em;
-  color: var(--text);
+.cover-title-img {
+  width: 62%;
+  height: auto;
 }
 
 .sheet-label {
