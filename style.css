@@ -1830,19 +1830,15 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .spread {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 12px 1fr;   /* pages | spine gutter | pages */
 }
 .spread + .spread { border-top: 1px dashed #c3c3ba; }
 
-/* thin spine (gutter) between the two pages */
+/* thin spine (gutter) as a real grid column so pages never run under it */
 .spread::before {
   content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 12px;
+  grid-column: 2;
+  grid-row: 1;
   border-left: 1px dashed #c3c3ba;
   border-right: 1px dashed #c3c3ba;
   pointer-events: none;
