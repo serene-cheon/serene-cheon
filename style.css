@@ -1869,8 +1869,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   color: #1e2b8b;
 }
 
-/* ── COVER: scattered-letter title page in PP Writer ── */
-.bpage-cover { padding: 0; }
+/* ── COVER ── */
+.bpage-cover { padding: 14px; }   /* even inset so the blue block sits inside the dashed grid */
 .bpage-cover::after { content: none; }   /* covers carry no page number */
 
 .cover {
