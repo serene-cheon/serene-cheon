@@ -1896,13 +1896,13 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 /* peek-a-boo lids covering the fish/star stamps baked into the image */
 .peek {
   position: absolute;
-  width: 8.1%;
+  width: 9.3%;   /* slightly larger than the printed circle so its shadow hides too */
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
-  border: 0;
   padding: 0;
   border-radius: 50%;
-  background: #fff;
+  background: #151d7f;               /* same blue as the cover — only the dashed ring shows */
+  border: 1.5px dashed #fbfaf7;
   cursor: pointer;
   transition: transform 0.18s ease;
 }
