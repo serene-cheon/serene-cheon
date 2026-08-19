@@ -1870,7 +1870,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 
 /* ── COVER ── */
-.bpage-cover { padding: 14px; }   /* even inset so the blue block sits inside the dashed grid */
+.bpage-cover { padding: 0; }   /* full-bleed: the blue plate fills the page to the dashed frame */
 .bpage-cover::after { content: none; }   /* covers carry no page number */
 
 .cover {
