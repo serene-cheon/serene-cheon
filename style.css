@@ -1866,7 +1866,10 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 
 /* ── COVER ── */
-.bpage-cover { padding: 0; }   /* full-bleed: the blue plate fills the page to the dashed frame */
+.bpage-cover {
+  padding: 0;
+  background: #151d7f;   /* cell itself is blue, so no white gap can ever open */
+}
 .bpage-cover::after { content: none; }   /* covers carry no page number */
 
 .cover {
