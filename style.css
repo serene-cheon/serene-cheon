@@ -1890,7 +1890,32 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   background: #151d7f;
   container-type: inline-size;   /* lets the text below scale with the page, like the image does */
 }
+.cvm-topwrap { position: relative; }
 .cvm-top { width: 100%; height: auto; display: block; }
+
+/* peek-a-boo lids covering the fish/star stamps baked into the image */
+.peek {
+  position: absolute;
+  width: 8.1%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.18s ease;
+}
+.peek:hover { transform: translate(-50%, -53%) scale(1.05); }
+.peek.off {
+  animation: peekFall 0.8s cubic-bezier(0.34, 0.02, 0.82, 0.4) forwards;
+  pointer-events: none;
+}
+@keyframes peekFall {
+  0%   { transform: translate(-50%, -50%) rotate(0deg); opacity: 1; }
+  70%  { opacity: 1; }
+  100% { transform: translate(-50%, 150px) rotate(48deg); opacity: 0; }
+}
 .cvm-bottom {
   flex: 1;
   padding: 3.37cqw 16% 0 15.8%;
