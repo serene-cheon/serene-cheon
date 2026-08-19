@@ -1872,12 +1872,12 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .cover {
   position: relative;
   width: 100%;
-  height: 100%;
+  flex: 1;   /* stretch with the page cell even when the row grows taller than the aspect ratio */
 }
 .cover {
   position: relative;
   width: 100%;
-  height: 100%;
+  flex: 1;   /* stretch with the page cell even when the row grows taller than the aspect ratio */
 }
 /* cover built from the mock image; only the contents block is live HTML,
    colours sampled from the image so the seam is invisible */
