@@ -1851,7 +1851,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .bpage {
   position: relative;
   min-width: 0;
-  aspect-ratio: 3 / 4;   /* portrait pages, identical size on every spread */
+  aspect-ratio: 612 / 792;   /* letter-ratio pages, identical on every spread (matches the cover art) */
   display: flex;
   flex-direction: column;
   padding: 30px 34px 56px;
@@ -1883,55 +1883,37 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   width: 100%;
   height: 100%;
 }
-.cover-blue { background: #1f2c96; }
-
-.cv-label {
-  position: absolute;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: #48d961;
-}
-.cv-tl { left: 16%; top: 9%; }
-.cv-tr { right: 12%; top: 9%; }
-.cv-contents { left: 16%; top: 77.5%; }
-.cv-hello { right: 12%; top: 77.5%; }
-
-/* letter dots */
-.cv-dot {
-  position: absolute;
-  width: 8%;
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
-  background: #fbfaf7;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 7px 14px rgba(8, 12, 60, 0.45);
-}
-.cv-dot span {
-  font-family: 'PP Neue Montreal', 'ABC Social', sans-serif;
-  font-weight: 600;
-  font-size: clamp(13px, 1.6vw, 20px);
-  color: #48d961;
-}
-.cv-dot img { width: 78%; height: auto; display: block; }
-
-/* chapter buttons */
-.cv-chapters {
-  position: absolute;
-  left: 19.5%;
-  top: 81.5%;
+/* cover built from the mock image; only the contents block is live HTML,
+   colours sampled from the image so the seam is invisible */
+.cover-mock {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  background: #151d7f;
+}
+.cvm-top { width: 100%; height: auto; display: block; }
+.cvm-bottom {
+  flex: 1;
+  padding: 3.2% 16% 0 15.8%;
+  color: #68e070;
+}
+.cvm-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.cvm-chapters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 13px 0 0 3.4%;
 }
 .cv-ch {
-  font-size: 13.5px;
+  font-size: 12.5px;
   font-weight: 500;
-  letter-spacing: 0.03em;
-  color: #48d961;
+  letter-spacing: 0.04em;
+  color: #68e070;
   transition: transform 0.22s ease;
 }
 .cv-ch:hover { transform: translateX(10px); }
@@ -1977,7 +1959,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   .spread { grid-template-columns: 1fr; }
   .spread::before { content: none; }
   .bpage { aspect-ratio: auto; }
-  .bpage-cover { aspect-ratio: 3 / 4; }   /* cover keeps its shape when stacked */
+  .bpage-cover { aspect-ratio: 612 / 792; }   /* cover keeps its shape when stacked */
   .bpage:first-child { border-bottom: 1px dashed #c3c3ba; }
 }
 
