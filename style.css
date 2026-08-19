@@ -124,6 +124,50 @@
   src: url('fonts/ABCSocial-BlackItalic.otf') format('opentype');
 }
 
+/* ─── PP NEUE MONTREAL (self-hosted, /fonts) ─── */
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/PPNeueMontreal-Hairline.otf') format('opentype');
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/PPNeueMontreal-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/PPNeueMontreal-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/PPNeueMontreal-Italic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/PPNeueMontreal-Semibold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'PP Neue Montreal';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/PPNeueMontreal-Extrabold.otf') format('opentype');
+}
+
 /* ─── PP WRITER (self-hosted, /fonts) ─── */
 @font-face {
   font-family: 'PP Writer';
@@ -1867,8 +1911,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   box-shadow: 0 7px 14px rgba(8, 12, 60, 0.45);
 }
 .cv-dot span {
-  font-family: 'PP Neue Montreal', 'ABC Social', sans-serif;   /* Montreal files not in repo yet — falls back to Social */
-  font-weight: 500;
+  font-family: 'PP Neue Montreal', 'ABC Social', sans-serif;
+  font-weight: 600;
   font-size: clamp(13px, 1.6vw, 20px);
   color: #48d961;
 }
