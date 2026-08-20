@@ -1834,7 +1834,10 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   display: grid;
   border: 1px dashed #c3c3ba;
 }
-.spread + .spread { margin-top: -1px; }   /* rows share a single dashed rule */
+.spread + .spread { margin-top: -1px; border-top: 0; }   /* single shared dashed rule (two overlapped dashes read as solid) */
+
+/* punch-card spread hidden for now */
+.about-book > .spread:nth-of-type(3) { display: none; }
 
 /* spine gutter as a real column, framed by dashed rules */
 .spread::before {
