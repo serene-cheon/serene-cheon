@@ -1908,33 +1908,23 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   background: #eff0fb;
   container-type: inline-size;   /* lets the text below scale with the page, like the image does */
 }
-/* woven-paper texture over the whole cover */
-.cover-mock::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  background: url("paper-texture.jpg?v=1") top left / 340px auto repeat;
-  mix-blend-mode: multiply;
-  opacity: 0.5;
-  pointer-events: none;
-}
+/* woven-paper texture over the whole cover (hidden for now) */
+.cover-mock::after { content: none; }
 .cvm-topwrap { position: relative; }
 .cvm-top { width: 100%; height: auto; display: block; }
 
 /* peek-a-boo lids covering the fish/star stamps baked into the image */
 .peek {
   position: absolute;
-  width: 9.3%;   /* slightly larger than the printed circle so its shadow hides too */
+  width: 7.9%;   /* same diameter as the printed circle — slits land on its edge */
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
   padding: 0;
   border-radius: 50%;
-  /* pressed-perforation look: each slit is a dark groove with a light
-     catch-edge below it, on a faintly raised paper disc */
+  /* flush die-cut piece: slits sit right on the printed circle's edge —
+     a grey-lavender groove with a white catch-edge below, no relief */
   background:
-    radial-gradient(circle at 42% 36%, rgba(255,255,255,0.5), rgba(255,255,255,0) 68%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60.9' cy='61.3' r='54' fill='none' stroke='rgba(255,255,255,0.9)' stroke-width='1.6' stroke-dasharray='6 7.05' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='60' r='54' fill='none' stroke='%23a9adc4' stroke-width='2.2' stroke-dasharray='6 7.05' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60.8' cy='61.1' r='56.5' fill='none' stroke='rgba(255,255,255,0.95)' stroke-width='1.5' stroke-dasharray='6 7.15' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='60' r='56.5' fill='none' stroke='%239ba1bd' stroke-width='2' stroke-dasharray='6 7.15' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat,
     #eff0fb;
   border: 0;
   cursor: pointer;
