@@ -1825,6 +1825,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   max-width: 1200px;
   border: 1px dashed #c3c3ba;
   margin-top: 10px;
+  container-type: inline-size;
 }
 
 .spread {
@@ -1847,10 +1848,19 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .bpage {
   position: relative;
   min-width: 0;
-  aspect-ratio: 612 / 792;   /* letter-ratio pages, identical on every spread (matches the cover art) */
+  aspect-ratio: 612 / 792;   /* fallback: letter-ratio pages (matches the cover art) */
   display: flex;
   flex-direction: column;
   padding: 30px 34px 56px;
+}
+/* ratio as a MINIMUM height, so a page can stretch with its row when the
+   facing page's content is taller — aspect-ratio alone pins the box and
+   leaves a white gap under the cover */
+@supports (min-height: 1cqw) {
+  .bpage {
+    aspect-ratio: auto;
+    min-height: calc((100cqw - 12px) / 2 * 1.29412);
+  }
 }
 
 /* page number centered at the foot of each page */
@@ -1995,8 +2005,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 @media (max-width: 860px) {
   .spread { grid-template-columns: 1fr; }
   .spread::before { content: none; }
-  .bpage { aspect-ratio: auto; }
-  .bpage-cover { aspect-ratio: 612 / 792; }   /* cover keeps its shape when stacked */
+  .bpage { aspect-ratio: auto; min-height: 0; }
+  .bpage-cover { aspect-ratio: 612 / 792; min-height: calc(100cqw * 1.29412); }   /* cover keeps its shape when stacked */
   .bpage:first-child { border-bottom: 1px dashed #c3c3ba; }
 }
 
