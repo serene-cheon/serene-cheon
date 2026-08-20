@@ -1914,7 +1914,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   position: absolute;
   inset: 0;
   z-index: 3;
-  background: url("paper-texture.jpg?v=1") center / cover;
+  background: url("paper-texture.jpg?v=1") top left / 340px auto repeat;
   mix-blend-mode: multiply;
   opacity: 0.5;
   pointer-events: none;
