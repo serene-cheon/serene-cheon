@@ -2028,7 +2028,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   align-self: flex-start;
   width: 34%;
 }
-.barcode-img { display: block; width: 100%; height: auto; }
+.barcode-svg { display: block; width: 100%; height: auto; }
+.barcode-svg text { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
 
 @media (max-width: 860px) {
   .spread,
