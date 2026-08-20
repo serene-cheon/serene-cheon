@@ -1885,7 +1885,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 /* ── COVER ── */
 .bpage-cover {
   padding: 0;
-  background: #151d7f;   /* cell itself is blue, so no white gap can ever open */
+  background: #eff0fb;   /* cell painted too, so no white gap can ever open */
 }
 .bpage-cover::after { content: none; }   /* covers carry no page number */
 
@@ -1902,10 +1902,22 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 /* cover built from the mock image; only the contents block is live HTML,
    colours sampled from the image so the seam is invisible */
 .cover-mock {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background: #151d7f;
+  background: #eff0fb;
   container-type: inline-size;   /* lets the text below scale with the page, like the image does */
+}
+/* woven-paper texture over the whole cover */
+.cover-mock::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: url("paper-texture.jpg?v=1") center / cover;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  pointer-events: none;
 }
 .cvm-topwrap { position: relative; }
 .cvm-top { width: 100%; height: auto; display: block; }
@@ -1921,9 +1933,9 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   /* pressed-perforation look: each slit is a dark groove with a light
      catch-edge below it, on a faintly raised paper disc */
   background:
-    radial-gradient(circle at 42% 36%, rgba(255,255,255,0.055), rgba(255,255,255,0) 68%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60.9' cy='61.3' r='54' fill='none' stroke='rgba(205,215,255,0.35)' stroke-width='1.6' stroke-dasharray='6 7.05' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='60' r='54' fill='none' stroke='%230a0e46' stroke-width='2.2' stroke-dasharray='6 7.05' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat,
-    #151d7f;
+    radial-gradient(circle at 42% 36%, rgba(255,255,255,0.5), rgba(255,255,255,0) 68%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60.9' cy='61.3' r='54' fill='none' stroke='rgba(255,255,255,0.9)' stroke-width='1.6' stroke-dasharray='6 7.05' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='60' r='54' fill='none' stroke='%23a9adc4' stroke-width='2.2' stroke-dasharray='6 7.05' stroke-linecap='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat,
+    #eff0fb;
   border: 0;
   cursor: pointer;
   transition: transform 0.18s ease;
@@ -1941,7 +1953,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .cvm-bottom {
   flex: 1;
   padding: 3.37cqw 16% 0 15.8%;
-  color: #68e070;
+  color: #48d961;
 }
 .cvm-row {
   display: flex;
@@ -1966,7 +1978,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1;
-  color: #68e070;
+  color: #48d961;
   transition: transform 0.22s ease;
 }
 .cv-ch .ar { font-family: 'PP Neue Montreal', sans-serif; }
