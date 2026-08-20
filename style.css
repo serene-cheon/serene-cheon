@@ -2021,20 +2021,11 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 
 /* back-cover barcode block */
 .barcode-box {
-  margin-top: auto;   /* anchor to the foot of the back-cover page */
+  margin-top: auto;   /* anchor to the foot of the page */
   align-self: flex-start;
-  width: 200px;
-  border: 1px solid var(--border);
-  background: #fff;
-  padding: 10px 12px 9px;
+  width: 34%;
 }
-.barcode-meta {
-  font-size: 10px;
-  line-height: 1.55;
-  color: #1a1a1a;
-  margin-bottom: 7px;
-}
-.barcode { display: block; width: 100%; height: 34px; }
+.barcode-img { display: block; width: 100%; height: auto; }
 
 @media (max-width: 860px) {
   .spread,
