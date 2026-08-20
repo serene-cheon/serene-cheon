@@ -1823,7 +1823,6 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .about-book {
   position: relative;
   max-width: 1200px;
-  border: 1px dashed #c3c3ba;
   margin-top: 10px;
   container-type: inline-size;
 }
@@ -1831,23 +1830,20 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .spread {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 12px 1fr;   /* pages | spine gutter | pages */
+  grid-template-columns:
+    calc((100cqw - 36px) * 0.1503) 1fr 1fr calc((100cqw - 36px) * 0.1503);
+  column-gap: 12px;   /* white gutters double as the spine */
 }
-.spread + .spread { border-top: 1px dashed #c3c3ba; }
+.spread + .spread { margin-top: 12px; }
 
-/* thin spine (gutter) as a real grid column so pages never run under it */
-.spread::before {
-  content: "";
-  grid-column: 2;
-  grid-row: 1;
-  border-left: 1px dashed #c3c3ba;
-  border-right: 1px dashed #c3c3ba;
-  pointer-events: none;
-}
+/* dust-jacket flaps flanking the cover spread (ghosts keep rows 2-3 aligned) */
+.bflap { border: 1px dashed #c3c3ba; }
+.bflap-ghost { border: none; }
 
 .bpage {
   position: relative;
   min-width: 0;
+  border: 1px dashed #c3c3ba;
   aspect-ratio: 612 / 792;   /* fallback: letter-ratio pages (matches the cover art) */
   display: flex;
   flex-direction: column;
@@ -1859,15 +1855,15 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 @supports (min-height: 1cqw) {
   .bpage {
     aspect-ratio: auto;
-    min-height: calc((100cqw - 12px) / 2 * 1.29412);
-    padding: calc((100cqw - 12px) / 2 * 0.0505) calc((100cqw - 12px) / 2 * 0.057) calc((100cqw - 12px) / 2 * 0.094);
+    min-height: calc((100cqw - 36px) * 0.3497 * 1.29412);
+    padding: calc((100cqw - 36px) * 0.3497 * 0.0505) calc((100cqw - 36px) * 0.3497 * 0.057) calc((100cqw - 36px) * 0.3497 * 0.094);
   }
   /* text scales with the page like a printed spread, so content height always
      stays proportional and no page can outgrow the 612:792 ratio
      (cqw tracks the whole book, so page-relative sizes are (100cqw-12px)/2) */
-  .sheet-label { font-size: calc((100cqw - 12px) / 2 * 0.02); margin-bottom: calc((100cqw - 12px) / 2 * 0.037); }
-  .bpage::after { font-size: calc((100cqw - 12px) / 2 * 0.0192); bottom: calc((100cqw - 12px) / 2 * 0.0235); }
-  .bpage .about-ed-col p { font-size: calc((100cqw - 12px) / 2 * 0.0234); margin-bottom: 1.15em; }
+  .sheet-label { font-size: calc((100cqw - 36px) * 0.3497 * 0.02); margin-bottom: calc((100cqw - 36px) * 0.3497 * 0.037); }
+  .bpage::after { font-size: calc((100cqw - 36px) * 0.3497 * 0.0192); bottom: calc((100cqw - 36px) * 0.3497 * 0.0235); }
+  .bpage .about-ed-col p { font-size: calc((100cqw - 36px) * 0.3497 * 0.0234); margin-bottom: 1.15em; }
 }
 
 /* page number centered at the foot of each page */
@@ -1989,7 +1985,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   margin-top: 0;
 }
 .bpage .punch-cards {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   max-width: none;
   margin-top: 0;
 }
@@ -2012,11 +2008,10 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .barcode { display: block; width: 100%; height: 34px; }
 
 @media (max-width: 860px) {
-  .spread { grid-template-columns: 1fr; }
-  .spread::before { content: none; }
+  .spread { grid-template-columns: 1fr; row-gap: 12px; }
+  .bflap { display: none; }
   .bpage { aspect-ratio: auto; min-height: 0; }
   .bpage-cover { aspect-ratio: 612 / 792; min-height: calc(100cqw * 1.29412); }   /* cover keeps its shape when stacked */
-  .bpage:first-child { border-bottom: 1px dashed #c3c3ba; }
 }
 
 /* ─── PUNCH CARDS: doodle-style fun-fact cards in the logo's linocut palette ─── */
