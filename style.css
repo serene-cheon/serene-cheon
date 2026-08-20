@@ -1822,10 +1822,12 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 /* ─── BOOK: about content laid out as bound spreads (left/right pages) ─── */
 .about-book {
   position: relative;
-  max-width: 1200px;
   margin-top: 10px;
-  container-type: inline-size;
+  container-type: inline-size;   /* no width cap: the book fills the page and scales as one piece */
 }
+
+/* the about page lets its container run full-bleed so the book can fill wide screens */
+.page--wide { max-width: none; }
 
 .spread {
   position: relative;
