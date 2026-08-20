@@ -1860,7 +1860,14 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   .bpage {
     aspect-ratio: auto;
     min-height: calc((100cqw - 12px) / 2 * 1.29412);
+    padding: calc((100cqw - 12px) / 2 * 0.0505) calc((100cqw - 12px) / 2 * 0.057) calc((100cqw - 12px) / 2 * 0.094);
   }
+  /* text scales with the page like a printed spread, so content height always
+     stays proportional and no page can outgrow the 612:792 ratio
+     (cqw tracks the whole book, so page-relative sizes are (100cqw-12px)/2) */
+  .sheet-label { font-size: calc((100cqw - 12px) / 2 * 0.02); margin-bottom: calc((100cqw - 12px) / 2 * 0.037); }
+  .bpage::after { font-size: calc((100cqw - 12px) / 2 * 0.0192); bottom: calc((100cqw - 12px) / 2 * 0.0235); }
+  .bpage .about-ed-col p { font-size: calc((100cqw - 12px) / 2 * 0.0234); margin-bottom: 1.15em; }
 }
 
 /* page number centered at the foot of each page */
