@@ -124,6 +124,43 @@
   src: url('fonts/ABCSocial-BlackItalic.otf') format('opentype');
 }
 
+/* ─── IVAR TEXT (self-hosted, /fonts) ─── */
+@font-face {
+  font-family: 'Ivar Text';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/IvarText-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Ivar Text';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/IvarText-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Ivar Text';
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/IvarText-MediumItalic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Ivar Text';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/IvarText-SemiBold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Ivar Text';
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url('fonts/IvarText-SemiBoldItalic.otf') format('opentype');
+}
+
 /* ─── PP NEUE MONTREAL (self-hosted, /fonts) ─── */
 @font-face {
   font-family: 'PP Neue Montreal';
@@ -1347,8 +1384,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 .book-jstor .book-spine span {
   transform: none;   /* standard top-down vertical title (the base rotate clips the string start) */
-  font-family: 'PP Writer', Georgia, serif;
-  font-weight: 700;
+  font-family: 'Ivar Text', Georgia, serif;
+  font-weight: 600;
   font-size: 10px;
   letter-spacing: 0;
   max-height: none;
