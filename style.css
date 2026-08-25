@@ -1333,6 +1333,41 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   text-overflow: ellipsis;
 }
 
+/* ── JSTOR edition: marble-grey jacket, spine logo, painted belly band ── */
+.book-jstor .book-spine {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+  padding-top: 16px;
+}
+.book-jstor .spine-logo {
+  width: 20px;
+  height: auto;
+  flex-shrink: 0;
+}
+.book-jstor .book-spine span {
+  max-height: calc(var(--h, 290px) - 150px);
+}
+.book-jstor .book-cover::after,
+.book-jstor .book-spine::after,
+.book-jstor .book-back::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 34%;
+  background: url("jstor-band.jpg?v=1") center 32% / cover no-repeat;
+  pointer-events: none;
+}
+.book-jstor .book-spine::after { background-position: left 32%; background-size: auto 100%; }
+.book-jstor .book-cover-author {
+  color: #fff;
+  opacity: 0.95;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
 /* PAGE block — right side, cream with page lines */
 .book-pages {
   width: var(--t, 40px);
