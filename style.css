@@ -1374,7 +1374,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .book-jstor .book-spine {
   flex-direction: column;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 16px;
   padding-top: 12px;
 }
 .book-jstor .spine-logo {
@@ -1408,12 +1408,23 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .book-jstor .book-cover-title {
   font-family: 'Ivar Text', Georgia, serif;
   font-weight: 500;
+  font-size: 16.5px;
 }
-.book-jstor .book-cover-author {
-  color: #fff;
-  opacity: 0.95;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+.book-jstor .book-cover-head {
+  position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.book-jstor .book-cover-blurb {
+  font-family: 'Ivar Text', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  opacity: 0.72;
 }
 
 /* PAGE block — right side, cream with page lines */
