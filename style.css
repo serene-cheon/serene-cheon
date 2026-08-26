@@ -1487,6 +1487,20 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   letter-spacing: -0.01em;
 }
 
+.book-fluke .book-cover-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.book-fluke .cover-wordmark {
+  width: 46%;
+  height: auto;
+  display: block;
+}
+
 .book-fluke .book-cover-title,
 .book-fluke .book-cover-author,
 .book-fluke .book-spine span {
