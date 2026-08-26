@@ -1418,10 +1418,10 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 /* woven paper texture over the whole jacket, tiled small for a crunchy grain */
 .book-jstor .book-cover::before,
 .book-jstor .book-spine::before {
-  background-image: url("paper-texture-tile.jpg?v=1");
-  background-size: 190px 190px;   /* seamless offset-wrapped tile */
+  background-image: url("paper-texture-tile.jpg?v=2");
+  background-size: 200px 200px;   /* seamless paper tile */
   background-repeat: repeat;
-  opacity: 0.5;
+  opacity: 0.85;
   mix-blend-mode: multiply;
 }
 .book-jstor .book-cover::after,
@@ -1433,13 +1433,13 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   right: 0;
   bottom: 0;
   height: 34%;
-  background: url("paper-texture-tile.jpg?v=1") top left / 190px 190px repeat,
+  background: url("paper-texture-tile.jpg?v=2") top left / 200px 200px repeat,
               url("jstor-band.jpg?v=1") center 32% / cover no-repeat;
   background-blend-mode: multiply, normal;
   pointer-events: none;
 }
 .book-jstor .book-spine::after {
-  background: url("paper-texture-tile.jpg?v=1") top left / 190px 190px repeat,
+  background: url("paper-texture-tile.jpg?v=2") top left / 200px 200px repeat,
               url("jstor-band.jpg?v=1") left 32% / auto 100% no-repeat;
   background-blend-mode: multiply, normal;
 }
