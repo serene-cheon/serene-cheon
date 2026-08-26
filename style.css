@@ -1418,11 +1418,11 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 /* woven paper texture over the whole jacket, tiled small for a crunchy grain */
 .book-jstor .book-cover::before,
 .book-jstor .book-spine::before {
-  background-image: url("paper-texture-tile.jpg?v=2");
-  background-size: 200px 200px;   /* seamless paper tile */
+  background-image: url("paper-texture-grain.jpg?v=1");
+  background-size: 105px 105px;   /* seamless paper tile, small = crisp grain */
   background-repeat: repeat;
   opacity: 0.85;
-  mix-blend-mode: multiply;
+  mix-blend-mode: overlay;        /* keeps the marble-grey bright, only adds tooth */
 }
 .book-jstor .book-cover::after,
 .book-jstor .book-spine::after,
@@ -1433,15 +1433,15 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   right: 0;
   bottom: 0;
   height: 34%;
-  background: url("paper-texture-tile.jpg?v=2") top left / 200px 200px repeat,
+  background: url("paper-texture-grain.jpg?v=1") top left / 105px 105px repeat,
               url("jstor-band.jpg?v=1") center 32% / cover no-repeat;
-  background-blend-mode: multiply, normal;
+  background-blend-mode: overlay, normal;
   pointer-events: none;
 }
 .book-jstor .book-spine::after {
-  background: url("paper-texture-tile.jpg?v=2") top left / 200px 200px repeat,
+  background: url("paper-texture-grain.jpg?v=1") top left / 105px 105px repeat,
               url("jstor-band.jpg?v=1") left 32% / auto 100% no-repeat;
-  background-blend-mode: multiply, normal;
+  background-blend-mode: overlay, normal;
 }
 .book-jstor .book-cover-title {
   font-family: 'Ivar Text', Georgia, serif;
