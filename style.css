@@ -1468,6 +1468,23 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   color: #1a1a19;
 }
 
+/* ── Fluke edition: brand grey jacket with the wordmark on the spine ── */
+.book-fluke .book-spine {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  padding-top: 14px;
+}
+.book-fluke .spine-logo {
+  width: 40px;
+  height: auto;
+  flex-shrink: 0;
+}
+.book-fluke .book-spine span {
+  transform: none;
+  max-height: none;
+}
+
 /* PAGE block — right side, cream with page lines */
 .book-pages {
   width: var(--t, 40px);
