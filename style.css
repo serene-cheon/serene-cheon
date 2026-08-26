@@ -1415,7 +1415,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 /* keep the spine band low enough that the title ends above it */
 .book-jstor .book-spine::after { height: 24%; }
-/* woven paper texture over the whole jacket, tiled small for a crunchy grain */
+/* paper grain sits ABOVE the artwork and type so the whole jacket shares
+   one printed surface instead of text floating over a textured ground */
 .book-jstor .book-cover::before,
 .book-jstor .book-spine::before {
   background-image: url("paper-texture-grain.jpg?v=1");
@@ -1423,6 +1424,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   background-repeat: repeat;
   opacity: 0.85;
   mix-blend-mode: overlay;        /* keeps the marble-grey bright, only adds tooth */
+  z-index: 4;                     /* over the band (::after) and the text block */
 }
 .book-jstor .book-cover::after,
 .book-jstor .book-spine::after,
@@ -1433,15 +1435,11 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   right: 0;
   bottom: 0;
   height: 34%;
-  background: url("paper-texture-grain.jpg?v=1") top left / 105px 105px repeat,
-              url("jstor-band.jpg?v=1") center 32% / cover no-repeat;
-  background-blend-mode: overlay, normal;
+  background: url("jstor-band.jpg?v=1") center 32% / cover no-repeat;
   pointer-events: none;
 }
 .book-jstor .book-spine::after {
-  background: url("paper-texture-grain.jpg?v=1") top left / 105px 105px repeat,
-              url("jstor-band.jpg?v=1") left 32% / auto 100% no-repeat;
-  background-blend-mode: overlay, normal;
+  background: url("jstor-band.jpg?v=1") left 32% / auto 100% no-repeat;
 }
 .book-jstor .book-cover-title {
   font-family: 'Ivar Text', Georgia, serif;
