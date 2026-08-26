@@ -1415,6 +1415,15 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 }
 /* keep the spine band low enough that the title ends above it */
 .book-jstor .book-spine::after { height: 24%; }
+/* woven paper texture over the whole jacket, tiled small for a crunchy grain */
+.book-jstor .book-cover::before,
+.book-jstor .book-spine::before {
+  background-image: url("paper-texture.jpg?v=1");
+  background-size: 110px auto;
+  background-repeat: repeat;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+}
 .book-jstor .book-cover::after,
 .book-jstor .book-spine::after,
 .book-jstor .book-back::after {
@@ -1424,10 +1433,16 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   right: 0;
   bottom: 0;
   height: 34%;
-  background: url("jstor-band.jpg?v=1") center 32% / cover no-repeat;
+  background: url("paper-texture.jpg?v=1") top left / 110px auto repeat,
+              url("jstor-band.jpg?v=1") center 32% / cover no-repeat;
+  background-blend-mode: multiply, normal;
   pointer-events: none;
 }
-.book-jstor .book-spine::after { background-position: left 32%; background-size: auto 100%; }
+.book-jstor .book-spine::after {
+  background: url("paper-texture.jpg?v=1") top left / 110px auto repeat,
+              url("jstor-band.jpg?v=1") left 32% / auto 100% no-repeat;
+  background-blend-mode: multiply, normal;
+}
 .book-jstor .book-cover-title {
   font-family: 'Ivar Text', Georgia, serif;
   font-weight: 500;
