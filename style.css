@@ -1436,6 +1436,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   color: #990000;
   align-self: flex-end;
   text-align: right;
+  margin-top: 28px;
 }
 .book-jstor .book-cover-head {
   position: relative;
@@ -1449,7 +1450,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 .book-jstor .book-cover-blurb {
   font-family: 'GT America', 'ABC Social', sans-serif;
   font-weight: 400;
-  font-size: 9px;
+  font-size: 8px;
   line-height: 1.32;
   color: #1a1a19;
 }
