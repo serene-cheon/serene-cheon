@@ -1469,6 +1469,28 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   color: #1a1a19;
 }
 
+/* ── ChipXR cover art: silicon die, traces and bond pads ── */
+.book-chip .book-cover {
+  background:
+    /* fine wafer grid */
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0 1px, rgba(255,255,255,0) 1px 14px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 1px, rgba(255,255,255,0) 1px 14px),
+    linear-gradient(160deg, #d64632 0%, #c0301f 58%, #99251a 100%);
+}
+/* the die: a chip package sitting mid-cover, traces fanning out of it */
+.book-chip .chip-art {
+  position: absolute !important;
+  left: 50%;
+  top: 55%;
+  width: 62%;
+  height: auto;
+  flex: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.92;
+  pointer-events: none;
+}
+
 /* ── ChipXR edition: CHI'26 publication band across the cover foot ── */
 .book-chip .book-cover-head {
   position: relative;
