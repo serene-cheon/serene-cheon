@@ -1485,6 +1485,25 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   opacity: 0.82;
   max-width: 80%;
 }
+/* the belly band continues around the spine and back board */
+.book-chip .book-spine::after,
+.book-chip .book-back::after,
+.book-chip .book-pages::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8%;
+  height: 78px;
+  z-index: 3;
+  pointer-events: none;
+  background: #fbfaf6;
+  border-top: 1px solid rgba(0,0,0,0.10);
+  border-bottom: 1px solid rgba(0,0,0,0.10);
+}
+.book-chip .book-spine::after { box-shadow: inset -8px 0 14px rgba(0,0,0,0.16); }
+.book-chip .book-pages::after { background: #f3efe2; }
+
 .book-chip .chi-band {
   position: absolute;
   left: 0;
