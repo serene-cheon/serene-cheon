@@ -1485,7 +1485,8 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   opacity: 0.82;
   max-width: 80%;
 }
-/* the belly band continues around the spine and back board */
+/* the belly band continues around the spine, back board and fore-edge —
+   same height on every face so it reads as one wrapped strip of paper */
 .book-chip .book-spine::after,
 .book-chip .book-back::after,
 .book-chip .book-pages::after {
@@ -1494,14 +1495,18 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   left: 0;
   right: 0;
   bottom: 8%;
-  height: 78px;
+  height: var(--band-h, 62px);
   z-index: 3;
   pointer-events: none;
   background: #fbfaf6;
-  border-top: 1px solid rgba(0,0,0,0.10);
-  border-bottom: 1px solid rgba(0,0,0,0.10);
+  /* paper thickness: shadow cast onto the cover above and below the strip */
+  box-shadow:
+    0 -3px 6px rgba(0,0,0,0.20),
+    0 4px 8px rgba(0,0,0,0.24);
 }
-.book-chip .book-spine::after { box-shadow: inset -8px 0 14px rgba(0,0,0,0.16); }
+.book-chip .book-spine::after {
+  background: linear-gradient(90deg, rgba(0,0,0,0.18), rgba(0,0,0,0) 55%), #fbfaf6;
+}
 .book-chip .book-pages::after { background: #f3efe2; }
 
 .book-chip .chi-band {
@@ -1509,23 +1514,16 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   left: 0;
   right: 0;
   bottom: 8%;
+  height: var(--band-h, 62px);
   z-index: 3;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 12px 16px 14px;
+  justify-content: center;
+  padding: 0 16px;
   background: #fbfaf6;
-  border-top: 1px solid rgba(0,0,0,0.10);
-  border-bottom: 1px solid rgba(0,0,0,0.10);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.14);
-}
-.book-chip .chi-note {
-  font-size: 8px;
-  line-height: 1.35;
-  letter-spacing: 0.01em;
-  text-align: center;
-  color: #2e2e2e;
+  box-shadow:
+    0 -3px 6px rgba(0,0,0,0.20),
+    0 4px 8px rgba(0,0,0,0.24);
 }
 .book-chip .chi-marks {
   display: flex;
@@ -1533,7 +1531,7 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
   justify-content: center;
   gap: 16px;
 }
-.book-chip .chi-laurel { height: 42px; width: auto; }
+.book-chip .chi-laurel { height: 44px; width: auto; }
 .book-chip .chi-logo { height: 26px; width: auto; }
 
 /* ── Fluke edition: brand grey jacket with the wordmark on the spine ── */
