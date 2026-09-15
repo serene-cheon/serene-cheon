@@ -431,6 +431,17 @@ body.home .page-footer { padding-top: 12px; padding-bottom: 20px; }
 
 .topbar-group { text-align: left; }
 
+/* publication page: nav links sit in one horizontal row beside the logo
+   (nav-morph.js slides each link from its previous page's spot into this row) */
+body.pub .topbar { align-items: center; }
+body.pub .topbar-menu { gap: 40px; }
+body.pub .topbar-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 26px;
+}
+
 .topbar-group-title {
   display: block;
   font-size: 12.5px;
