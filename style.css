@@ -343,10 +343,10 @@ img { display: block; max-width: 100%; }
   position: sticky;
   top: 0;
   z-index: 40;          /* keep nav clickable above the 3D shelf */
-  background: var(--white);
 }
 
-/* full-viewport backdrop so content never peeks past the boxed topbar on wide screens */
+/* full-viewport backdrop so content never peeks past the boxed topbar on wide screens;
+   it fades to transparent toward the bottom, with a matching frosted blur */
 .topbar::before {
   content: "";
   position: absolute;
@@ -355,7 +355,15 @@ img { display: block; max-width: 100%; }
   left: 50%;
   width: 100vw;
   transform: translateX(-50%);
-  background: var(--white);
+  background: linear-gradient(to bottom,
+    var(--white) 0%,
+    var(--white) 52%,
+    rgba(255,255,255,0.72) 76%,
+    rgba(255,255,255,0) 100%);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  -webkit-mask-image: linear-gradient(to bottom, #000 52%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 52%, transparent 100%);
   z-index: -1;
 }
 
