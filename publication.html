@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publication — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=313" />
+  <link rel="stylesheet" href="style.css?v=314" />
 </head>
 <body class="pub">
 
@@ -25,7 +25,16 @@
 </header>
 
 <main class="page">
+  <aside class="pub-side">
+    <nav class="pub-toc">
+      <a href="#publications" class="active">Publication</a>
+      <a href="#research-area">Research Area</a>
+    </nav>
+    <span id="localTime" class="pub-clock"></span>
+  </aside>
+
   <div class="page-content">
+    <section id="publications" class="pub-section">
     <div class="page-body">
       <p>Peer-reviewed research, conference papers, and writing on human-computer interaction, inclusive design, and qualitative methodology.</p>
     </div>
@@ -83,12 +92,27 @@
       </article>
 
     </div>
+    </section>
+
+    <section id="research-area" class="pub-section">
+      <div class="pub-sec-title">Research Area</div>
+      <div class="ra-list">
+        <div class="ra-item">
+          <div class="ra-name">Human–AI Interaction</div>
+          <div class="ra-desc">How people adopt, trust, and build everyday workflows around AI-powered tools.</div>
+        </div>
+        <div class="ra-item">
+          <div class="ra-name">Accessibility &amp; Inclusive Design</div>
+          <div class="ra-desc">Centering disabled and marginalized users in research and design practice.</div>
+        </div>
+        <div class="ra-item">
+          <div class="ra-name">Qualitative &amp; Mixed Methods</div>
+          <div class="ra-desc">Contextual inquiry, diary studies, and combining field data with behavioral metrics.</div>
+        </div>
+      </div>
+    </section>
   </div>
 </main>
-
-<footer class="page-footer">
-  <span id="localTime"></span>
-</footer>
 
 <script>
   function updateTime() {
@@ -108,6 +132,28 @@
     tag.classList.add('show');
     setTimeout(() => tag.classList.remove('show'), 1800);
   }
+
+  // scrollspy: highlight the sidebar entry of the section in view
+  const tocLinks = Array.from(document.querySelectorAll('.pub-toc a'));
+  const sections = tocLinks
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+
+  function spy() {
+    const probe = window.innerHeight * 0.35;
+    let current = sections[0];
+    for (const sec of sections) {
+      if (sec.getBoundingClientRect().top <= probe) current = sec;
+    }
+    // pinned to the bottom → the last section wins even if it never crosses the probe line
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      current = sections[sections.length - 1];
+    }
+    tocLinks.forEach(a =>
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current.id));
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
 </script>
 <script src="nav-morph.js?v=1"></script>
 </body>
