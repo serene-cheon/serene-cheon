@@ -1106,14 +1106,17 @@ body.pub .topbar-group {
 .pub-toc a:hover,
 .pub-toc a.active { color: var(--text); }
 
-.pub-clock {
-  position: fixed;                                   /* same spot as the home footer clock */
-  bottom: 22px;
-  left: max(var(--px), calc((100vw - 1600px) / 2 + var(--px)));
-  font-size: 14px;
-  color: #737373;
-  letter-spacing: -0.01em;
-  font-variant-numeric: tabular-nums;
+/* the clock reuses the home footer verbatim, pinned to the viewport bottom
+   with home's exact paddings so it sits at the identical spot */
+body.pub .page-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 12px;
+  padding-bottom: 20px;
+  pointer-events: none;
+  z-index: 30;
 }
 
 body.pub .page-content { margin-left: 210px; }
