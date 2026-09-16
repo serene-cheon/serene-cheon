@@ -1066,7 +1066,7 @@ body.pub .topbar-group {
 .pub-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));   /* 2-up on desktop */
-  gap: 52px 96px;
+  gap: 52px 128px;
   align-items: start;
 }
 
@@ -1091,6 +1091,7 @@ body.pub .topbar-group {
 
 .pub-venue {
   font-size: 13px;
+  font-weight: 500;              /* matches the title weight */
   color: #a3a3a0;
 }
 
