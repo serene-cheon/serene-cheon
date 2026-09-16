@@ -1057,29 +1057,16 @@ body.pub .topbar-group {
 
 /* ─── PUBLICATION (paper list) ─── */
 /* ── year-led card timeline ── */
-.pub-year-row {
-  display: grid;
-  grid-template-columns: 170px 1fr;
-  gap: 40px;
-  scroll-margin-top: 116px;
-}
+.pub-year-row { scroll-margin-top: 116px; }
 
 .pub-year-row + .pub-year-row { margin-top: 96px; }
-
-.pub-year-label {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--text);
-  letter-spacing: -0.01em;
-  line-height: 1.35;
-}
 
 .pub-card { scroll-margin-top: 116px; }
 
 .pub-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: 56px 44px;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));   /* 3-up on desktop */
+  gap: 56px 40px;
   align-items: start;
 }
 
@@ -1254,7 +1241,7 @@ body.pub .page-footer {
   z-index: 30;
 }
 
-body.pub .page-content { margin-left: 268px; max-width: 1120px; }
+body.pub .page-content { margin-left: 268px; max-width: 1280px; }
 
 .pub-year-row + .pub-section,
 .pub-section + .pub-section { margin-top: 96px; }
