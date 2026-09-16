@@ -1109,13 +1109,15 @@ body.pub .topbar-group {
 .side-title {
   margin-top: 12px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text);
   letter-spacing: -0.01em;
 }
 
-/* publication keeps only the home logo in the topbar */
+/* publication keeps only the home logo in the topbar; no backdrop, so the
+   body scrolls clear to the top instead of being clipped by an empty bar */
 body.pub .topbar-menu { display: none; }
+body.pub .topbar::before { display: none; }
 
 /* sub-contents unfold on hover / active, set in the tag-blurb style */
 .tag-sub {
