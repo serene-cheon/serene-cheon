@@ -1066,7 +1066,7 @@ body.pub .topbar-group {
 .pub-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));   /* 2-up on desktop */
-  gap: 80px 96px;
+  gap: 52px 96px;
   align-items: start;
 }
 
@@ -1241,7 +1241,7 @@ body.pub .page-footer {
   z-index: 30;
 }
 
-body.pub .page-content { margin-left: 268px; max-width: 1120px; }
+body.pub .page-content { margin-left: 268px; max-width: none; }   /* grid runs to the page's right edge */
 
 .pub-year-row + .pub-section,
 .pub-section + .pub-section { margin-top: 96px; }
