@@ -63,9 +63,11 @@
     });
   }
 
-  /* the fixed topbar sits out of flow, so give the body matching headroom */
+  /* the fixed topbar sits out of flow, so give the body matching headroom
+     (home has no scroll; publication sets its own offset in CSS) */
   function offsetFixedNav() {
-    if (document.body.classList.contains('home')) return;
+    const b = document.body.classList;
+    if (b.contains('home') || b.contains('pub')) return;
     const bar = document.querySelector('.topbar');
     if (bar) document.body.style.paddingTop = bar.offsetHeight + 'px';
   }

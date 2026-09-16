@@ -1087,7 +1087,7 @@ body.pub .topbar-group {
 /* back button + page name at the top of the sidebar column */
 .side-head {
   position: fixed;
-  top: 94px;
+  top: 102px;
   left: max(var(--px), calc((100vw - 1600px) / 2 + var(--px)));
   width: 192px;
   z-index: 30;
@@ -1118,6 +1118,7 @@ body.pub .topbar-group {
    body scrolls clear to the top instead of being clipped by an empty bar */
 body.pub .topbar-menu { display: none; }
 body.pub .topbar::before { display: none; }
+body.pub { padding-top: 24px; }                      /* body starts level with the logo's top */
 
 /* sub-contents unfold on hover / active, set in the tag-blurb style */
 .tag-sub {
