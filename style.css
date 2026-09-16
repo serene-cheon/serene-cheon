@@ -1123,6 +1123,12 @@ body.pub .topbar-group {
 
 .tag-sub a:hover { opacity: 1; }
 
+.pub-num {
+  font-variant-numeric: tabular-nums;
+  margin-right: 3px;
+  opacity: 0.75;
+}
+
 .pub-group { scroll-margin-top: 116px; }
 .pub-group + .pub-group { margin-top: 56px; }
 
