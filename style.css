@@ -370,6 +370,41 @@ body:not(.home) .topbar {
 
 /* ─── HOME: single-screen, no-scroll layout ─── */
 body.home { display: flex; flex-direction: column; height: 100vh; height: 100dvh; overflow: hidden; }
+
+/* full-bleed dashed frame: two crossing line pairs, like printers' crop marks */
+body.home::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  border-left: 1px dashed #cfcfc8;
+  border-right: 1px dashed #cfcfc8;
+  pointer-events: none;
+  z-index: 5;
+}
+
+body.home::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 14px;
+  bottom: 14px;
+  border-top: 1px dashed #cfcfc8;
+  border-bottom: 1px dashed #cfcfc8;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@media (max-width: 1000px) {
+  body.home::before,
+  body.home::after { display: none; }
+}
+
+/* home never scrolls, so the topbar needs no backdrop — it would cover the frame */
+body.home .topbar::before { display: none; }
 body.home .topbar,
 body.home .page-footer { flex-shrink: 0; width: 100%; }
 body.home .page {
