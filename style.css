@@ -1107,6 +1107,9 @@ body.pub .topbar-group {
 .pub-toc a.active { color: var(--text); }
 
 .pub-clock {
+  position: fixed;                                   /* same spot as the home footer clock */
+  bottom: 22px;
+  left: max(var(--px), calc((100vw - 1600px) / 2 + var(--px)));
   font-size: 14px;
   color: #737373;
   letter-spacing: -0.01em;
