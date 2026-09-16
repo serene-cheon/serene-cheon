@@ -1093,6 +1093,39 @@ body.pub .topbar-group {
 
 .pub-toc { display: flex; flex-direction: column; }
 
+/* back button + page name at the top of the sidebar column */
+.side-head {
+  position: fixed;
+  top: 118px;
+  left: max(var(--px), calc((100vw - 1600px) / 2 + var(--px)));
+  width: 192px;
+  z-index: 30;
+}
+
+.side-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #737373;
+  letter-spacing: -0.01em;
+  transition: color 0.15s;
+}
+
+.side-back:hover { color: var(--text); }
+.side-back svg { display: block; }
+
+.side-title {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+/* publication keeps only the home logo in the topbar */
+body.pub .topbar-menu { display: none; }
+
 /* sub-contents unfold on hover / active, set in the tag-blurb style */
 .tag-sub {
   display: flex;
@@ -1179,7 +1212,8 @@ body.pub .page-content { margin-left: 210px; }
 }
 
 @media (max-width: 900px) {
-  .pub-side { display: none; }
+  .pub-side,
+  .side-head { display: none; }
   body.pub .page-content { margin-left: 0; }
 }
 
