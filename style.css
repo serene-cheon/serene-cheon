@@ -373,7 +373,10 @@ body.home { display: flex; flex-direction: column; height: 100vh; height: 100dvh
 
 /* full-bleed dashed frame: two crossing line pairs, like printers' crop marks;
    the edge gap eases toward 0 as the viewport narrows, then the lines slip away */
-body.home { --frame-gap: clamp(0px, calc((100vw - 1000px) * 0.036), 16px); }
+body.home {
+  --frame-gap: clamp(0px, calc((100vw - 1000px) * 0.036), 16px);    /* vertical lines follow width */
+  --frame-gap-y: clamp(0px, calc((100vh - 650px) * 0.08), 16px);    /* horizontal lines follow height */
+}
 
 body.home::before {
   content: "";
@@ -393,8 +396,8 @@ body.home::after {
   position: fixed;
   left: 0;
   right: 0;
-  top: var(--frame-gap);
-  bottom: var(--frame-gap);
+  top: var(--frame-gap-y);
+  bottom: var(--frame-gap-y);
   border-top: 1px dashed #e1e1db;
   border-bottom: 1px dashed #e1e1db;
   pointer-events: none;
@@ -402,8 +405,10 @@ body.home::after {
 }
 
 @media (max-width: 1000px) {
-  body.home::before,
-  body.home::after { display: none; }
+  body.home::before { display: none; }   /* vertical lines leave with narrow width */
+}
+@media (max-height: 650px) {
+  body.home::after { display: none; }    /* horizontal lines leave with short height */
 }
 
 /* home never scrolls, so the topbar needs no backdrop — it would cover the frame */
