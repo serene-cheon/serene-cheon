@@ -1059,8 +1059,8 @@ body.pub .topbar-group {
 /* ── year-led card timeline ── */
 .pub-year-row {
   display: grid;
-  grid-template-columns: 84px 1fr;
-  gap: 36px;
+  grid-template-columns: 170px 1fr;
+  gap: 40px;
   scroll-margin-top: 116px;
 }
 
@@ -1071,8 +1071,10 @@ body.pub .topbar-group {
   font-weight: 500;
   color: var(--text);
   letter-spacing: -0.01em;
-  line-height: 1.2;
+  line-height: 1.35;
 }
+
+.pub-card { scroll-margin-top: 116px; }
 
 .pub-grid {
   display: grid;
