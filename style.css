@@ -1076,21 +1076,18 @@ body.pub .topbar-group {
 .pub-toc {
   display: flex;
   flex-direction: column;
-  margin-top: 36px;
+  margin-top: 30px;
 }
 
-/* roomier rhythm between sidebar entries (line-heights untouched) */
-.pub-toc .tag-shape {
-  padding-top: 17px;
-  padding-bottom: 17px;
-}
+/* the wider publication sidebar column */
+.pub-toc .tag-shape { width: 100%; }
 
 /* back button + page name at the top of the sidebar column */
 .side-head {
   position: fixed;
   top: 102px;
   left: max(var(--px), calc((100vw - 1600px) / 2 + var(--px)));
-  width: 192px;
+  width: 240px;
   z-index: 30;
 }
 
@@ -1178,7 +1175,7 @@ body.pub .page-footer {
   z-index: 30;
 }
 
-body.pub .page-content { margin-left: 210px; }
+body.pub .page-content { margin-left: 268px; }
 
 .pub-section + .pub-section { margin-top: 72px; }
 
