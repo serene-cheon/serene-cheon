@@ -375,7 +375,7 @@ body.home { display: flex; flex-direction: column; height: 100vh; height: 100dvh
    the edge gap eases toward 0 as the viewport narrows, then the lines slip away */
 body.home {
   --frame-gap: clamp(0px, calc((100vw - 1000px) * 0.036), 16px);    /* vertical lines follow width */
-  --frame-gap-y: clamp(0px, calc((100vh - 650px) * 0.08), 16px);    /* horizontal lines follow height */
+  --frame-gap-y: clamp(0px, calc((100vh - 650px) * 0.096), 24px);   /* horizontal lines follow height */
 }
 
 body.home::before {
