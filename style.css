@@ -1066,19 +1066,19 @@ body.pub .topbar-group {
 .pub-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));   /* 2-up on desktop */
-  gap: 80px 64px;
+  gap: 80px 96px;
   align-items: start;
 }
 
 .pub-card {
   display: grid;
-  grid-template-columns: 148px 1fr;
+  grid-template-columns: 128px 1fr;
   gap: 18px;
 }
 
 .pub-thumb {
-  width: 148px;
-  height: 188px;                 /* every thumbnail shares this size */
+  width: 128px;
+  height: 162px;                 /* every thumbnail shares this size */
   background: #efefec;
 }
 
@@ -1086,7 +1086,7 @@ body.pub .topbar-group {
   display: flex;
   flex-direction: column;
   justify-content: space-between;   /* venue pinned top, info fills from the bottom */
-  min-height: 188px;
+  min-height: 162px;
 }
 
 .pub-venue {
