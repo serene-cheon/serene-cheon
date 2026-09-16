@@ -1072,17 +1072,12 @@ body.pub .topbar-group {
   text-decoration-color: var(--text);
 }
 
-/* ── publication sidebar: same tag list as the home shelf, centered left ── */
-.pub-side {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  left: max(var(--px), calc((100vw - 1600px) / 2 + var(--px)));
-  width: 192px;
-  z-index: 30;
+/* ── publication sidebar: same tag list as the home shelf, under the title ── */
+.pub-toc {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 }
-
-.pub-toc { display: flex; flex-direction: column; }
 
 /* back button + page name at the top of the sidebar column */
 .side-head {
@@ -1100,10 +1095,13 @@ body.pub .topbar-group {
   font-size: 13px;
   color: #737373;
   letter-spacing: -0.01em;
-  transition: color 0.15s;
+  padding: 6px 14px 6px 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  transition: color 0.15s, border-color 0.15s;
 }
 
-.side-back:hover { color: var(--text); }
+.side-back:hover { color: var(--text); border-color: #c9c9c5; }
 .side-back svg { display: block; }
 
 .side-title {
@@ -1206,7 +1204,6 @@ body.pub .page-content { margin-left: 210px; }
 }
 
 @media (max-width: 900px) {
-  .pub-side,
   .side-head { display: none; }
   body.pub .page-content { margin-left: 0; }
 }
