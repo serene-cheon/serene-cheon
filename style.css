@@ -1059,14 +1059,14 @@ body.pub .topbar-group {
 /* ── year-led card timeline ── */
 .pub-year-row { scroll-margin-top: 116px; }
 
-.pub-year-row + .pub-year-row { margin-top: 96px; }
+.pub-year-row + .pub-year-row { margin-top: 170px; }   /* clear break between sections */
 
 .pub-card { scroll-margin-top: 116px; }
 
 .pub-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));   /* 3-up on desktop */
-  gap: 56px 40px;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));   /* 2-up on desktop */
+  gap: 56px 44px;
   align-items: start;
 }
 
@@ -1241,7 +1241,7 @@ body.pub .page-footer {
   z-index: 30;
 }
 
-body.pub .page-content { margin-left: 268px; max-width: 1280px; }
+body.pub .page-content { margin-left: 268px; max-width: 1120px; }
 
 .pub-year-row + .pub-section,
 .pub-section + .pub-section { margin-top: 96px; }
