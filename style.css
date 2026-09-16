@@ -1022,20 +1022,14 @@ body.pub .topbar-group {
 
 .pub-entry {
   display: grid;
-  grid-template-columns: 168px 1fr;
-  gap: 32px;
+  grid-template-columns: 52px 1fr;
+  gap: 24px;
 }
 
-.pub-venue-name {
-  font-size: 13px;
-  color: var(--text);
-  line-height: 1.5;
-}
-
-.pub-type {
+.pub-year {
   font-size: 11.5px;
   color: var(--muted);
-  margin-top: 4px;
+  padding-top: 2px;
 }
 
 .pub-title {
@@ -1044,6 +1038,13 @@ body.pub .topbar-group {
   color: var(--text);
   line-height: 1.5;
   margin-bottom: 5px;
+}
+
+.pub-venue {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-bottom: 4px;
+  font-style: italic;
 }
 
 .pub-authors {
