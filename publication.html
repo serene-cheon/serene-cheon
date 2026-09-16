@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publication — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=320" />
+  <link rel="stylesheet" href="style.css?v=321" />
 </head>
 <body class="pub">
 
@@ -27,21 +27,21 @@
 <main class="page">
   <aside class="pub-side">
     <nav class="pub-toc">
-      <a href="#publications" class="tag-shape is-active">
-        <span class="tag-label">Publication</span>
+      <div class="tag-shape is-active">
+        <a class="tag-label" href="#publications">Publication</a>
         <div class="tag-sub">
-          <span>Papers, Journal Articles</span>
-          <span>Extended Abstracts, Posters, Work in Progress</span>
+          <a href="#papers">Papers, Journal Articles</a>
+          <a href="#posters">Extended Abstracts, Posters, Work in Progress</a>
         </div>
-      </a>
-      <a href="#research-area" class="tag-shape">
-        <span class="tag-label">Research Area</span>
+      </div>
+      <div class="tag-shape">
+        <a class="tag-label" href="#research-area">Research Area</a>
         <div class="tag-sub">
           <span>Human–AI Interaction</span>
           <span>Accessibility &amp; Inclusive Design</span>
           <span>Qualitative &amp; Mixed Methods</span>
         </div>
-      </a>
+      </div>
     </nav>
   </aside>
 
@@ -51,7 +51,9 @@
       <p>Peer-reviewed research, conference papers, and writing on human-computer interaction, inclusive design, and qualitative methodology.</p>
     </div>
 
-    <div class="pub-list">
+    <div id="papers" class="pub-group">
+      <div class="pub-sec-title">Papers, Journal Articles</div>
+      <div class="pub-list">
 
       <article class="pub-entry">
         <div class="pub-year">2025</div>
@@ -78,6 +80,13 @@
         </div>
       </article>
 
+      </div>
+    </div>
+
+    <div id="posters" class="pub-group">
+      <div class="pub-sec-title">Extended Abstracts, Posters, Work in Progress</div>
+      <div class="pub-list">
+
       <article class="pub-entry">
         <div class="pub-year">2024</div>
         <div class="pub-body">
@@ -103,6 +112,7 @@
         </div>
       </article>
 
+      </div>
     </div>
     </section>
 
@@ -150,9 +160,9 @@
   }
 
   // scrollspy: highlight the sidebar entry of the section in view
-  const tocLinks = Array.from(document.querySelectorAll('.pub-toc a'));
-  const sections = tocLinks
-    .map(a => document.querySelector(a.getAttribute('href')))
+  const tocItems = Array.from(document.querySelectorAll('.pub-toc .tag-shape'));
+  const sections = tocItems
+    .map(t => document.querySelector(t.querySelector('.tag-label').getAttribute('href')))
     .filter(Boolean);
 
   function spy() {
@@ -165,8 +175,7 @@
     if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
       current = sections[sections.length - 1];
     }
-    tocLinks.forEach(a =>
-      a.classList.toggle('is-active', a.getAttribute('href') === '#' + current.id));
+    tocItems.forEach((t, i) => t.classList.toggle('is-active', sections[i] === current));
   }
   window.addEventListener('scroll', spy, { passive: true });
   spy();
