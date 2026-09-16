@@ -1087,7 +1087,7 @@ body.pub .topbar-group {
 /* back button + page name at the top of the sidebar column */
 .side-head {
   position: fixed;
-  top: 118px;
+  top: 94px;
   left: max(var(--px), calc((100vw - 1600px) / 2 + var(--px)));
   width: 192px;
   z-index: 30;
