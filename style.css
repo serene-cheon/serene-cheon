@@ -1076,7 +1076,13 @@ body.pub .topbar-group {
 .pub-toc {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 36px;
+}
+
+/* roomier rhythm between sidebar entries (line-heights untouched) */
+.pub-toc .tag-shape {
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
 /* back button + page name at the top of the sidebar column */
