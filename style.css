@@ -1081,30 +1081,16 @@ body.pub .topbar-group {
   text-decoration-color: var(--text);
 }
 
-/* ── publication sidebar: quiet fixed column with the TOC and the clock ── */
+/* ── publication sidebar: same tag list as the home shelf, bottom-left ── */
 .pub-side {
   position: fixed;
-  top: 118px;                                        /* clears the sticky topbar */
-  bottom: 40px;
+  bottom: 76px;                                      /* sits above the pinned clock */
   left: max(var(--px), calc((100vw - 1600px) / 2 + var(--px)));
-  width: 170px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 192px;
   z-index: 30;
 }
 
-.pub-toc { display: flex; flex-direction: column; gap: 6px; }
-
-.pub-toc a {
-  font-size: 14px;
-  color: #737373;
-  letter-spacing: -0.01em;
-  transition: color 0.15s;
-}
-
-.pub-toc a:hover,
-.pub-toc a.active { color: var(--text); }
+.pub-toc { display: flex; flex-direction: column; }
 
 /* the clock reuses the home footer verbatim, pinned to the viewport bottom
    with home's exact paddings so it sits at the identical spot */
