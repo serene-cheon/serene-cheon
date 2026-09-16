@@ -1113,7 +1113,7 @@ body.pub .topbar-group {
    body scrolls clear to the top instead of being clipped by an empty bar */
 body.pub .topbar-menu { display: none; }
 body.pub .topbar::before { display: none; }
-body.pub { padding-top: 24px; }                      /* body starts level with the logo's top */
+body.pub { padding-top: 102px; }                     /* body starts level with the Back button */
 
 /* sub-contents unfold on hover / active, set in the tag-blurb style */
 .tag-sub {
