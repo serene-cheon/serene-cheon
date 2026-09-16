@@ -1130,6 +1130,7 @@ body.pub .topbar-group {
 }
 
 .pub-group { scroll-margin-top: 116px; }
+.pub-entry { scroll-margin-top: 116px; }
 .pub-group + .pub-group { margin-top: 56px; }
 
 /* the clock reuses the home footer verbatim, pinned to the viewport bottom
