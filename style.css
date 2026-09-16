@@ -1081,16 +1081,43 @@ body.pub .topbar-group {
   text-decoration-color: var(--text);
 }
 
-/* ── publication sidebar: same tag list as the home shelf, bottom-left ── */
+/* ── publication sidebar: same tag list as the home shelf, centered left ── */
 .pub-side {
   position: fixed;
-  bottom: 76px;                                      /* sits above the pinned clock */
+  top: 50%;
+  transform: translateY(-50%);
   left: max(var(--px), calc((100vw - 1600px) / 2 + var(--px)));
   width: 192px;
   z-index: 30;
 }
 
 .pub-toc { display: flex; flex-direction: column; }
+
+/* sub-contents unfold on hover / active, set in the tag-blurb style */
+.tag-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.2s ease, margin-top 0.3s ease;
+}
+
+.tag-shape:hover .tag-sub,
+.tag-shape.is-active .tag-sub {
+  max-height: 140px;
+  opacity: 1;
+  margin-top: 4px;
+}
+
+.tag-sub span {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  opacity: 0.7;
+}
 
 /* the clock reuses the home footer verbatim, pinned to the viewport bottom
    with home's exact paddings so it sits at the identical spot */
