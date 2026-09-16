@@ -355,8 +355,7 @@ body:not(.home) .topbar {
 
 .pub-section { scroll-margin-top: 116px; }   /* anchor jumps land clear of the fixed bar */
 
-/* full-viewport backdrop so content never peeks past the boxed topbar on wide screens;
-   it fades to transparent toward the bottom, with a matching frosted blur */
+/* full-viewport backdrop so content never peeks past the boxed topbar on wide screens */
 .topbar::before {
   content: "";
   position: absolute;
@@ -365,15 +364,7 @@ body:not(.home) .topbar {
   left: 50%;
   width: 100vw;
   transform: translateX(-50%);
-  background: linear-gradient(to bottom,
-    var(--white) 0%,
-    var(--white) 52%,
-    rgba(255,255,255,0.72) 76%,
-    rgba(255,255,255,0) 100%);
-  -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
-  -webkit-mask-image: linear-gradient(to bottom, #000 52%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 52%, transparent 100%);
+  background: var(--white);
   z-index: -1;
 }
 
