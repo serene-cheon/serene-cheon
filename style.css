@@ -1152,6 +1152,13 @@ body.pub .topbar-group {
   letter-spacing: -0.01em;
 }
 
+.side-crumb {
+  color: #a3a3a0;
+  transition: color 0.15s;
+}
+
+.side-crumb:hover { color: var(--text); }
+
 /* publication keeps only the home logo in the topbar; no backdrop, so the
    body scrolls clear to the top instead of being clipped by an empty bar */
 body.pub .topbar-menu { display: none; }
