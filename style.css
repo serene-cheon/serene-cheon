@@ -371,16 +371,19 @@ body:not(.home) .topbar {
 /* ─── HOME: single-screen, no-scroll layout ─── */
 body.home { display: flex; flex-direction: column; height: 100vh; height: 100dvh; overflow: hidden; }
 
-/* full-bleed dashed frame: two crossing line pairs, like printers' crop marks */
+/* full-bleed dashed frame: two crossing line pairs, like printers' crop marks;
+   the edge gap eases toward 0 as the viewport narrows, then the lines slip away */
+body.home { --frame-gap: clamp(0px, calc((100vw - 1000px) * 0.036), 16px); }
+
 body.home::before {
   content: "";
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 16px;
-  right: 16px;
-  border-left: 1px dashed #cfcfc8;
-  border-right: 1px dashed #cfcfc8;
+  left: var(--frame-gap);
+  right: var(--frame-gap);
+  border-left: 1px dashed #e1e1db;
+  border-right: 1px dashed #e1e1db;
   pointer-events: none;
   z-index: 5;
 }
@@ -390,10 +393,10 @@ body.home::after {
   position: fixed;
   left: 0;
   right: 0;
-  top: 14px;
-  bottom: 14px;
-  border-top: 1px dashed #cfcfc8;
-  border-bottom: 1px dashed #cfcfc8;
+  top: var(--frame-gap);
+  bottom: var(--frame-gap);
+  border-top: 1px dashed #e1e1db;
+  border-bottom: 1px dashed #e1e1db;
   pointer-events: none;
   z-index: 5;
 }
