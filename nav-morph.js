@@ -63,6 +63,15 @@
     });
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', play);
-  else play();
+  /* the fixed topbar sits out of flow, so give the body matching headroom */
+  function offsetFixedNav() {
+    if (document.body.classList.contains('home')) return;
+    const bar = document.querySelector('.topbar');
+    if (bar) document.body.style.paddingTop = bar.offsetHeight + 'px';
+  }
+  window.addEventListener('resize', offsetFixedNav);
+
+  function start() { offsetFixedNav(); play(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
 })();

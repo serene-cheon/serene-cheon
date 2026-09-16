@@ -340,10 +340,20 @@ img { display: block; max-width: 100%; }
   max-width: 1600px;
   margin: 0 auto;
   padding: 24px var(--px) 20px;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 40;          /* keep nav clickable above the 3D shelf */
 }
+
+/* scrolling pages pin the bar to the viewport itself (rock-solid, no sticky lag);
+   nav-morph.js pads the body by the bar's height so content starts below it */
+body:not(.home) .topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.pub-section { scroll-margin-top: 116px; }   /* anchor jumps land clear of the fixed bar */
 
 /* full-viewport backdrop so content never peeks past the boxed topbar on wide screens;
    it fades to transparent toward the bottom, with a matching frosted blur */
