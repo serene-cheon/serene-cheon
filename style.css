@@ -1066,7 +1066,7 @@ body.pub .topbar-group {
 .pub-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));   /* 2-up on desktop */
-  gap: 56px 44px;
+  gap: 80px 64px;
   align-items: start;
 }
 
