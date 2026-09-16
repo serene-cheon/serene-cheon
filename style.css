@@ -1056,19 +1056,53 @@ body.pub .topbar-group {
 }
 
 /* ─── PUBLICATION (paper list) ─── */
-.pub-list {
-  margin-top: 4px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;                     /* entries separated by air, not rules */
+/* ── year-led card timeline ── */
+.pub-year-row {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 36px;
+  scroll-margin-top: 116px;
 }
 
-.pub-entry { display: block; }
+.pub-year-row + .pub-year-row { margin-top: 96px; }
+
+.pub-year-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.pub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 56px 44px;
+  align-items: start;
+}
+
+.pub-card {
+  display: grid;
+  grid-template-columns: 148px 1fr;
+  gap: 18px;
+}
+
+.pub-thumb {
+  width: 148px;
+  height: 188px;                 /* every thumbnail shares this size */
+  background: #efefec;
+}
+
+.pub-card-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;   /* venue pinned top, info fills from the bottom */
+  min-height: 188px;
+}
 
 .pub-venue {
   font-size: 13px;
   color: #a3a3a0;
-  margin-bottom: 6px;
 }
 
 .pub-title {
@@ -1218,9 +1252,10 @@ body.pub .page-footer {
   z-index: 30;
 }
 
-body.pub .page-content { margin-left: 268px; max-width: 720px; }
+body.pub .page-content { margin-left: 268px; max-width: 1120px; }
 
-.pub-section + .pub-section { margin-top: 72px; }
+.pub-year-row + .pub-section,
+.pub-section + .pub-section { margin-top: 96px; }
 
 .pub-sec-title {
   font-size: 13px;
