@@ -1059,7 +1059,7 @@ body.pub .topbar-group {
 /* ── year-led card timeline ── */
 .pub-year-row { scroll-margin-top: 116px; }
 
-.pub-year-row + .pub-year-row { margin-top: 170px; }   /* clear break between sections */
+.pub-year-row + .pub-year-row { margin-top: 130px; }   /* clear break between sections */
 
 .pub-card { scroll-margin-top: 116px; }
 
