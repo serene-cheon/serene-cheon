@@ -1075,6 +1075,11 @@ body.pub .topbar-group {
   .pub-grid { gap: 32px 64px; }
 }
 
+/* below this point the text would outgrow the thumbnail — drop to one column */
+@media (max-width: 1265px) {
+  .pub-grid { grid-template-columns: 1fr; }
+}
+
 .pub-card {
   display: grid;
   grid-template-columns: 128px 1fr;
