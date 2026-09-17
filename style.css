@@ -1065,9 +1065,14 @@ body.pub .topbar-group {
 
 .pub-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));   /* 2-up on desktop */
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));   /* 2-up on desktop */
   gap: 32px 128px;
   align-items: start;
+}
+
+/* narrower screens: tighten the column gap so two columns survive longer */
+@media (max-width: 1300px) {
+  .pub-grid { gap: 32px 64px; }
 }
 
 .pub-card {
@@ -1253,7 +1258,7 @@ body.pub .page-content { margin-left: 268px; max-width: none; }   /* grid runs t
   font-weight: 400;
   color: #999;
   letter-spacing: -0.01em;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .ra-list { display: flex; flex-direction: column; gap: 26px; }
