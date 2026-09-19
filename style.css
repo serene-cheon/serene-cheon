@@ -1062,6 +1062,13 @@ body.pub .topbar-group {
   margin-bottom: 72px;
 }
 
+.pub-intro p {                   /* same voice as the home bio */
+  font-size: 14px;
+  color: #737373;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
 .pub-year-row { scroll-margin-top: 116px; }
 
 .pub-year-row + .pub-year-row { margin-top: 130px; }   /* clear break between sections */
