@@ -1057,6 +1057,11 @@ body.pub .topbar-group {
 
 /* ─── PUBLICATION (paper list) ─── */
 /* ── year-led card timeline ── */
+.pub-intro {
+  max-width: 560px;
+  margin-bottom: 72px;
+}
+
 .pub-year-row { scroll-margin-top: 116px; }
 
 .pub-year-row + .pub-year-row { margin-top: 130px; }   /* clear break between sections */
