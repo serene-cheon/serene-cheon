@@ -1178,6 +1178,7 @@ body.pub .topbar-group {
   font-family: 'PP Writer', serif;
   font-size: 11px;
   font-weight: 400;
+  font-style: italic;
   color: var(--text);
   letter-spacing: 0.02em;
   margin-top: 36px;
