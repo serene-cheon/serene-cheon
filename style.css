@@ -1063,8 +1063,8 @@ body.pub .topbar-group {
 
 /* highlighter-ink effect */
 .ink-hl {
-  padding: 0 0.28em;
-  margin: 0 -0.28em;
+  padding: 0 0.16em;
+  margin: 0 -0.16em;
   background: linear-gradient(100deg,
     rgba(255, 224, 60, 0)    0.4%,
     rgba(255, 224, 60, 0.78) 1.6%,
@@ -1072,8 +1072,8 @@ body.pub .topbar-group {
     rgba(255, 224, 60, 0.38) 62%,
     rgba(255, 224, 60, 0.6)  97%,
     rgba(255, 224, 60, 0)    99.4%);
-  background-size: 100% 68%;             /* a thinner stroke sitting low on the text */
-  background-position: 0 78%;
+  background-size: 100% 74%;             /* a thin stroke sitting low on the text */
+  background-position: 0 76%;
   background-repeat: no-repeat;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
