@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publication — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=407" />
+  <link rel="stylesheet" href="style.css?v=408" />
 </head>
 <body class="pub">
 
@@ -36,9 +36,6 @@
 
     <nav class="pub-toc">
       <div class="tag-shape is-active">
-        <a class="tag-label" href="#research-area">Research Area</a>
-      </div>
-      <div class="tag-shape">
         <a class="tag-label" href="#papers">Papers, Journal Articles</a>
         <div class="tag-sub">
           <a href="#paper-2026">2026</a>
@@ -64,15 +61,13 @@
       <p>I have published and presented at top HCI venues including ACM CHI.</p>
     </div>
 
-    <section id="research-area" class="pub-section">
-      <div class="pub-sec-title">Research Area</div>
-      <div class="ra-tags">
-        <button type="button" class="ra-tag" data-area="hai">Human&ndash;AI Interaction</button>
-        <button type="button" class="ra-tag" data-area="edtech">Educational Technology</button>
-        <button type="button" class="ra-tag" data-area="design">Design Research</button>
-        <button type="button" class="ra-clear" hidden>Reset &#10005;</button>
-      </div>
-    </section>
+    <div class="ra-bar">
+      <span class="ra-bar-label">Research Area:</span>
+      <button type="button" class="ra-tag" data-area="hai">Human&ndash;AI Interaction <span class="ra-count"></span></button>
+      <button type="button" class="ra-tag" data-area="edtech">Educational Technology <span class="ra-count"></span></button>
+      <button type="button" class="ra-tag" data-area="design">Design Research <span class="ra-count"></span></button>
+      <button type="button" class="ra-clear" hidden>Reset &#10005;</button>
+    </div>
 
     <section id="papers" class="pub-year-row">
       <div class="pub-sec-title">Papers, Journal Articles</div>
@@ -255,8 +250,12 @@
     });
     spy();
   }
-  raTags.forEach(t => t.addEventListener('click', () =>
-    applyFilter(t.classList.contains('is-on') ? null : t.dataset.area)));
+  raTags.forEach(t => {
+    const n = pubCards.filter(c => c.dataset.areas.split(' ').includes(t.dataset.area)).length;
+    t.querySelector('.ra-count').textContent = n;
+    t.addEventListener('click', () =>
+      applyFilter(t.classList.contains('is-on') ? null : t.dataset.area));
+  });
   raClear.addEventListener('click', () => applyFilter(null));
 
   // Back goes to the previous page when there is one, otherwise home
