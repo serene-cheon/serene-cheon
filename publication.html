@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publication — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=380" />
+  <link rel="stylesheet" href="style.css?v=381" />
 </head>
 <body class="pub">
 
@@ -69,26 +69,18 @@
 
     <section id="research-area" class="pub-section">
       <div class="pub-sec-title">Research Area</div>
-      <div class="ra-list">
-        <div class="ra-item">
-          <div class="ra-name">Human&ndash;AI Interaction</div>
-          <div class="ra-desc">How people adopt, trust, and collaborate with AI-powered tools in everyday contexts.</div>
-        </div>
-        <div class="ra-item">
-          <div class="ra-name">Educational Technology</div>
-          <div class="ra-desc">Designing and studying immersive, AI-supported learning environments.</div>
-        </div>
-        <div class="ra-item">
-          <div class="ra-name">Design Research</div>
-          <div class="ra-desc">Mixed-methods inquiry that turns qualitative insight into design decisions.</div>
-        </div>
+      <div class="ra-tags">
+        <button type="button" class="ra-tag" data-area="hai">Human&ndash;AI Interaction</button>
+        <button type="button" class="ra-tag" data-area="edtech">Educational Technology</button>
+        <button type="button" class="ra-tag" data-area="design">Design Research</button>
+        <button type="button" class="ra-clear" hidden>Reset &#10005;</button>
       </div>
     </section>
 
     <section id="papers" class="pub-year-row">
       <div class="pub-sec-title">Papers, Journal Articles</div>
       <div class="pub-grid">
-<article class="pub-card" id="paper-2026">
+<article class="pub-card" data-areas="hai edtech" id="paper-2026">
         <div class="pub-thumb"></div>
         <div class="pub-card-txt">
           <div class="pub-venue">CHI 2026</div>
@@ -100,7 +92,7 @@
         </div>
       </article>
 
-<article class="pub-card" id="paper-2025">
+<article class="pub-card" data-areas="hai edtech" id="paper-2025">
         <div class="pub-thumb"></div>
         <div class="pub-card-txt">
           <div class="pub-venue">Computers &amp; Education: Artificial Intelligence</div>
@@ -117,7 +109,7 @@
     <section id="posters" class="pub-year-row">
       <div class="pub-sec-title">Posters, Work in Progress</div>
       <div class="pub-grid">
-<article class="pub-card" id="poster-2025">
+<article class="pub-card" data-areas="hai edtech design" id="poster-2025">
         <div class="pub-thumb"></div>
         <div class="pub-card-txt">
           <div class="pub-venue">CSCW 2025</div>
@@ -129,7 +121,7 @@
         </div>
       </article>
 
-<article class="pub-card">
+<article class="pub-card" data-areas="hai edtech">
         <div class="pub-thumb"></div>
         <div class="pub-card-txt">
           <div class="pub-venue">CSCW 2025</div>
@@ -141,7 +133,7 @@
         </div>
       </article>
 
-<article class="pub-card">
+<article class="pub-card" data-areas="edtech">
         <div class="pub-thumb"></div>
         <div class="pub-card-txt">
           <div class="pub-venue">CHI 2025</div>
@@ -153,7 +145,7 @@
         </div>
       </article>
 
-<article class="pub-card" id="poster-2024">
+<article class="pub-card" data-areas="edtech design" id="poster-2024">
         <div class="pub-thumb"></div>
         <div class="pub-card-txt">
           <div class="pub-venue">UIST 2024</div>
@@ -165,7 +157,7 @@
         </div>
       </article>
 
-<article class="pub-card">
+<article class="pub-card" data-areas="edtech">
         <div class="pub-thumb"></div>
         <div class="pub-card-txt">
           <div class="pub-venue">IEEE Frontiers in Education</div>
@@ -177,7 +169,7 @@
         </div>
       </article>
 
-<article class="pub-card">
+<article class="pub-card" data-areas="design">
         <div class="pub-thumb"></div>
         <div class="pub-card-txt">
           <div class="pub-venue">CHI 2024</div>
@@ -189,7 +181,7 @@
         </div>
       </article>
 
-<article class="pub-card" id="poster-2023">
+<article class="pub-card" data-areas="hai design" id="poster-2023">
         <div class="pub-thumb"></div>
         <div class="pub-card-txt">
           <div class="pub-venue">CSCW 2023</div>
@@ -248,6 +240,27 @@
   }
   window.addEventListener('scroll', spy, { passive: true });
   spy();
+
+  // research-area tags filter the publication cards
+  const raTags = Array.from(document.querySelectorAll('.ra-tag'));
+  const raClear = document.querySelector('.ra-clear');
+  const pubCards = Array.from(document.querySelectorAll('.pub-card'));
+
+  function applyFilter(area) {
+    raTags.forEach(t => t.classList.toggle('is-on', t.dataset.area === area));
+    raClear.hidden = !area;
+    pubCards.forEach(c => {
+      c.style.display = (!area || c.dataset.areas.split(' ').includes(area)) ? '' : 'none';
+    });
+    document.querySelectorAll('.pub-year-row').forEach(sec => {
+      const any = Array.from(sec.querySelectorAll('.pub-card')).some(c => c.style.display !== 'none');
+      sec.style.display = any ? '' : 'none';
+    });
+    spy();
+  }
+  raTags.forEach(t => t.addEventListener('click', () =>
+    applyFilter(t.classList.contains('is-on') ? null : t.dataset.area)));
+  raClear.addEventListener('click', () => applyFilter(null));
 
   // Back goes to the previous page when there is one, otherwise home
   document.querySelector('.side-back').addEventListener('click', (e) => {
