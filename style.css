@@ -1073,7 +1073,7 @@ body.pub .topbar-group {
 /* ─── PUBLICATION (paper list) ─── */
 /* ── year-led card timeline ── */
 .pub-intro {
-  margin-bottom: 44px;
+  margin-bottom: 84px;           /* the bar belongs to the list below, not the intro */
 }
 
 /* highlighter-ink effect */
@@ -1323,7 +1323,7 @@ body.pub .page-content { margin-left: 268px; max-width: none; }   /* grid runs t
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 64px;
+  margin-bottom: 36px;
 }
 
 .ra-bar-label {
