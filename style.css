@@ -1293,8 +1293,8 @@ body.pub .page-content { margin-left: 268px; max-width: none; }   /* grid runs t
   color: #737373;
   background: none;
   border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 7px 16px;
+  border-radius: 0;
+  padding: 6px 14px;
   cursor: pointer;
   transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
