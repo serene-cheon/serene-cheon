@@ -1327,7 +1327,7 @@ body.pub .page-content { margin-left: 268px; max-width: none; }   /* grid runs t
 }
 
 .ra-bar-label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--text);
   letter-spacing: -0.01em;
@@ -1339,13 +1339,13 @@ body.pub .page-content { margin-left: 268px; max-width: none; }   /* grid runs t
 
 .ra-tag {
   font-family: inherit;
-  font-size: 12.5px;
+  font-size: 11.5px;
   letter-spacing: -0.01em;
   color: #737373;
   background: none;
   border: 1px solid var(--border);
   border-radius: 0;
-  padding: 6px 14px;
+  padding: 4px 10px;
   cursor: pointer;
   transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
@@ -1360,7 +1360,7 @@ body.pub .page-content { margin-left: 268px; max-width: none; }   /* grid runs t
 
 .ra-clear {
   font-family: inherit;
-  font-size: 12px;
+  font-size: 11.5px;
   letter-spacing: -0.01em;
   color: #999;
   background: none;
