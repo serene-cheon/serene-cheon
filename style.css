@@ -1267,6 +1267,7 @@ body.pub .page-footer {
 body.pub .page-content { margin-left: 268px; max-width: none; }   /* grid runs to the page's right edge */
 
 .pub-year-row + .pub-section,
+.pub-section + .pub-year-row,
 .pub-section + .pub-section { margin-top: 96px; }
 
 .pub-sec-title {
