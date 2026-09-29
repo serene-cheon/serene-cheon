@@ -1087,11 +1087,25 @@ body.pub .topbar-group {
     rgba(255, 224, 60, 0.38) 62%,
     rgba(255, 224, 60, 0.6)  97%,
     rgba(255, 224, 60, 0)    99.4%);
-  background-size: 100% 74%;             /* a thin stroke sitting low on the text */
+  background-size: 0% 74%;               /* a thin stroke sitting low on the text */
   background-position: 0 76%;
   background-repeat: no-repeat;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  animation: ink-sweep 0.85s cubic-bezier(0.3, 0, 0.2, 1) forwards;
+}
+
+/* the marker sweeps across on first paint, one phrase after the other */
+@keyframes ink-sweep {
+  from { background-size: 0% 74%; }
+  to   { background-size: 100% 74%; }
+}
+
+.pub-intro p .ink-hl:nth-of-type(1) { animation-delay: 0.45s; }
+.pub-intro p .ink-hl:nth-of-type(2) { animation-delay: 1.35s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ink-hl { animation: none; background-size: 100% 74%; }
 }
 
 .pub-intro p {
