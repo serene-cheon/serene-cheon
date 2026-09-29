@@ -1323,7 +1323,7 @@ body.pub .page-content { margin-left: 268px; max-width: none; }   /* grid runs t
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 88px;
+  margin-bottom: 64px;
 }
 
 .ra-bar-label {
