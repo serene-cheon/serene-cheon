@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=415" />
+  <link rel="stylesheet" href="style.css?v=416" />
 </head>
-<body>
+<body class="pub about">
 
 <header class="topbar">
   <a href="index.html" class="topbar-logo"><img class="logo-mark" src="logo-mark.png" alt="Serene Cheon" /></a>
@@ -24,246 +24,39 @@
   </nav>
 </header>
 
-<main class="page page--wide">
+<main class="page">
+  <div class="side-head">
+    <a class="side-back" href="index.html">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M13.5 8 H3 M7 4 L3 8 L7 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Back</span>
+    </a>
+    <div class="side-title">About</div>
 
-  <!-- music player — swap src to your mp3 path -->
-  <audio id="audio" src="" preload="none"></audio>
-
-  <div class="player" style="display:none">
-    <span class="player-label">Listening to</span>
-    <div class="player-info">
-      <span class="player-track" id="trackName">track title</span>
-      <span class="player-artist" id="trackArtist">artist</span>
-    </div>
-    <div class="player-bar" id="progressBar">
-      <div class="player-bar-fill" id="progressFill"></div>
-    </div>
-    <span class="player-time" id="playerTime">0:00</span>
-    <button class="player-btn" id="playBtn" aria-label="Play">
-      <svg id="iconPlay" viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg>
-      <svg id="iconPause" viewBox="0 0 10 10" style="display:none"><rect x="2" y="1" width="2.5" height="8"/><rect x="5.5" y="1" width="2.5" height="8"/></svg>
-    </button>
+    <nav class="pub-toc">
+      <div class="tag-shape is-active">
+        <a class="tag-label" href="#about-me">About Serene</a>
+      </div>
+      <div class="tag-shape">
+        <a class="tag-label" href="#gallery">Gallery</a>
+      </div>
+    </nav>
   </div>
 
-  <div class="book3d-scene" style="display:none">
-    <div class="b3-scale">
-      <div class="book3d state-0" id="book3d">
-
-        <div class="b3-shadow"></div>
-
-        <!-- static left of first spread -->
-        <div class="b3-base b3-base-left">
-          <div class="b3-photo">photo</div>
-        </div>
-
-        <!-- static right of last spread -->
-        <div class="b3-base b3-base-right">
-          <div class="spread-run"><span>03.2</span><span>Now</span></div>
-          <div class="timeline-section" style="margin-top:0">
-            <div>
-              <div class="tl-entry">
-                <div class="tl-year">2025 – Present</div>
-                <div>
-                  <p class="tl-role">Senior UX Researcher</p>
-                  <p class="tl-company">Luminary Labs · Remote</p>
-                  <p class="tl-desc">Leading the enterprise research stream, mentoring two junior researchers, and building a shared research repository to democratise insights.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="b3-note">Always happy to talk research, books, and Bay Area trails —<br>say hi at serenecheon@berkeley.edu</p>
-        </div>
-
-        <!-- leaf 0 : front = spread1 right / back = spread2 left -->
-        <div class="b3-leaf" data-i="0">
-          <div class="b3-face b3-front">
-            <div class="spread-run"><span>01.1</span><span>About Serene</span></div>
-            <div class="spread-display">Curious by default,<br>rigorous by training.</div>
-            <div class="about-bio-text">
-              <p>I graduated from UC Berkeley with a focus on human-computer interaction and cognitive science, which gave me a rigorous, evidence-based lens for understanding how people think, feel, and behave with technology.</p>
-              <p>Good research, to me, is less about methods and more about curiosity. It's about sitting with ambiguity long enough to ask the right question — and then designing the study that can actually answer it.</p>
-            </div>
-          </div>
-          <div class="b3-face b3-back">
-            <div class="spread-run"><span>02.1</span><span>How I Work</span></div>
-            <div class="about-bio-text">
-              <p>I've worked across mobile apps, enterprise software, and public-facing services, always with the same goal: making sure the people who matter most have a voice in the room when decisions get made.</p>
-              <p>Outside of work, I volunteer as an accessibility auditor for non-profit websites, mentor early-career researchers, and explore Bay Area hiking trails.</p>
-            </div>
-            <div class="skills-section">
-              <p class="section-label">Research &amp; Synthesis</p>
-              <div class="skills-cols">
-                <div class="skill-col">
-                  <ul>
-                    <li>User Interviews</li>
-                    <li>Usability Testing</li>
-                    <li>Contextual Inquiry</li>
-                    <li>Diary Studies</li>
-                  </ul>
-                </div>
-                <div class="skill-col">
-                  <ul>
-                    <li>Affinity Diagramming</li>
-                    <li>Journey Mapping</li>
-                    <li>Thematic Analysis</li>
-                    <li>Jobs-to-be-Done</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- leaf 1 : front = spread2 right / back = spread3 left -->
-        <div class="b3-leaf" data-i="1">
-          <div class="b3-face b3-front">
-            <div class="spread-run"><span>02.2</span><span>Toolkit</span></div>
-            <div class="skills-section" style="margin-top:0">
-              <p class="section-label">Tools &amp; Strengths</p>
-              <div class="skills-cols">
-                <div class="skill-col">
-                  <p class="skill-col-title">Tools</p>
-                  <ul>
-                    <li>Figma</li>
-                    <li>Miro</li>
-                    <li>Dovetail</li>
-                    <li>Lookback</li>
-                    <li>Maze</li>
-                  </ul>
-                </div>
-                <div class="skill-col">
-                  <p class="skill-col-title">Strengths</p>
-                  <ul>
-                    <li>Stakeholder Comms</li>
-                    <li>Workshop Facilitation</li>
-                    <li>Storytelling</li>
-                    <li>Mentoring</li>
-                    <li>Accessibility</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="b3-face b3-back">
-            <div class="spread-run"><span>03.1</span><span>Experience</span></div>
-            <div class="timeline-section" style="margin-top:0">
-              <div>
-                <div class="tl-entry">
-                  <div class="tl-year">Summer 2023</div>
-                  <div>
-                    <p class="tl-role">UX Research Intern</p>
-                    <p class="tl-company">Bloom Finance · San Francisco, CA</p>
-                    <p class="tl-desc">Conducted 20+ participant studies evaluating a redesigned investment onboarding flow. Findings adopted within one quarter.</p>
-                  </div>
-                </div>
-                <div class="tl-entry">
-                  <div class="tl-year">2024</div>
-                  <div>
-                    <p class="tl-role">UX Researcher</p>
-                    <p class="tl-company">Luminary Labs · Remote</p>
-                    <p class="tl-desc">Owned the full research programme end-to-end. Led an accessibility initiative reaching WCAG 2.1 AA compliance.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="b3-nav b3-nav-left" aria-label="Previous page"></div>
-    <div class="b3-nav b3-nav-right" aria-label="Next page"></div>
-    <div class="b3-hint" id="b3Hint">Click the page to turn →</div>
-  </div>
-
-
-  <div class="env-scene" style="display:none">
-    <div class="envelope" id="envelope">
-      <!-- opened flap (navy, peak up) -->
-      <div class="env-back"></div>
-
-      <!-- letters inside -->
-      <div class="env-item env-letter" data-item>
-        <div class="env-letter-head">Dear visitor,</div>
-        <p>Thanks for stopping by. I'm Serene — a mixed-methods UX researcher who believes good research is equal parts curiosity and rigor.</p>
-        <p>Have a look around the shelf, and say hi anytime.</p>
-        <div class="env-letter-sign">— Serene ✳</div>
-      </div>
-
-      <div class="env-item env-polaroid" data-item>
-        <div class="env-polaroid-img">photo</div>
-        <div class="env-polaroid-cap">Berkeley, CA</div>
-      </div>
-
-      <div class="env-item env-vellum" data-item></div>
-
-      <!-- front pocket -->
-      <div class="env-front"></div>
-
-      <!-- ticket label -->
-      <div class="env-ticket">
-        <div class="env-ticket-title">About Serene</div>
-        <div class="env-ticket-sub">by serene · berkeley, ca</div>
-      </div>
-    </div>
-    <div class="b3-hint">Click a letter to pull it out</div>
-  </div>
-
-
-  <div class="about-ed">
-  <div class="about-book" id="aboutBook">
-
-    <section class="spread spread--flaps">
-    <div class="bflap"></div>
-    <div class="bpage bpage-cover" data-pno="01">
-      <div class="cover cover-mock">
-        <div class="cvm-topwrap">
-          <img class="cvm-top" src="cover-top.jpg?v=4" alt="About Serene" />
-          <button class="peek" style="left:48.35%;top:61.13%" aria-label="peek: fish stamp"></button>
-          <button class="peek" style="left:61.68%;top:57.53%" aria-label="peek: star stamp"></button>
-        </div>
-        <div class="cvm-bottom">
-          <div class="cvm-row"><span>/CONTENTS</span></div>
-          <nav class="cvm-chapters">
-            <a class="cv-ch" href="#ch1"><span class="ar">→</span> CHAPTER 1. INTRODUCTION</a>
-            <a class="cv-ch" href="#ch2"><span class="ar">→</span> CHAPTER 2. EXPERIENCE</a>
-            <a class="cv-ch" href="#ch3"><span class="ar">→</span> CHAPTER 3. FUN FACTS</a>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <div class="bpage" data-pno="02" id="ch1">
-    <div class="sheet-label"><span>01.1</span>About Serene</div>
-      <div class="about-ed-col">
+  <div class="page-content">
+    <section id="about-me" class="pub-section">
+      <div class="page-body pub-intro">
         <p>Serene approaches research with a sense of steady curiosity: asking why five times, sitting with ambiguity, and trusting that the most interesting answers live one question deeper. She loves spaces that invite nuanced conversations, meaningful narratives, and a high bar for craft.</p>
         <p>She graduated from UC Berkeley with a focus on human-computer interaction and cognitive science — a rigorous, evidence-based lens for understanding how people think, feel, and behave with technology. Good research, to her, is equal parts curiosity and rigor.</p>
         <p>When she's not in a research session, you can catch her rearranging her bookshelf for the nth time, collecting sea-creature stamps, exploring Bay Area trails, and generally embracing a very spontaneous existence.</p>
-        <p>If you have an interesting idea, want to collaborate on a project, or just have a chat, please <a href="#" onclick="navigator.clipboard.writeText('serenecheon@berkeley.edu');return false;">reach out</a>!! She is always on the lookout for new friends and research opportunities. <span class="about-ed-accent">++ She is available for 2026 opportunities! ☺☺☺</span></p>
+        <p>If you have an interesting idea, want to collaborate on a project, or just have a chat, please <a class="about-link" href="mailto:serenecheon@berkeley.edu">reach out</a>!! She is always on the lookout for new friends and research opportunities. <span class="about-ed-accent">++ She is available for 2026 opportunities! &#9786;&#9786;&#9786;</span></p>
       </div>
-    <div class="barcode-box"><svg class="barcode-svg" viewBox="0 0 300 186" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="186" fill="#fff"/>
-        <g fill="#141414">
-          <text x="292" y="16" text-anchor="end" font-size="14">$13.00</text>
-          <text x="8" y="34" font-size="14.5" letter-spacing="1.5">ISBN 979-9-9913-0000-8</text>
-          <text x="293" y="62" text-anchor="end" font-size="15" letter-spacing="1">51300&gt;</text>
-          <rect x="9.85" y="46" width="1.85" height="114"/><rect x="13.55" y="46" width="1.85" height="114"/><rect x="17.25" y="46" width="5.55" height="104"/><rect x="24.65" y="46" width="7.40" height="104"/><rect x="33.90" y="46" width="1.85" height="104"/><rect x="41.30" y="46" width="3.70" height="104"/><rect x="46.85" y="46" width="1.85" height="104"/><rect x="59.80" y="46" width="1.85" height="104"/><rect x="63.50" y="46" width="7.40" height="104"/><rect x="72.75" y="46" width="1.85" height="104"/><rect x="83.85" y="46" width="3.70" height="104"/><rect x="91.25" y="46" width="1.85" height="104"/><rect x="94.95" y="46" width="1.85" height="114"/><rect x="98.65" y="46" width="1.85" height="114"/><rect x="102.35" y="46" width="1.85" height="104"/><rect x="111.60" y="46" width="1.85" height="104"/><rect x="115.30" y="46" width="5.55" height="104"/><rect x="124.55" y="46" width="1.85" height="104"/><rect x="128.25" y="46" width="5.55" height="104"/><rect x="137.50" y="46" width="1.85" height="104"/><rect x="141.20" y="46" width="5.55" height="104"/><rect x="150.45" y="46" width="1.85" height="104"/><rect x="154.15" y="46" width="5.55" height="104"/><rect x="163.40" y="46" width="1.85" height="104"/><rect x="167.10" y="46" width="1.85" height="104"/><rect x="172.65" y="46" width="1.85" height="104"/><rect x="180.05" y="46" width="1.85" height="114"/><rect x="183.75" y="46" width="1.85" height="114"/>
-          <rect x="208.70" y="70" width="1.85" height="80"/><rect x="212.40" y="70" width="5.55" height="80"/><rect x="223.50" y="70" width="3.70" height="80"/><rect x="230.90" y="70" width="1.85" height="80"/><rect x="236.45" y="70" width="3.70" height="80"/><rect x="243.85" y="70" width="1.85" height="80"/><rect x="247.55" y="70" width="1.85" height="80"/><rect x="251.25" y="70" width="7.40" height="80"/><rect x="260.50" y="70" width="1.85" height="80"/><rect x="264.20" y="70" width="1.85" height="80"/><rect x="271.60" y="70" width="3.70" height="80"/><rect x="277.15" y="70" width="1.85" height="80"/><rect x="280.85" y="70" width="3.70" height="80"/><rect x="286.40" y="70" width="3.70" height="80"/>
-          <text x="2" y="176" font-size="13">9</text>
-          <text x="55" y="176" font-size="13" letter-spacing="2">799991</text>
-          <text x="130" y="176" font-size="13" letter-spacing="2">300008</text>
-        </g>
-      </svg></div>
-    </div>
-    <div class="bflap"></div>
-
     </section>
 
-    <section class="spread">
-    <div class="bpage" data-pno="03" id="ch2">
-    <div class="sheet-label"><span>02.1</span>A growing gallery to get to know me…</div>
-
-    <div class="about-ed-gallery">
-
+    <section id="gallery" class="pub-section">
+      <div class="pub-sec-title">A growing gallery to get to know me&#8230;</div>
+      <div class="about-gallery">
       <figure class="stamp-item"><div class="stamp"><div class="stamp-body has-photo" style="--ink:#fff">
         <img class="stamp-photo" src="stamp-photo-1.jpg?v=1" alt="Hiking toward Mt. Rainier" />
       </div></div><figcaption class="stamp-caption">Collecting national park passport stamps</figcaption></figure>
@@ -299,13 +92,6 @@
         </svg>
         <span class="stamp-name">Clownfish</span>
       </div></div></figure>
-
-    </div>
-    </div>
-    <div class="bpage" data-pno="04">
-    <div class="sheet-label"><span>02.2</span>…and growing</div>
-
-    <div class="about-ed-gallery">
 
       <figure class="stamp-item"><div class="stamp"><div class="stamp-body" style="--ph:#d8d3e6; --ink:#6a5a92">
         <span class="stamp-val">30<sup>¢</sup></span>
@@ -349,162 +135,15 @@
         </svg>
         <span class="stamp-name">Red Crab</span>
       </div></div></figure>
-
-    </div>
-    </div>
-
+      </div>
     </section>
-
-    <section class="spread">
-    <div class="bpage" data-pno="05" id="ch3">
-    <div class="sheet-label"><span>03.1</span>Punch cards — click an empty slot for a fun fact ✳</div>
-
-    <div class="punch-cards" id="punchCards">
-
-      <div class="punch-card pc-cream" data-prize="a book rec from my shelf">
-        <div class="pc-official">Official Serene Punch Card</div>
-        <svg class="pc-doodle" viewBox="0 0 48 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M8 34c10-2 22-2 32 0"/>
-          <path d="M10 33l2-8c9-1.5 17-1.5 25 0l2 8"/>
-          <path d="M14 25l2-7c6-1 11-1 17 0l2 7"/>
-          <path d="M18 18l1.5-6c4-.8 7-.8 10.5 0l1.5 6"/>
-          <path d="M40 4c.7 2.4 1.5 3.2 4 3.9-2.5.7-3.3 1.5-4 3.9-.7-2.4-1.5-3.2-4-3.9 2.5-.7 3.3-1.5 4-3.9z" fill="currentColor" stroke="none"/>
-        </svg>
-        <h3 class="pc-title">Rearranged<br>my bookshelf</h3>
-        <div class="pc-grid">
-          <button class="pc-slot" data-fact="I sort my shelf by color one month, by mood the next."></button>
-          <button class="pc-slot" data-fact="Three copies of The Design of Everyday Things live here."></button>
-          <button class="pc-slot" data-fact="I annotate in pencil only — ink feels too permanent."></button>
-          <button class="pc-slot" data-fact="My to-be-read pile is officially taller than my lamp."></button>
-          <button class="pc-slot" data-fact="Alphabetized once. It lasted four days."></button>
-          <button class="pc-slot" data-fact="Field notes disguised as memoirs are my weakness."></button>
-          <button class="pc-slot" data-fact="One-in-one-out rule: adopted, then ignored monthly."></button>
-          <button class="pc-slot" data-fact="I read endings first. Zero regrets."></button>
-        </div>
-        <svg class="pc-waves" viewBox="0 0 200 18" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
-          <path d="M4 5c12-5 24-5 36 0s24 5 36 0 24-5 36 0 24 5 36 0 24-5 48 0"/>
-          <path d="M4 12c12-5 24-5 36 0s24 5 36 0 24-5 36 0 24 5 36 0 24-5 48 0"/>
-        </svg>
-        <div class="pc-prize">Prize: <span class="pc-prize-text"></span></div>
-      </div>
-
-      <div class="punch-card pc-blue" data-prize="a trail rec + snack map">
-        <div class="pc-official">Official Serene Punch Card</div>
-        <svg class="pc-doodle" viewBox="0 0 48 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 33L16 11l7 12 6-9 11 19"/>
-          <path d="M13 19l3 4 3-5"/>
-          <circle cx="40" cy="8" r="3.6"/>
-          <path d="M40 1.5v1.6M40 12.9v1.6M33.5 8h1.6M44.9 8h1.6M35.4 3.4l1.2 1.2M44.6 3.4l-1.2 1.2M35.4 12.6l1.2-1.2M44.6 12.6l-1.2-1.2"/>
-        </svg>
-        <h3 class="pc-title">Hiked a<br>new trail!</h3>
-        <div class="pc-grid">
-          <button class="pc-slot" data-fact="My national-park passport has stamps from 3 states so far."></button>
-          <button class="pc-slot" data-fact="Mt. Rainier: hiked. Half Dome: on the list."></button>
-          <button class="pc-slot" data-fact="I will detour 20 minutes for one good viewpoint."></button>
-          <button class="pc-slot" data-fact="Trail mix ratio: 80% chocolate, 20% everything else."></button>
-          <button class="pc-slot" data-fact="I keep a tiny notebook for overheard trail quotes."></button>
-          <button class="pc-slot" data-fact="Once out-hiked my phone battery. Twice, actually."></button>
-          <button class="pc-slot" data-fact="I rate hikes by snack spots, not elevation gain."></button>
-          <button class="pc-slot" data-fact="Sunrise hikes: yes. Sunrise alarms: negotiable."></button>
-        </div>
-        <svg class="pc-waves" viewBox="0 0 200 18" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
-          <path d="M4 5c12-5 24-5 36 0s24 5 36 0 24-5 36 0 24 5 36 0 24-5 48 0"/>
-          <path d="M4 12c12-5 24-5 36 0s24 5 36 0 24-5 36 0 24 5 36 0 24-5 48 0"/>
-        </svg>
-        <div class="pc-prize">Prize: <span class="pc-prize-text"></span></div>
-      </div>
-
-    </div>
-    </div>
-    <div class="bpage" data-pno="06">
-    <div class="sheet-label"><span>03.2</span>Complete the collection</div>
-
-    <div class="punch-cards punch-cards-b">
-      <div class="punch-card pc-pink" data-prize="a letter, wax seal included">
-        <div class="pc-official">Official Serene Punch Card</div>
-        <svg class="pc-doodle" viewBox="0 0 48 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 22c5-6 13-8 20-4l8-6-2 8 2 8-8-6c-7 4-15 2-20-4z" />
-          <circle cx="12" cy="21" r="1" fill="currentColor" stroke="none"/>
-          <path d="M40 26c.7 2.4 1.5 3.2 4 3.9-2.5.7-3.3 1.5-4 3.9-.7-2.4-1.5-3.2-4-3.9 2.5-.7 3.3-1.5 4-3.9z" fill="currentColor" stroke="none"/>
-          <circle cx="38" cy="6" r="1.4"/>
-          <circle cx="43" cy="12" r="1"/>
-        </svg>
-        <h3 class="pc-title">Found a new<br>sea-creature stamp</h3>
-        <div class="pc-grid">
-          <button class="pc-slot" data-fact="The collection started with a 5¢ crab from a flea market."></button>
-          <button class="pc-slot" data-fact="Current favorite: a moon-jelly stamp from Japan."></button>
-          <button class="pc-slot" data-fact="The fish on this site is drawn after stamp no. 12."></button>
-          <button class="pc-slot" data-fact="Duplicates get traded by mail — wax seal included."></button>
-          <button class="pc-slot" data-fact="Still hunting: an octopus with all eight arms showing."></button>
-          <button class="pc-slot" data-fact="They live in a cookie tin that never held cookies."></button>
-          <button class="pc-slot" data-fact="I can spot a scallop shell at twenty paces."></button>
-          <button class="pc-slot" data-fact="Dream find: a giant squid on a vintage airmail."></button>
-        </div>
-        <svg class="pc-waves" viewBox="0 0 200 18" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
-          <path d="M4 5c12-5 24-5 36 0s24 5 36 0 24-5 36 0 24 5 36 0 24-5 48 0"/>
-          <path d="M4 12c12-5 24-5 36 0s24 5 36 0 24-5 36 0 24 5 36 0 24-5 48 0"/>
-        </svg>
-        <div class="pc-prize">Prize: <span class="pc-prize-text"></span></div>
-      </div>
-
-    </div>
-
-
-    </div>
-    </section>
-
-    <div class="pc-bubble" id="pcBubble"></div>
   </div>
-  </div>
-
 </main>
 
 <footer class="page-footer">
   <span id="localTime"></span>
 </footer>
 
-<script>
-  const TRACK = {
-    src:    '',           // e.g. 'music/my-song.mp3'
-    title:  'track title',
-    artist: 'artist',
-  };
-
-  const audio     = document.getElementById('audio');
-  const playBtn   = document.getElementById('playBtn');
-  const iconPlay  = document.getElementById('iconPlay');
-  const iconPause = document.getElementById('iconPause');
-  const fill      = document.getElementById('progressFill');
-  const timeEl    = document.getElementById('playerTime');
-  const bar       = document.getElementById('progressBar');
-
-  document.getElementById('trackName').textContent   = TRACK.title;
-  document.getElementById('trackArtist').textContent = TRACK.artist;
-  if (TRACK.src) audio.src = TRACK.src;
-
-  function fmt(s) {
-    return Math.floor(s/60) + ':' + String(Math.floor(s%60)).padStart(2,'0');
-  }
-
-  playBtn.addEventListener('click', () => {
-    if (!TRACK.src) return;
-    audio.paused ? audio.play() : audio.pause();
-  });
-
-  audio.addEventListener('play',  () => { iconPlay.style.display='none'; iconPause.style.display=''; });
-  audio.addEventListener('pause', () => { iconPlay.style.display='';     iconPause.style.display='none'; });
-  audio.addEventListener('ended', () => { iconPlay.style.display='';     iconPause.style.display='none'; fill.style.width='0%'; });
-  audio.addEventListener('timeupdate', () => {
-    if (!audio.duration) return;
-    fill.style.width = (audio.currentTime / audio.duration * 100) + '%';
-    timeEl.textContent = fmt(audio.currentTime);
-  });
-  bar.addEventListener('click', (e) => {
-    if (!audio.duration) return;
-    const r = bar.getBoundingClientRect();
-    audio.currentTime = ((e.clientX - r.left) / r.width) * audio.duration;
-  });
-</script>
 <script>
   function updateTime() {
     const t = new Date().toLocaleTimeString('en-US', {
@@ -523,101 +162,31 @@
     tag.classList.add('show');
     setTimeout(() => tag.classList.remove('show'), 1800);
   }
-</script>
 
-<script>
-  const book3d = document.getElementById('book3d');
-  const leaves = Array.from(book3d.querySelectorAll('.b3-leaf'));
-  const hint = document.getElementById('b3Hint');
-  const MAX = leaves.length + 1;   // state 1 = opened, 2.. = pages turned
-  let state = 0;
+  // scrollspy: highlight the sidebar entry of the section in view
+  const tocItems = Array.from(document.querySelectorAll('.pub-toc .tag-shape'));
+  const sections = tocItems
+    .map(t => document.querySelector(t.querySelector('.tag-label').getAttribute('href')))
+    .filter(Boolean);
 
-  function render() {
-    book3d.classList.remove('state-0','state-1','state-2','state-3');
-    book3d.classList.add('state-' + state);
-    leaves.forEach((l, i) => l.classList.toggle('flipped', i < state - 1));
-    hint.textContent = state === 0 ? 'Click to open the book →'
-                     : state < MAX ? '← / → Click either side to browse'
-                     : '← Click the left page to go back';
+  function spy() {
+    const probe = window.innerHeight * 0.35;
+    let current = sections[0];
+    for (const sec of sections) {
+      if (sec.getBoundingClientRect().top <= probe) current = sec;
+    }
+    if (window.scrollY > 0 && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      current = sections[sections.length - 1];
+    }
+    tocItems.forEach((t, i) => t.classList.toggle('is-active', sections[i] === current));
   }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
 
-  document.querySelector('.b3-nav-right').addEventListener('click', () => { if (state < MAX) { state++; render(); } });
-  document.querySelector('.b3-nav-left').addEventListener('click',  () => { if (state > 0)  { state--; render(); } });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight' && state < MAX) { state++; render(); }
-    if (e.key === 'ArrowLeft'  && state > 0)  { state--; render(); }
+  // Back goes to the previous page when there is one, otherwise home
+  document.querySelector('.side-back').addEventListener('click', (e) => {
+    if (history.length > 1) { e.preventDefault(); history.back(); }
   });
-  render();
-</script>
-
-<script>
-  const envItems = Array.from(document.querySelectorAll('.env-item'));
-  envItems.forEach(item => {
-    item.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const wasOut = item.classList.contains('out');
-      envItems.forEach(i => i.classList.remove('out'));
-      if (!wasOut) item.classList.add('out');
-    });
-  });
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.env-item')) envItems.forEach(i => i.classList.remove('out'));
-  });
-</script>
-
-<script>
-  // punch cards: click a slot → stamp it + show a fun fact; punches persist
-  // cover peek-a-boo: click a lid circle, it drops off and reveals the stamp
-  document.querySelectorAll('.peek').forEach((pk) => {
-    pk.addEventListener('click', () => pk.classList.add('off'));
-  });
-
-  (function () {
-    const KEY = 'pc-punched-v1';
-    const saved = new Set(JSON.parse(localStorage.getItem(KEY) || '[]'));
-    const wrap = document.getElementById('aboutBook');
-    const bubble = document.getElementById('pcBubble');
-    if (!wrap || !bubble) return;
-    let timer;
-
-    document.querySelectorAll('.punch-card').forEach((card, ci) => {
-      const slots = Array.from(card.querySelectorAll('.pc-slot'));
-      const prizeEl = card.querySelector('.pc-prize-text');
-
-      const checkDone = () => {
-        if (slots.every(s => s.classList.contains('punched'))) {
-          prizeEl.textContent = card.dataset.prize;
-        }
-      };
-
-      slots.forEach((slot, si) => {
-        const id = ci + '-' + si;
-        slot.style.setProperty('--rot', (Math.random() * 14 - 7).toFixed(1) + 'deg');
-        if (saved.has(id)) slot.classList.add('punched', 'no-anim');
-
-        slot.addEventListener('click', () => {
-          if (!slot.classList.contains('punched')) {
-            slot.classList.remove('no-anim');
-            slot.classList.add('punched');
-            saved.add(id);
-            localStorage.setItem(KEY, JSON.stringify([...saved]));
-            checkDone();
-          }
-          const r = slot.getBoundingClientRect();
-          const w = wrap.getBoundingClientRect();
-          bubble.textContent = slot.dataset.fact;
-          const left = Math.max(115, Math.min(w.width - 115, r.left - w.left + r.width / 2));
-          bubble.style.left = left + 'px';
-          bubble.style.top = (r.top - w.top - 8) + 'px';
-          bubble.classList.add('show');
-          clearTimeout(timer);
-          timer = setTimeout(() => bubble.classList.remove('show'), 4500);
-        });
-      });
-
-      checkDone();
-    });
-  })();
 </script>
 <script src="nav-morph.js?v=4"></script>
 </body>

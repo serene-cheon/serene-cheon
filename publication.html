@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publication — Serene Cheon</title>
-  <link rel="stylesheet" href="style.css?v=415" />
+  <link rel="stylesheet" href="style.css?v=416" />
 </head>
 <body class="pub">
 
@@ -227,7 +227,7 @@
       if (sec.getBoundingClientRect().top <= probe) current = sec;
     }
     // pinned to the bottom → the last section wins even if it never crosses the probe line
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+    if (window.scrollY > 0 && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
       current = sections[sections.length - 1];
     }
     tocItems.forEach((t, i) => t.classList.toggle('is-active', sections[i] === current));
