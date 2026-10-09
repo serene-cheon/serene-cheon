@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChipXR — Serene Cheon</title>
+  <link rel="stylesheet" href="style.css?v=417" />
+</head>
+<body class="pub case">
+
+<header class="topbar">
+  <a href="index.html" class="topbar-logo"><img class="logo-mark" src="logo-mark.png" alt="Serene Cheon" /></a>
+  <nav class="topbar-menu">
+    <div class="topbar-group">
+      <a href="index.html">Projects</a>
+      <a href="publication.html">Publication</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="topbar-group">
+      <span class="contact-email" onclick="copyEmail(this)">Email<span class="contact-copied">Copied!</span></span>
+      <a href="https://www.linkedin.com/in/serene-cheon/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=2hDTQIkAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="side-head">
+    <a class="side-back" href="index.html">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M13.5 8 H3 M7 4 L3 8 L7 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Back</span>
+    </a>
+    <div class="side-title">ChipXR</div>
+
+    <nav class="pub-toc">
+      <div class="tag-shape is-active"><a class="tag-label" href="#overview">Overview</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#challenge">Challenge</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#design">Design</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#evaluation">Evaluation</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#findings">Findings</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#takeaways">Takeaways</a></div>
+    </nav>
+  </div>
+
+  <div class="page-content">
+
+    <section id="overview" class="pub-section">
+      <h1 class="cs-title">ChipXR</h1>
+      <p class="cs-subtitle">Designing immersive XR training to break barriers in semiconductor education</p>
+      <figure class="cs-fig cs-hero"><img src="chipxr-hero.webp" alt="ChipXR mixed-reality learning environment" /></figure>
+
+      <div class="cs-meta">
+        <div class="cs-meta-item">
+          <div class="cs-meta-label">Role &amp; Team</div>
+          <div class="cs-meta-value">UX Researcher working with a Product Manager, UX Designer, Software Engineers, Technical Artists, and Content Experts</div>
+        </div>
+        <div class="cs-meta-item">
+          <div class="cs-meta-label">Timeline</div>
+          <div class="cs-meta-value">June 2024 &ndash; Dec 2025</div>
+        </div>
+        <div class="cs-meta-item">
+          <div class="cs-meta-label">Tools</div>
+          <div class="cs-meta-value">MAXQDA, Qualtrics, Figma</div>
+        </div>
+        <div class="cs-meta-item">
+          <div class="cs-meta-label">Methods</div>
+          <div class="cs-meta-value">Think-aloud protocols, Focus group, Survey, Thematic analysis, Statistical analysis</div>
+        </div>
+        <div class="cs-meta-item cs-meta-wide">
+          <div class="cs-meta-label">Impact</div>
+          <div class="cs-meta-value">Achieved <strong>+21% spatial knowledge gain</strong> and reduced <strong>&minus;24.17% extraneous cognitive load</strong> compared to video-based learning. To be implemented in university courses and an internship training program. Published at <strong>CHI 2026</strong> (Full paper) and <strong>CHI 2025</strong> (Late breaking work).</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="challenge" class="pub-section">
+      <div class="pub-sec-title">Challenge</div>
+      <h2 class="cs-statement">The current semiconductor education lacks resources for engineering students to understand complex semiconductor chips.</h2>
+      <p class="cs-body">Through in-depth interviews with engineering students and industry professionals and initial discussions with semiconductor educators, I uncovered two major pain points in current semiconductor education:</p>
+
+      <div class="cs-pair">
+        <div class="cs-card">
+          <div class="cs-card-kicker">Pain Point 1</div>
+          <div class="cs-card-title">Poor support for spatial understanding</div>
+          <p class="cs-card-body">3D chip structures are hard to understand with traditional flat materials.</p>
+          <img src="chipxr-pain1a.jpg" alt="Flat teaching materials" />
+        </div>
+        <div class="cs-card">
+          <div class="cs-card-kicker">Pain Point 2</div>
+          <div class="cs-card-title">Lack of practical laboratory experiences</div>
+          <p class="cs-card-body">Hands-on labs are limited for students due to cost and feasibility.</p>
+          <img src="chipxr-pain2.jpg" alt="Limited lab access" />
+        </div>
+      </div>
+
+      <h2 class="cs-statement">My goal was to create a learning tool that could overcome these challenges.</h2>
+      <p class="cs-body">Partnering with the University of Florida&rsquo;s Electrical &amp; Computer Engineering Department, we decided to create a tool that could be used in their courses.</p>
+
+      <h2 class="cs-statement">&hellip;what if we leverage mixed reality?</h2>
+      <p class="cs-body">Through additional brainstorming sessions with semiconductor experts and educators, I realized that MR technology could tackle these pain points all at once.</p>
+
+      <div class="cs-pair">
+        <div class="cs-card">
+          <div class="cs-card-kicker">Pain Point 1 &rarr; 3D visualization</div>
+          <p class="cs-card-body">Make learning easier with intuitive visualizations of complex chip structures.</p>
+        </div>
+        <div class="cs-card">
+          <div class="cs-card-kicker">Pain Point 2 &rarr; Hands-on practice</div>
+          <p class="cs-card-body">Enable lab experiences virtually beyond physical and resource constraints.</p>
+        </div>
+      </div>
+
+      <h2 class="cs-statement">I tested the concept.</h2>
+      <p class="cs-body">Since MR is an emerging technology, there was limited guidance to inform the design. So I tested an MVP to inform design direction and reduce uncertainties. To better understand user behavior, I let them think-aloud while interacting with our MVP and recorded observation notes.</p>
+
+      <div class="cs-study">
+        <div><span class="cs-meta-label">Goal</span>Identify potential usability risks</div>
+        <div><span class="cs-meta-label">Participants</span>12 Engineering students</div>
+        <div><span class="cs-meta-label">Method</span>Think-aloud protocols, Survey</div>
+      </div>
+
+      <div class="cs-pair">
+        <figure class="cs-fig"><img src="chipxr-mvp1.jpg" alt="MVP testing session" /></figure>
+        <figure class="cs-fig"><img src="chipxr-mvp2.jpg" alt="MVP testing session" /></figure>
+      </div>
+
+      <h2 class="cs-statement">&hellip;and found inefficient design creates wrong cognitive load, which can negatively impact learning.</h2>
+      <p class="cs-body"><strong>Usability issues found!</strong> When users tried to grab or interact with virtual objects to complete tasks, they often failed to locate the objects which led to interaction errors. This happened because in MR environments virtual objects blend into the physical background and cause visual confusion for users.</p>
+      <figure class="cs-fig"><img src="chipxr-usability.jpg" alt="Usability issues observed in the MVP" /></figure>
+
+      <div class="cs-pair">
+        <div class="cs-card">
+          <div class="cs-card-kicker">&#129327; Extraneous load</div>
+          <p class="cs-card-body">Unnecessary load from interaction failures. We don&rsquo;t want to waste our brain power like this.</p>
+        </div>
+        <div class="cs-card">
+          <div class="cs-card-kicker">&#129299; Germane load</div>
+          <p class="cs-card-body">Productive load used for actual learning. This looks right.</p>
+        </div>
+      </div>
+
+      <h2 class="cs-statement">Then, how might we design MR learning experiences to manage cognitive load more efficiently?</h2>
+      <p class="cs-body">To identify strategies for better managing cognitive load, I worked with education and HCI researchers to translate learning theories into concrete design decisions.</p>
+    </section>
+
+    <section id="design" class="pub-section">
+      <div class="pub-sec-title">Design Strategies</div>
+
+      <div class="cs-card-kicker">Strategy 1 &middot; Signaling Principle, Cognitive Theory of Multimedia Learning</div>
+      <h2 class="cs-statement">Add visual clarity through organization and signifiers.</h2>
+      <div class="cs-pair">
+        <figure class="cs-fig"><img src="chipxr-signal-before.jpg" alt="Before: virtual objects scattered" /><figcaption>Before &mdash; virtual objects were scattered throughout the scene.</figcaption></figure>
+        <figure class="cs-fig"><img src="chipxr-signal-after.jpg" alt="After: objects anchored to a grid" /><figcaption>After &mdash; I anchored the objects onto the grid.</figcaption></figure>
+      </div>
+      <div class="cs-pair">
+        <figure class="cs-fig"><img src="chipxr-signal-highlights.jpg" alt="Highlights on interactable items" /><figcaption>Highlights &mdash; I signified interactable items.</figcaption></figure>
+        <figure class="cs-fig"><img src="chipxr-signal-hands.jpg" alt="Guiding hands direct user attention" /><figcaption>Guiding hands &mdash; I directed user attention for clear guidance.</figcaption></figure>
+      </div>
+
+      <div class="cs-card-kicker">Strategy 2 &middot; Segmenting Principle, Cognitive Theory of Multimedia Learning</div>
+      <h2 class="cs-statement">Chunk learning into digestible pieces.</h2>
+      <div class="cs-steps">
+        <div class="cs-step">
+          <div class="cs-step-no">Step 1</div>
+          <div class="cs-card-title">Learn</div>
+          <p class="cs-card-body">Identify key components and their functions in chip structure.<br /><span class="cs-dim">User task &mdash; interact with 3D chip component models with accompanying audio explanations.</span></p>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-no">Step 2</div>
+          <div class="cs-card-title">Assemble</div>
+          <p class="cs-card-body">Reinforce comprehension of the components and their relationships in the structure.<br /><span class="cs-dim">User task &mdash; place component pieces in correct order to build the complete structure.</span></p>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-no">Step 3</div>
+          <div class="cs-card-title">Fabricate</div>
+          <p class="cs-card-body">Understand the chip fabrication process by linking structural elements to procedural flows.<br /><span class="cs-dim">User task &mdash; perform hands-on fabrication tasks to build the chip.</span></p>
+        </div>
+      </div>
+      <figure class="cs-fig"><img src="chipxr-assemble.webp" alt="Modular lessons in ChipXR" /><figcaption>Modular lessons &mdash; step-by-step fabrication.</figcaption></figure>
+
+      <div class="cs-fab">
+        <div class="cs-meta-label">Fabrication process</div>
+        <ol>
+          <li>Photolithography</li><li>Etching</li><li>Electrodeposition</li><li>Wafer Bumping</li><li>Compute Die&ndash;Base Die Attach</li><li>TSV Reveal</li><li>Electrodeposition</li><li>Solder Reflow</li><li>PCB Attach</li>
+        </ol>
+      </div>
+
+      <div class="cs-card-kicker">Strategy 3</div>
+      <h2 class="cs-statement">Resolve questions instantly with AI support.</h2>
+      <p class="cs-body">I worked with the engineering team to integrate a fine-tuned GPT API into the system to provide learners with timely support and encourage active learning. The AI teaching assistant addresses learners&rsquo; questions in real time with contextual feedback throughout the learning experience.</p>
+      <figure class="cs-fig"><img src="chipxr-ai-demo.webp" alt="AI teaching assistant in ChipXR" /></figure>
+      <figure class="cs-fig"><img src="chipxr-ai.jpg" alt="AI teaching assistant interface" /></figure>
+
+      <div class="cs-features">
+        <p class="cs-body">&#10022; Let students explore complex chip structures in 3D and full 360&deg; view.</p>
+        <p class="cs-body">&#10022; Reinforce spatial understanding through an interactive LEGO-like quiz.</p>
+        <p class="cs-body">&#10022; Practice the fabrication process through hands-on tasks.</p>
+        <p class="cs-body">&#10022; Resolve questions in real time with the AI teaching assistant.</p>
+      </div>
+    </section>
+
+    <section id="evaluation" class="pub-section">
+      <div class="pub-sec-title">Evaluation</div>
+      <h2 class="cs-statement">Evaluating ChipXR.</h2>
+      <p class="cs-body">I used mixed-methods to evaluate the app comprehensively, and conducted two rounds of user testing.</p>
+
+      <div class="cs-card-kicker">Qualitative evaluation</div>
+      <p class="cs-body">Since this tool was designed for university courses, I needed to evaluate the tool and how it could be implemented in real classroom settings. So, I decided to gather feedback directly from students enrolled in the class.</p>
+      <div class="cs-study">
+        <div><span class="cs-meta-label">Goal</span>Get in-depth insights from target users</div>
+        <div><span class="cs-meta-label">Participants</span>9 students from the target course</div>
+        <div><span class="cs-meta-label">Method</span>Think-aloud protocols, Focus groups</div>
+        <div><span class="cs-meta-label">Tool</span>MAXQDA</div>
+      </div>
+      <p class="cs-body"><span class="cs-dim">Study design &mdash; Step 1: engage with ChipXR while thinking aloud. Step 2: focus-group interviews with 3 participants per session.</span></p>
+
+      <div class="cs-card-kicker">Quantitative evaluation</div>
+      <p class="cs-body">I additionally conducted an experiment to evaluate whether ChipXR successfully supports learning quantitatively. To get enough participants, I expanded the criteria and recruited engineering students from related majors using convenience sampling.</p>
+      <div class="cs-study">
+        <div><span class="cs-meta-label">Goal</span>Evaluate learning effectiveness</div>
+        <div><span class="cs-meta-label">Participants</span>24 engineering students</div>
+        <div><span class="cs-meta-label">Method</span>Survey &middot; within-subjects comparative study</div>
+        <div><span class="cs-meta-label">Tool</span>Qualtrics, R</div>
+      </div>
+      <p class="cs-body">Since the AI teaching assistant was newly introduced after the iteration, I evaluated three conditions: <strong>ChipXR (MR + AI)</strong>, an <strong>MR-only</strong> version without AI, and a <strong>video-based</strong> version that mirrored traditional teaching methods. To ensure reliable results, I randomly assigned participants to each condition. They completed a pre-survey, engaged with the assigned condition in order, and then completed a post-survey after each session.</p>
+      <figure class="cs-fig"><img src="chipxr-quant.jpg" alt="Experiment design" /></figure>
+      <p class="cs-body"><span class="cs-dim">Key survey items &mdash; Knowledge (conceptual, procedural, visual-spatial) &middot; Cognitive load (intrinsic, extraneous, germane) &middot; Engagement (Skinner, Kindermann, and Furrer&rsquo;s engagement framework) &middot; Usability (System Usability Scale).</span></p>
+    </section>
+
+    <section id="findings" class="pub-section">
+      <div class="pub-sec-title">Findings</div>
+      <h2 class="cs-statement">ChipXR enhanced spatial understanding, managed cognitive load efficiently, and was more engaging than a traditional video lecture.</h2>
+
+      <div class="cs-stats">
+        <div class="cs-stat"><div class="cs-stat-num">+21%</div><div class="cs-stat-label">Spatial knowledge gain vs. video-based learning</div></div>
+        <div class="cs-stat"><div class="cs-stat-num">&minus;24.17%</div><div class="cs-stat-label">Extraneous cognitive load vs. video-based learning</div></div>
+        <div class="cs-stat"><div class="cs-stat-num">CHI 2026</div><div class="cs-stat-label">Accepted as a full paper (25% acceptance rate)</div></div>
+      </div>
+
+      <div class="cs-quotes">
+        <blockquote>&ldquo;Videos usually have a couple side views, but the 360 interactive view made it easier to visualize.&rdquo;</blockquote>
+        <blockquote>&ldquo;Getting that hands-on experience really helped solidify what I had only understood in a vague way before.&rdquo;</blockquote>
+        <blockquote>&ldquo;Especially in fabrication &mdash; mistakes are expensive. That&rsquo;s why VR is great. You can fail without breaking anything.&rdquo;</blockquote>
+      </div>
+
+      <p class="cs-body">Read the full paper: <a href="https://dl.acm.org/doi/10.1145/3772318.3793705" target="_blank" rel="noopener" class="pub-link">Learning Inside the Chip (CHI 2026) &#8599;</a></p>
+    </section>
+
+    <section id="takeaways" class="pub-section">
+      <div class="pub-sec-title">Takeaways</div>
+      <div class="cs-takeaway">
+        <div class="cs-card-title">Leverage stakeholder feedback across the design process.</div>
+        <p class="cs-body">Co-designing with experts and testing with students helped me overcome my knowledge gap and usability issues. Involving the right stakeholders at the right stages can help solve uncertain problems better than trying to address them alone.</p>
+      </div>
+      <div class="cs-takeaway">
+        <div class="cs-card-title">Don&rsquo;t just rely on tools &mdash; actively monitor throughout the research process!</div>
+        <p class="cs-body">I initially used Qualtrics&rsquo; random assignment feature to evenly assign participants to each condition. During the study, I discovered that the feature was not working properly, so I manually managed the remaining assignment to ensure balanced conditions. While tools are useful, continuous monitoring is essential to catch and address unexpected issues.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="page-footer">
+  <span id="localTime"></span>
+</footer>
+
+<script>
+  function updateTime() {
+    const t = new Date().toLocaleTimeString('en-US', {
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false,
+      timeZone: 'America/Los_Angeles'
+    });
+    const el = document.getElementById('localTime');
+    if (el) el.textContent = t;
+  }
+  updateTime();
+  setInterval(updateTime, 1000);
+
+  function copyEmail(el) {
+    navigator.clipboard.writeText('serenecheon@berkeley.edu');
+    const tag = el.querySelector('.contact-copied');
+    tag.classList.add('show');
+    setTimeout(() => tag.classList.remove('show'), 1800);
+  }
+
+  // scrollspy: highlight the sidebar entry of the section in view
+  const tocItems = Array.from(document.querySelectorAll('.pub-toc .tag-shape'));
+  const sections = tocItems
+    .map(t => document.querySelector(t.querySelector('.tag-label').getAttribute('href')))
+    .filter(Boolean);
+
+  function spy() {
+    const probe = window.innerHeight * 0.35;
+    let current = sections[0];
+    for (const sec of sections) {
+      if (sec.getBoundingClientRect().top <= probe) current = sec;
+    }
+    if (window.scrollY > 0 && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      current = sections[sections.length - 1];
+    }
+    tocItems.forEach((t, i) => t.classList.toggle('is-active', sections[i] === current));
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+
+  // Back goes to the previous page when there is one, otherwise home
+  document.querySelector('.side-back').addEventListener('click', (e) => {
+    if (history.length > 1) { e.preventDefault(); history.back(); }
+  });
+</script>
+<script src="nav-morph.js?v=4"></script>
+</body>
+</html>
