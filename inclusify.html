@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inclusify — Serene Cheon</title>
+  <link rel="stylesheet" href="style.css?v=418" />
+</head>
+<body class="pub case">
+
+<header class="topbar">
+  <a href="index.html" class="topbar-logo"><img class="logo-mark" src="logo-mark.png" alt="Serene Cheon" /></a>
+  <nav class="topbar-menu">
+    <div class="topbar-group">
+      <a href="index.html">Projects</a>
+      <a href="publication.html">Publication</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="topbar-group">
+      <span class="contact-email" onclick="copyEmail(this)">Email<span class="contact-copied">Copied!</span></span>
+      <a href="https://www.linkedin.com/in/serene-cheon/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=2hDTQIkAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="side-head">
+    <a class="side-back" href="index.html">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M13.5 8 H3 M7 4 L3 8 L7 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Back</span>
+    </a>
+    <div class="side-title">Inclusify</div>
+
+    <nav class="pub-toc">
+      <div class="tag-shape is-active"><a class="tag-label" href="#overview">Overview</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#challenge">Challenge</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#approach">Approach</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#research">Research</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#solution">Solution</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#test">Test</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#impact">Impact</a></div>
+      <div class="tag-shape"><a class="tag-label" href="#takeaways">Takeaways</a></div>
+    </nav>
+  </div>
+
+  <div class="page-content">
+
+    <section id="overview" class="pub-section">
+      <h1 class="cs-title">Inclusify</h1>
+      <p class="cs-subtitle">Visualizing racial microaggressions to raise awareness</p>
+      <figure class="cs-fig cs-hero"><img src="inclusify-hero.jpg" alt="Inclusify app screens" /></figure>
+
+      <div class="cs-meta">
+        <div class="cs-meta-item">
+          <div class="cs-meta-label">Role &amp; Team</div>
+          <div class="cs-meta-value">UX Designer working with 1 UX Designer</div>
+        </div>
+        <div class="cs-meta-item">
+          <div class="cs-meta-label">Timeline</div>
+          <div class="cs-meta-value">Nov 2023 &ndash; Jan 2024</div>
+        </div>
+        <div class="cs-meta-item">
+          <div class="cs-meta-label">Tools</div>
+          <div class="cs-meta-value">Figma, Google Workspace, Maze</div>
+        </div>
+        <div class="cs-meta-item">
+          <div class="cs-meta-label">Methods</div>
+          <div class="cs-meta-value">Interview, Survey</div>
+        </div>
+        <div class="cs-meta-item cs-meta-wide">
+          <div class="cs-meta-label">Impact</div>
+          <div class="cs-meta-value">Significantly increased racial prejudice recognition in <strong>4 out of 5 expressions</strong>. Published at the <strong>CHI 2024 Student Design Competition</strong>, with only 12 teams selected and a 28% acceptance rate.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="challenge" class="pub-section">
+      <div class="pub-sec-title">Challenge</div>
+      <h2 class="cs-statement">Racial microaggressions are difficult to detect due to their subtle nature.</h2>
+      <p class="cs-body">Racial microaggressions are subtle, often unintentional, discriminatory comments that convey negative assumptions about a person&rsquo;s race or ethnicity. These microaggressions contribute to unwelcoming environments for racial minorities. Compared to explicit racism, they often occur unintentionally and are harder to recognize, making them difficult to address.</p>
+
+      <div class="cs-bubbles">
+        <span class="cs-bubble">&ldquo;Where are you originally from?&rdquo;</span>
+        <span class="cs-bubble">&ldquo;You speak English so well!&rdquo;</span>
+        <span class="cs-bubble">&ldquo;Quiet&rdquo;</span>
+        <span class="cs-bubble">&ldquo;Nerdy&rdquo;</span>
+        <span class="cs-bubble">&ldquo;Spicy&rdquo;</span>
+        <span class="cs-bubble">&ldquo;You&rsquo;re such a Karen.&rdquo;</span>
+        <span class="cs-bubble">&ldquo;Don&rsquo;t you like fried chicken?&rdquo;</span>
+        <span class="cs-bubble is-dim">&hellip;I don&rsquo;t belong anywhere.</span>
+      </div>
+    </section>
+
+    <section id="approach" class="pub-section">
+      <div class="pub-sec-title">Approach</div>
+      <h2 class="cs-statement">Data visualization of people&rsquo;s experiences.</h2>
+      <p class="cs-body">This project began with the idea that raising awareness and fostering mutual understanding could help reduce microaggressions in everyday life. With this in mind, I sketched an online platform that allows users to report and visualize their experiences.</p>
+
+      <div class="cs-pair">
+        <figure class="cs-fig cs-nat"><img src="inclusify-option-a.jpg" alt="Early sketch of the races view" /><figcaption>Early design concept &mdash; keyword bubbles grouped by race.</figcaption></figure>
+        <figure class="cs-fig cs-nat"><img src="inclusify-option-b.jpg" alt="Early sketch of the keywords view" /><figcaption>Early design concept &mdash; trending keywords from reported experiences.</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="research" class="pub-section">
+      <div class="pub-sec-title">Research</div>
+      <h2 class="cs-statement">Gathering voices of diverse individuals.</h2>
+      <p class="cs-body">I used a mixed-methods approach to gain a deeper understanding of people&rsquo;s experiences with racism and microaggressions, as well as feedback on early sketches.</p>
+
+      <div class="cs-study">
+        <div><span class="cs-meta-label">Interview</span>4 participants from diverse racial backgrounds</div>
+        <div><span class="cs-meta-label">Survey</span>43 participants from diverse racial backgrounds</div>
+      </div>
+
+      <div class="cs-card-kicker">Interview insights</div>
+      <div class="cs-pair">
+        <div class="cs-card">
+          <div class="cs-card-kicker">Insight 1</div>
+          <div class="cs-card-title">Participants felt embarrassed, excluded, unsupported, and afraid to confront racism.</div>
+          <p class="cs-card-body">&ldquo;In group projects, other team members didn&rsquo;t give me a chance to present, pointing out my English. I thought about reporting it to the professor, but I was unsure whether he would understand my perspective.&rdquo;</p>
+        </div>
+        <div class="cs-card">
+          <div class="cs-card-kicker">Insight 2</div>
+          <div class="cs-card-title">Fostering a sense of community was emphasized to address racism.</div>
+          <p class="cs-card-body">&ldquo;As the community grows, it will be easier to challenge misconceptions and when things do not go well, I can always just retreat into the big black professional community.&rdquo;</p>
+        </div>
+      </div>
+
+      <div class="cs-card-kicker">Survey insights</div>
+      <div class="cs-pair">
+        <div class="cs-card">
+          <div class="cs-card-kicker">Insight 3</div>
+          <div class="cs-card-title">Verbal abuse and microaggressions were the most common forms of racism.</div>
+          <img src="inclusify-survey.png" alt="Survey chart: microaggression 60.5%, verbal abuse 53.5%" />
+        </div>
+        <div class="cs-card">
+          <div class="cs-card-kicker">Insight 4</div>
+          <div class="cs-card-title">Participants preferred the focus to be on their experiences rather than on race.</div>
+          <p class="cs-card-body">Between <strong>Option A</strong> (show keywords by race) and <strong>Option B</strong> (focus solely on keywords), participants preferred keeping the spotlight on the experiences themselves &mdash; so I moved forward with Option B.</p>
+        </div>
+      </div>
+
+      <div class="cs-card-kicker">Design requirements</div>
+      <p class="cs-body">Based on these findings, I defined the design requirements:</p>
+      <div class="cs-steps cs-cols4">
+        <div class="cs-step">
+          <div class="cs-step-no">Insight 1</div>
+          <div class="cs-card-title">Comprehensive yet anonymous reporting</div>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-no">Insight 2</div>
+          <div class="cs-card-title">Provide a supporting community</div>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-no">Insight 3</div>
+          <div class="cs-card-title">Highlight trending keywords</div>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-no">Insight 4</div>
+          <div class="cs-card-title">Focus on experience rather than on race</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="pub-section">
+      <div class="pub-sec-title">Solution</div>
+      <h2 class="cs-statement">Inclusify, amplifying diverse voices.</h2>
+
+      <div class="cs-card-kicker">Feature 1</div>
+      <h2 class="cs-statement">Report and Assess</h2>
+      <p class="cs-body">Collect more granular contexts around reported incidents to capture the subtle nuances of microaggressions.</p>
+      <figure class="cs-fig"><img src="inclusify-feat1.jpg" alt="Report and assess flow" /></figure>
+
+      <div class="cs-card-kicker">Feature 2</div>
+      <h2 class="cs-statement">Word Cloud Visualization</h2>
+      <p class="cs-body">Visualize people&rsquo;s experiences as keyword bubbles extracted from user responses.</p>
+      <figure class="cs-fig"><img src="inclusify-feat2.jpg" alt="Word cloud visualization" /></figure>
+      <figure class="cs-fig"><video src="inclusify-wordcloud.mp4" autoplay loop muted playsinline></video><figcaption>Filtering keyword bubbles by race, age, and gender.</figcaption></figure>
+
+      <div class="cs-card-kicker">Feature 3</div>
+      <h2 class="cs-statement">Summary and Insights</h2>
+      <p class="cs-body">Deeper insights into others&rsquo; experiences for each keyword to foster understanding.</p>
+      <figure class="cs-fig"><img src="inclusify-feat3.jpg" alt="Summary and insights screens" /></figure>
+
+      <div class="cs-card-kicker">Feature 4</div>
+      <h2 class="cs-statement">Community</h2>
+      <p class="cs-body">Empathize and advocate for people across diverse backgrounds by creating meaningful connections.</p>
+      <figure class="cs-fig"><img src="inclusify-feat4.jpg" alt="Community screens" /></figure>
+    </section>
+
+    <section id="test" class="pub-section">
+      <div class="pub-sec-title">Test</div>
+      <h2 class="cs-statement">Assessing the impact of Inclusify.</h2>
+      <p class="cs-body">I conducted online user tests with 26 participants to evaluate the effectiveness of Inclusify in enhancing public awareness and usability.</p>
+
+      <div class="cs-steps">
+        <div class="cs-step">
+          <div class="cs-step-no">Step 1</div>
+          <div class="cs-card-title">Pre-test</div>
+          <p class="cs-card-body">Initial evaluation of 5 prejudiced expressions.</p>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-no">Step 2</div>
+          <div class="cs-card-title">Interaction</div>
+          <p class="cs-card-body">Interact with Inclusify prototypes.</p>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-no">Step 3</div>
+          <div class="cs-card-title">Post-test</div>
+          <p class="cs-card-body">Reevaluation of the expressions, plus usability testing (SUS).</p>
+        </div>
+      </div>
+
+      <div class="cs-pair">
+        <figure class="cs-fig cs-nat"><img src="inclusify-step1.png" alt="Pre-test rating near Not racist" /><figcaption>Pre-test &mdash; expressions were rated close to &ldquo;not racist.&rdquo;</figcaption></figure>
+        <figure class="cs-fig cs-nat"><img src="inclusify-step3.png" alt="Post-test rating near Racist" /><figcaption>Post-test &mdash; after using Inclusify, ratings shifted toward &ldquo;racist.&rdquo;</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="impact" class="pub-section">
+      <div class="pub-sec-title">Impact</div>
+      <h2 class="cs-statement">Inclusify enhanced awareness of racial microaggressions with a user-friendly experience.</h2>
+
+      <div class="cs-stats">
+        <div class="cs-stat"><div class="cs-stat-num">4 of 5</div><div class="cs-stat-label">Expressions showed a significant increase in prejudice recognition</div></div>
+        <div class="cs-stat"><div class="cs-stat-num">73.6</div><div class="cs-stat-label">Average SUS score, above the recommended criteria</div></div>
+        <div class="cs-stat"><div class="cs-stat-num">CHI 2024</div><div class="cs-stat-label">Student Design Competition &mdash; one of only 12 teams, 28% acceptance rate</div></div>
+      </div>
+
+      <div class="cs-quotes">
+        <blockquote>&ldquo;I think the app definitely helps with making people aware of different racial stereotypes and is a good place for people within marginalized communities to express frustrations.&rdquo;</blockquote>
+        <blockquote>&ldquo;This app will significantly help people recognize microaggressions in our daily lives.&rdquo;</blockquote>
+      </div>
+
+      <h2 class="cs-statement">Also&hellip; this project was accepted to the 2024 CHI Student Design Competition.</h2>
+      <p class="cs-body">Inclusify was selected as one of only 12 teams with a 28% acceptance rate. This was my first publication as a first author, and I had the opportunity to present it in Hawaii!</p>
+
+      <div class="cs-pair">
+        <figure class="cs-fig"><img src="inclusify-chi1.jpg" alt="Presenting Inclusify at CHI 2024" /></figure>
+        <figure class="cs-fig"><img src="inclusify-chi2.jpg" alt="At the CHI 2024 venue in Hawaii" /></figure>
+      </div>
+
+      <p class="cs-body">Check out the paper: <a href="https://dl.acm.org/doi/10.1145/3613905.3647977" target="_blank" rel="noopener" class="pub-link">Inclusify (CHI 2024 Student Design Competition) &#8599;</a></p>
+    </section>
+
+    <section id="takeaways" class="pub-section">
+      <div class="pub-sec-title">Takeaways</div>
+      <div class="cs-takeaway">
+        <div class="cs-card-title">Feedback from diverse users can help mitigate potential harms.</div>
+        <p class="cs-body">Through the survey, I found that participants preferred to focus on the experience itself. This insight was critical in identifying potential risks early and avoiding design choices that could unintentionally reinforce racial bias.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="page-footer">
+  <span id="localTime"></span>
+</footer>
+
+<script>
+  function updateTime() {
+    const t = new Date().toLocaleTimeString('en-US', {
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false,
+      timeZone: 'America/Los_Angeles'
+    });
+    const el = document.getElementById('localTime');
+    if (el) el.textContent = t;
+  }
+  updateTime();
+  setInterval(updateTime, 1000);
+
+  function copyEmail(el) {
+    navigator.clipboard.writeText('serenecheon@berkeley.edu');
+    const tag = el.querySelector('.contact-copied');
+    tag.classList.add('show');
+    setTimeout(() => tag.classList.remove('show'), 1800);
+  }
+
+  // scrollspy: highlight the sidebar entry of the section in view
+  const tocItems = Array.from(document.querySelectorAll('.pub-toc .tag-shape'));
+  const sections = tocItems
+    .map(t => document.querySelector(t.querySelector('.tag-label').getAttribute('href')))
+    .filter(Boolean);
+
+  function spy() {
+    const probe = window.innerHeight * 0.35;
+    let current = sections[0];
+    for (const sec of sections) {
+      if (sec.getBoundingClientRect().top <= probe) current = sec;
+    }
+    if (window.scrollY > 0 && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      current = sections[sections.length - 1];
+    }
+    tocItems.forEach((t, i) => t.classList.toggle('is-active', sections[i] === current));
+  }
+  window.addEventListener('scroll', spy, { passive: true });
+  spy();
+
+  // Back goes to the previous page when there is one, otherwise home
+  document.querySelector('.side-back').addEventListener('click', (e) => {
+    if (history.length > 1) { e.preventDefault(); history.back(); }
+  });
+</script>
+<script src="nav-morph.js?v=4"></script>
+</body>
+</html>
