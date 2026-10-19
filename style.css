@@ -3077,3 +3077,18 @@ body.case .page-content { max-width: 880px; }   /* keep the long-form text reada
 @media (max-width: 900px) {
   .cs-steps.cs-cols4 { grid-template-columns: 1fr; }
 }
+
+/* kodi case-study extras */
+.cs-feature {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-top: 28px;
+}
+.cs-feature .cs-fig { margin-top: 0; }
+
+@media (max-width: 900px) {
+  .cs-feature { grid-template-columns: 1fr; }
+  .cs-feature .cs-fig:first-child { max-width: 300px; }
+}
