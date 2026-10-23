@@ -1087,21 +1087,17 @@ body.pub .topbar-group {
 .about-gallery .stamp-item {
   counter-increment: snap;
   flex: 0 0 auto;
-  position: relative;
-  height: calc(var(--strip-h) + 30px);
 }
 
 .about-gallery .stamp {
-  margin-top: var(--dy, 0px);
   height: var(--h, 140px);
   width: calc(var(--h, 140px) * 0.8125);   /* keeps the 13:16 stamp ratio */
 }
 
 .about-gallery .stamp-item::after {
   content: "0" counter(snap);
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  display: block;
+  margin-top: 12px;             /* label hangs just under its own image */
   font-size: 11px;
   color: #999;
   letter-spacing: 0.02em;
@@ -1109,8 +1105,6 @@ body.pub .topbar-group {
 
 @media (max-width: 900px) {
   .about-gallery { flex-wrap: wrap; }
-  .about-gallery .stamp-item { height: auto; padding-bottom: 26px; }
-  .about-gallery .stamp { margin-top: 0; }
 }
 
 .about-link {
