@@ -1080,7 +1080,7 @@ body.pub .topbar-group {
   --strip-h: 190px;
   display: flex;
   align-items: flex-start;
-  gap: 28px;
+  gap: 0;                       /* images sit flush, like the reference strip */
   counter-reset: snap;
 }
 
